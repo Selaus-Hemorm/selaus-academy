@@ -17,6 +17,26 @@
       margin:0;
       padding:0;
     }
+    <script>
+
+const params =
+  new URLSearchParams(window.location.search);
+
+const product =
+  params.get("product") || "dm";
+
+const paymentButton =
+  document.getElementById("continuePayment");
+
+if(paymentButton){
+
+  paymentButton.href =
+    "payment.html?product=" +
+    encodeURIComponent(product);
+
+}
+
+</script>
 
     body{
       font-family:
@@ -424,7 +444,13 @@
             type="submit"
             class="btn">
 
-            Continue to Payment →
+            <a
+  id="continuePayment"
+  class="btn dark full"
+  href="#"
+>
+  Continue to Payment →
+</a>
 
           </button>
 
