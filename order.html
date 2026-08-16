@@ -5,14 +5,18 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Order | Selaus Academy</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Order digital learning products from Selaus Academy."
-  >
+    content="Order digital learning products from Selaus Academy.">
+
+  <title>
+    Order | Selaus Academy
+  </title>
+
 
   <style>
 
@@ -22,7 +26,9 @@
       padding:0;
     }
 
+
     body{
+
       font-family:
         Inter,
         "Noto Sans Bengali",
@@ -31,256 +37,434 @@
         sans-serif;
 
       background:#f8fafc;
+
       color:#172033;
+
       line-height:1.6;
+
     }
+
 
     a{
       text-decoration:none;
       color:inherit;
     }
 
+
     .wrap{
+
       width:min(950px,92%);
+
       margin:auto;
+
     }
+
 
     header{
+
       background:#fff;
-      border-bottom:1px solid #e4e7ec;
+
+      border-bottom:
+        1px solid #e4e7ec;
+
     }
+
 
     .nav{
+
       min-height:76px;
+
       display:flex;
+
       align-items:center;
+
       justify-content:space-between;
+
     }
+
 
     .logo{
+
       font-size:21px;
+
       font-weight:900;
+
       color:#111827;
+
     }
+
 
     .back{
+
       font-size:13px;
+
       font-weight:700;
+
       color:#667085;
+
     }
+
 
     main{
+
       padding:60px 0;
+
     }
+
 
     .order-grid{
+
       display:grid;
-      grid-template-columns:1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap:25px;
+
       align-items:start;
+
     }
+
 
     .card{
+
       background:#fff;
-      border:1px solid #e4e7ec;
+
+      border:
+        1px solid #e4e7ec;
+
       border-radius:22px;
+
       padding:30px;
+
       box-shadow:
         0 12px 40px rgba(16,24,40,.06);
+
     }
+
 
     .label{
+
       font-size:10px;
+
       font-weight:900;
+
       letter-spacing:1.5px;
+
       color:#98a2b3;
+
       margin-bottom:8px;
+
     }
+
 
     h1{
+
       font-size:34px;
+
       line-height:1.2;
+
       margin-bottom:15px;
+
       color:#101828;
+
     }
+
 
     h2{
+
       font-size:22px;
+
       margin-bottom:10px;
+
     }
+
 
     .description{
+
       color:#667085;
+
       font-size:14px;
+
       margin-bottom:20px;
+
     }
+
 
     .product-list{
+
       list-style:none;
+
       margin:20px 0;
+
     }
+
 
     .product-list li{
+
       padding:8px 0;
-      border-bottom:1px solid #f2f4f7;
+
+      border-bottom:
+        1px solid #f2f4f7;
+
       font-size:13px;
+
       color:#475467;
+
     }
+
 
     .price{
+
       margin-top:20px;
+
       font-size:32px;
+
       font-weight:900;
+
       color:#111827;
+
     }
+
 
     .price small{
+
       display:block;
+
       font-size:10px;
+
       font-weight:600;
+
       color:#98a2b3;
+
     }
 
+
     label{
+
       display:block;
+
       margin-top:15px;
+
       margin-bottom:6px;
+
       font-size:13px;
+
       font-weight:800;
+
     }
+
 
     input,
     select{
+
       width:100%;
+
       min-height:48px;
+
       padding:0 14px;
 
-      border:1px solid #d0d5dd;
+      border:
+        1px solid #d0d5dd;
+
       border-radius:10px;
 
       background:#fff;
+
       color:#172033;
 
       font:inherit;
+
       font-size:14px;
+
     }
+
 
     input:focus,
     select:focus{
-      outline:2px solid #98a2b3;
+
+      outline:
+        2px solid #98a2b3;
+
       outline-offset:2px;
+
     }
 
+
     .payment-box{
+
       margin-top:20px;
+
       padding:18px;
 
       border-radius:14px;
 
       background:#f8fafc;
-      border:1px solid #e4e7ec;
+
+      border:
+        1px solid #e4e7ec;
+
     }
+
 
     .payment-box strong{
+
       display:block;
+
       margin-bottom:5px;
+
     }
+
 
     .payment-box p{
+
       font-size:12px;
+
       color:#667085;
+
     }
 
+
     .payment-number{
+
       margin-top:10px;
-      padding:10px;
+
+      padding:12px;
 
       border-radius:8px;
 
       background:#fff;
-      border:1px solid #e4e7ec;
 
-      font-size:13px;
+      border:
+        1px solid #e4e7ec;
+
+      font-size:14px;
+
       font-weight:800;
+
       color:#111827;
+
     }
 
+
     .btn{
+
       width:100%;
+
       min-height:50px;
+
       margin-top:20px;
 
       border:0;
+
       border-radius:11px;
 
       background:#111827;
+
       color:#fff;
 
       font-size:14px;
+
       font-weight:800;
 
       cursor:pointer;
 
       transition:.2s ease;
+
     }
+
 
     .btn:hover{
+
       background:#273043;
+
       transform:translateY(-1px);
+
     }
+
 
     .btn:disabled{
+
       opacity:.6;
+
       cursor:not-allowed;
+
       transform:none;
+
     }
+
 
     .secure{
+
       margin-top:15px;
+
       text-align:center;
+
       font-size:11px;
+
       color:#98a2b3;
+
     }
 
+
     .error{
+
       display:none;
 
       padding:15px;
+
       margin-bottom:20px;
 
       border-radius:10px;
 
       background:#fef3f2;
+
       color:#b42318;
 
       font-size:13px;
+
       font-weight:700;
+
     }
 
+
     .success{
+
       display:none;
 
       padding:18px;
+
       margin-bottom:20px;
 
       border-radius:12px;
 
       background:#ecfdf3;
-      border:1px solid #abefc6;
+
+      border:
+        1px solid #abefc6;
 
       color:#067647;
 
       font-size:14px;
+
       font-weight:700;
+
     }
+
 
     .order-id{
+
       margin-top:10px;
+
       font-size:13px;
+
       font-weight:900;
+
     }
 
+
     .support{
+
       display:block;
 
       margin-top:15px;
@@ -288,12 +472,36 @@
       text-align:center;
 
       font-size:13px;
+
       font-weight:800;
 
       color:#111827;
+
     }
 
+
+    .notice{
+
+      margin-top:15px;
+
+      padding:12px;
+
+      border-radius:10px;
+
+      background:#fffaeb;
+
+      border:
+        1px solid #fedf89;
+
+      color:#93370d;
+
+      font-size:12px;
+
+    }
+
+
     footer{
+
       padding:35px 0;
 
       text-align:center;
@@ -301,24 +509,37 @@
       color:#98a2b3;
 
       font-size:11px;
+
     }
+
 
     @media(max-width:700px){
 
       main{
+
         padding:35px 0;
+
       }
+
 
       .order-grid{
+
         grid-template-columns:1fr;
+
       }
+
 
       h1{
+
         font-size:29px;
+
       }
 
+
       .card{
+
         padding:24px;
+
       }
 
     }
@@ -331,17 +552,30 @@
 <body>
 
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
   <div class="wrap nav">
 
-    <a href="index.html" class="logo">
+
+    <a
+      href="index.html"
+      class="logo">
+
       SELAUS ACADEMY
+
     </a>
 
-    <a href="index.html" class="back">
-      ← Back to Website
+
+    <a
+      href="index.html#products"
+      class="back">
+
+      ← Back to Products
+
     </a>
+
 
   </div>
 
@@ -349,18 +583,20 @@
 
 
 
+<!-- ================= MAIN ================= -->
+
 <main>
 
   <div class="wrap">
 
+
     <div class="order-grid">
 
 
-      <!-- =========================================
-           PRODUCT INFORMATION
-      ========================================== -->
+      <!-- ================= PRODUCT ================= -->
 
       <section class="card">
+
 
         <div class="label">
           YOUR PRODUCT
@@ -373,14 +609,14 @@
 
 
         <p
-          class="description"
-          id="productDescription">
+          id="productDescription"
+          class="description">
         </p>
 
 
         <ul
-          class="product-list"
-          id="productItems">
+          id="productItems"
+          class="product-list">
         </ul>
 
 
@@ -390,21 +626,22 @@
             PRODUCT PRICE
           </small>
 
+
           <span id="productPrice">
             —
           </span>
 
         </div>
 
+
       </section>
 
 
 
-      <!-- =========================================
-           ORDER FORM
-      ========================================== -->
+      <!-- ================= ORDER FORM ================= -->
 
       <section class="card">
+
 
         <div class="label">
           ORDER INFORMATION
@@ -417,9 +654,11 @@
 
 
         <p class="description">
-          আপনার তথ্য দিন এবং payment সম্পন্ন করে
-          Transaction ID দিন। Payment verification-এর
-          পরে আপনার purchased file Gmail-এ access দেওয়া হবে।
+
+          প্রথমে payment করুন। এরপর আপনার Name,
+          Gmail, Mobile Number, Payment Method এবং
+          Transaction ID দিয়ে order submit করুন।
+
         </p>
 
 
@@ -439,23 +678,32 @@
           id="success"
           class="success">
 
+
           ✅ Order successfully submitted!
+
 
           <div
             id="orderId"
             class="order-id">
           </div>
 
+
           <div style="margin-top:8px;">
+
             Payment verification-এর পরে আপনার
-            Gmail address-এ file access দেওয়া হবে।
+            Gmail address-এ purchased file access দেওয়া হবে।
+
           </div>
+
 
         </div>
 
 
 
-        <form id="orderForm">
+        <!-- FORM -->
+
+        <form
+          id="orderForm">
 
 
           <!-- NAME -->
@@ -464,12 +712,12 @@
             Full Name
           </label>
 
+
           <input
             id="name"
             type="text"
             placeholder="আপনার নাম"
-            required
-          >
+            required>
 
 
 
@@ -479,12 +727,12 @@
             Gmail Address
           </label>
 
+
           <input
             id="email"
             type="email"
             placeholder="example@gmail.com"
-            required
-          >
+            required>
 
 
 
@@ -494,12 +742,12 @@
             WhatsApp / Mobile Number
           </label>
 
+
           <input
             id="phone"
             type="tel"
             placeholder="01XXXXXXXXX"
-            required
-          >
+            required>
 
 
 
@@ -509,25 +757,31 @@
             Payment Method
           </label>
 
+
           <select
             id="payment"
             required>
+
 
             <option value="">
               Select Payment Method
             </option>
 
+
             <option value="bKash">
               bKash
             </option>
+
 
             <option value="Nagad">
               Nagad
             </option>
 
+
             <option value="Bank Transfer">
               Bank Transfer
             </option>
+
 
           </select>
 
@@ -539,16 +793,18 @@
             id="paymentBox"
             class="payment-box">
 
+
             <strong>
               💳 Payment Instructions
             </strong>
 
+
             <p id="paymentText">
 
-              প্রথমে আপনার নির্বাচিত payment method
-              ব্যবহার করে payment করুন।
+              প্রথমে একটি payment method নির্বাচন করুন।
 
             </p>
+
 
           </div>
 
@@ -567,8 +823,15 @@
             id="transactionId"
             type="text"
             placeholder="Payment করার পর Transaction ID দিন"
-            required
-          >
+            required>
+
+
+          <div class="notice">
+
+            ⚠️ Payment করার পরে সঠিক Transaction ID দিন।
+            ভুল Transaction ID দিলে order verification করা সম্ভব হবে না।
+
+          </div>
 
 
 
@@ -596,7 +859,7 @@
 
 
 
-        <!-- WHATSAPP SUPPORT -->
+        <!-- SUPPORT -->
 
         <a
           href="https://wa.me/8801753630079"
@@ -610,6 +873,7 @@
 
 
       </section>
+
 
     </div>
 
@@ -626,6 +890,8 @@
 </footer>
 
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -644,6 +910,7 @@ const GOOGLE_SCRIPT_URL =
 ===================================================== */
 
 const products = {
+
 
   dm: {
 
@@ -782,6 +1049,38 @@ const products = {
 
     ]
 
+  },
+
+
+  bundle: {
+
+    title:
+      "Digital Career Starter Bundle",
+
+    price:
+      "৳ ৯৯৯",
+
+    description:
+      "Digital Marketing + Canva + Freelancing + Upwork + Fiverr—beginner হিসেবে শুরু করার জন্য গুরুত্বপূর্ণ resources একসাথে।",
+
+    items: [
+
+      "Digital Marketing Beginner Guide",
+
+      "Canva Beginner to Professional Guide",
+
+      "Freelancing Beginner Guide",
+
+      "Upwork Proposal Guide",
+
+      "Fiverr Gig Guide",
+
+      "PDF + PPTX",
+
+      "Personal Access"
+
+    ]
+
   }
 
 };
@@ -799,7 +1098,7 @@ const params =
 
 
 const productKey =
-  params.get("product") || "dm";
+  params.get("product");
 
 
 const product =
@@ -812,37 +1111,69 @@ const product =
 ===================================================== */
 
 const productTitle =
-  document.getElementById("productTitle");
+  document.getElementById(
+    "productTitle"
+  );
+
 
 const productDescription =
-  document.getElementById("productDescription");
+  document.getElementById(
+    "productDescription"
+  );
+
 
 const productPrice =
-  document.getElementById("productPrice");
+  document.getElementById(
+    "productPrice"
+  );
+
 
 const productItems =
-  document.getElementById("productItems");
+  document.getElementById(
+    "productItems"
+  );
+
 
 const errorBox =
-  document.getElementById("error");
+  document.getElementById(
+    "error"
+  );
+
 
 const successBox =
-  document.getElementById("success");
+  document.getElementById(
+    "success"
+  );
+
 
 const orderIdBox =
-  document.getElementById("orderId");
+  document.getElementById(
+    "orderId"
+  );
+
 
 const form =
-  document.getElementById("orderForm");
+  document.getElementById(
+    "orderForm"
+  );
+
 
 const submitButton =
-  document.getElementById("submitButton");
+  document.getElementById(
+    "submitButton"
+  );
+
 
 const payment =
-  document.getElementById("payment");
+  document.getElementById(
+    "payment"
+  );
+
 
 const paymentText =
-  document.getElementById("paymentText");
+  document.getElementById(
+    "paymentText"
+  );
 
 
 
@@ -855,19 +1186,25 @@ if(!product){
   errorBox.style.display =
     "block";
 
+
   errorBox.textContent =
-    "Product পাওয়া যায়নি। Website থেকে আবার product select করুন।";
+    "❌ Product পাওয়া যায়নি। অনুগ্রহ করে Website থেকে আবার product select করুন।";
+
 
   form.style.display =
     "none";
 
+
 }else{
+
 
   productTitle.textContent =
     product.title;
 
+
   productDescription.textContent =
     product.description;
+
 
   productPrice.textContent =
     product.price;
@@ -877,12 +1214,18 @@ if(!product){
     function(item){
 
       const li =
-        document.createElement("li");
+        document.createElement(
+          "li"
+        );
+
 
       li.textContent =
         "✓ " + item;
 
-      productItems.appendChild(li);
+
+      productItems.appendChild(
+        li
+      );
 
     }
   );
@@ -917,7 +1260,13 @@ payment.addEventListener(
 
         "<br>" +
 
-        "Payment করার পরে Transaction ID এখানে দিন।";
+        "Payment amount: <b>" +
+        product.price +
+        "</b>" +
+
+        "<br>" +
+
+        "Payment করার পরে Transaction ID এখানে দিন.";
 
     }
 
@@ -936,7 +1285,13 @@ payment.addEventListener(
 
         "<br>" +
 
-        "Payment করার পরে Transaction ID এখানে দিন।";
+        "Payment amount: <b>" +
+        product.price +
+        "</b>" +
+
+        "<br>" +
+
+        "Payment করার পরে Transaction ID এখানে দিন.";
 
     }
 
@@ -945,11 +1300,27 @@ payment.addEventListener(
 
       paymentText.innerHTML =
 
-        "Bank Transfer-এর জন্য order submit করার পরে " +
+        "Bank Transfer-এর জন্য নিচের account ব্যবহার করুন:" +
 
-        "আপনার সাথে যোগাযোগ করা হবে। অথবা " +
+        '<div class="payment-number">' +
 
-        "WhatsApp Support ব্যবহার করুন।";
+        "Bank: YOUR BANK NAME<br>" +
+
+        "Account Name: SELAUS HEMROM<br>" +
+
+        "Account Number: YOUR ACCOUNT NUMBER" +
+
+        "</div>" +
+
+        "<br>" +
+
+        "Payment amount: <b>" +
+        product.price +
+        "</b>" +
+
+        "<br>" +
+
+        "Payment করার পরে Transaction ID এখানে দিন.";
 
     }
 
@@ -957,10 +1328,7 @@ payment.addEventListener(
     else{
 
       paymentText.textContent =
-
-        "প্রথমে আপনার নির্বাচিত payment method " +
-
-        "ব্যবহার করে payment করুন।";
+        "প্রথমে একটি payment method নির্বাচন করুন।";
 
     }
 
@@ -970,7 +1338,7 @@ payment.addEventListener(
 
 
 /* =====================================================
-   SUBMIT ORDER
+   FORM SUBMISSION
 ===================================================== */
 
 form.addEventListener(
@@ -986,6 +1354,11 @@ form.addEventListener(
 
     }
 
+
+
+    /* =====================
+       GET VALUES
+    ===================== */
 
     const name =
       document
@@ -1022,7 +1395,9 @@ form.addEventListener(
 
 
 
-    /* VALIDATION */
+    /* =====================
+       VALIDATION
+    ===================== */
 
     if(
       !name ||
@@ -1035,8 +1410,10 @@ form.addEventListener(
       errorBox.style.display =
         "block";
 
+
       errorBox.textContent =
-        "❌ অনুগ্রহ করে Name, Gmail, Phone, Payment Method এবং Transaction ID পূরণ করুন।";
+        "❌ Name, Gmail, Phone, Payment Method এবং Transaction ID সব পূরণ করুন।";
+
 
       return;
 
@@ -1044,17 +1421,23 @@ form.addEventListener(
 
 
 
-    /* GMAIL CHECK */
+    /* =====================
+       GMAIL VALIDATION
+    ===================== */
 
     if(
-      !email.toLowerCase().endsWith("@gmail.com")
+      !email
+        .toLowerCase()
+        .endsWith("@gmail.com")
     ){
 
       errorBox.style.display =
         "block";
 
+
       errorBox.textContent =
         "❌ অনুগ্রহ করে একটি valid Gmail address দিন।";
+
 
       return;
 
@@ -1062,10 +1445,13 @@ form.addEventListener(
 
 
 
-    /* START SUBMIT */
+    /* =====================
+       CLEAR ERROR
+    ===================== */
 
     errorBox.style.display =
       "none";
+
 
     successBox.style.display =
       "none";
@@ -1074,12 +1460,15 @@ form.addEventListener(
     submitButton.disabled =
       true;
 
+
     submitButton.textContent =
       "Submitting Order...";
 
 
 
-    /* ORDER DATA */
+    /* =====================
+       ORDER DATA
+    ===================== */
 
     const orderData = {
 
@@ -1108,34 +1497,59 @@ form.addEventListener(
 
 
 
+    /* =====================
+       SEND TO GOOGLE SCRIPT
+    ===================== */
+
     try{
 
-
-      /* SEND TO GOOGLE SHEETS */
 
       const response =
         await fetch(
           GOOGLE_SCRIPT_URL,
           {
 
-            method:"POST",
+            method:
+              "POST",
 
             body:
-              JSON.stringify(orderData)
+              JSON.stringify(
+                orderData
+              )
 
           }
         );
 
 
-      const result =
-        await response.json();
+      const responseText =
+        await response.text();
 
 
+      let result;
+
+
+      try{
+
+        result =
+          JSON.parse(
+            responseText
+          );
+
+      }catch(parseError){
+
+        throw new Error(
+          "Google Apps Script response পাওয়া যায়নি।"
+        );
+
+      }
+
+
+
+      /* =====================
+         SUCCESS
+      ===================== */
 
       if(result.success){
-
-
-        /* SUCCESS */
 
         form.style.display =
           "none";
@@ -1150,13 +1564,11 @@ form.addEventListener(
           result.orderId;
 
 
-
       }else{
-
 
         throw new Error(
           result.error ||
-          "Order submission failed"
+          "Order submission failed."
         );
 
       }
@@ -1165,7 +1577,10 @@ form.addEventListener(
     }catch(error){
 
 
-      console.error(error);
+      console.error(
+        "Order Error:",
+        error
+      );
 
 
       errorBox.style.display =
@@ -1173,7 +1588,7 @@ form.addEventListener(
 
 
       errorBox.textContent =
-        "❌ Order submit হয়নি। Google Sheet connection অথবা Apps Script deployment check করুন।";
+        "❌ Order submit হয়নি। Google Apps Script deployment এবং Web App access check করুন।";
 
 
       submitButton.disabled =
