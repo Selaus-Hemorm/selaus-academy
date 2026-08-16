@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Payment | Selaus Academy</title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:
+        Inter,
+        "Noto Sans Bengali",
+        "Noto Sans",
+        Arial,
+        sans-serif;
+
+      background:#f8fafc;
+      color:#172033;
+      line-height:1.6;
+    }
+
+    .wrap{
+      width:min(900px,92%);
+      margin:auto;
+    }
+
+    header{
+      padding:22px 0;
+      background:#fff;
+      border-bottom:1px solid #e4e7ec;
+    }
+
+    .logo{
+      font-size:21px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .logo span{
+      color:#667085;
+      font-weight:500;
+    }
+
+    main{
+      padding:60px 0;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid #e4e7ec;
+      border-radius:24px;
+      padding:35px;
+      box-shadow:0 15px 50px rgba(16,24,40,.06);
+      margin-bottom:20px;
+    }
+
+    .eyebrow{
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      color:#98a2b3;
+      margin-bottom:8px;
+    }
+
+    h1{
+      font-size:34px;
+      line-height:1.2;
+      color:#101828;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#667085;
+      font-size:14px;
+      margin-bottom:28px;
+    }
+
+    .product{
+      padding:22px;
+      border-radius:16px;
+      background:#f8fafc;
+      border:1px solid #e4e7ec;
+      margin-bottom:25px;
+    }
+
+    .product h2{
+      font-size:21px;
+      margin-bottom:7px;
+    }
+
+    .product p{
+      color:#667085;
+      font-size:13px;
+    }
+
+    .price{
+      margin-top:12px;
+      font-size:28px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .payment-title{
+      font-size:20px;
+      font-weight:900;
+      margin-bottom:15px;
+    }
+
+    .method{
+      border:1px solid #d0d5dd;
+      border-radius:14px;
+      padding:18px;
+      margin-bottom:12px;
+      cursor:pointer;
+      transition:.2s;
+    }
+
+    .method:hover{
+      border-color:#111827;
+      background:#f8fafc;
+    }
+
+    .method input{
+      margin-right:10px;
+    }
+
+    .method strong{
+      font-size:15px;
+    }
+
+    .instructions{
+      margin-top:25px;
+      padding:22px;
+      background:#111827;
+      color:#fff;
+      border-radius:17px;
+    }
+
+    .instructions h3{
+      margin-bottom:12px;
+      font-size:18px;
+    }
+
+    .instructions p{
+      color:#d0d5dd;
+      font-size:13px;
+      margin:6px 0;
+    }
+
+    .number{
+      display:inline-block;
+      margin-top:8px;
+      padding:9px 13px;
+      background:#fff;
+      color:#111827;
+      border-radius:9px;
+      font-weight:900;
+    }
+
+    label{
+      display:block;
+      margin-top:20px;
+      margin-bottom:7px;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    input,
+    textarea,
+    select{
+      width:100%;
+      padding:13px 14px;
+      border:1px solid #d0d5dd;
+      border-radius:10px;
+      font:inherit;
+      outline:none;
+      background:#fff;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus{
+      border-color:#111827;
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    .btn{
+      width:100%;
+      min-height:50px;
+      margin-top:25px;
+      border:0;
+      border-radius:11px;
+      background:#111827;
+      color:#fff;
+      font-weight:900;
+      cursor:pointer;
+      font-size:14px;
+    }
+
+    .btn:hover{
+      background:#273043;
+    }
+
+    .note{
+      margin-top:15px;
+      text-align:center;
+      color:#667085;
+      font-size:11px;
+    }
+
+    .success{
+      display:none;
+      text-align:center;
+      padding:35px 15px;
+    }
+
+    .success-icon{
+      width:65px;
+      height:65px;
+      margin:0 auto 18px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#111827;
+      color:#fff;
+      font-size:27px;
+    }
+
+    .success h2{
+      margin-bottom:10px;
+    }
+
+    .success p{
+      color:#667085;
+      font-size:14px;
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:20px;
+      color:#111827;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    @media(max-width:600px){
+
+      main{
+        padding:35px 0;
+      }
+
+      .card{
+        padding:23px;
+        border-radius:18px;
+      }
+
+      h1{
+        font-size:28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="wrap">
+
+    <div class="logo">
+      SELAUS <span>ACADEMY</span>
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="wrap">
+
+    <div class="card" id="paymentCard">
+
+      <div class="eyebrow">
+        SECURE ORDER
+      </div>
+
+      <h1>
+        Complete Your Payment
+      </h1>
+
+      <p class="subtitle">
+        নিচের instructions অনুসরণ করে payment সম্পন্ন করুন।
+      </p>
+
+
+      <div class="product">
+
+        <div class="eyebrow">
+          YOUR PRODUCT
+        </div>
+
+        <h2 id="productTitle">
+          Product
+        </h2>
+
+        <p id="productDescription">
+          Product description
+        </p>
+
+        <div class="price" id="productPrice">
+          ৳ ০
+        </div>
+
+      </div>
+
+
+      <div class="payment-title">
+        💳 Payment Method
+      </div>
+
+
+      <label class="method">
+
+        <input
+          type="radio"
+          name="payment"
+          value="bKash"
+          checked
+        >
+
+        <strong>
+          bKash
+        </strong>
+
+      </label>
+
+
+      <label class="method">
+
+        <input
+          type="radio"
+          name="payment"
+          value="Nagad"
+        >
+
+        <strong>
+          Nagad
+        </strong>
+
+      </label>
+
+
+      <label class="method">
+
+        <input
+          type="radio"
+          name="payment"
+          value="Bank Transfer"
+        >
+
+        <strong>
+          Bank Transfer
+        </strong>
+
+      </label>
+
+
+      <div class="instructions">
+
+        <h3>
+          💳 Payment Instructions
+        </h3>
+
+        <p>
+          1. আপনার নির্বাচিত payment method ব্যবহার করে payment করুন।
+        </p>
+
+        <p>
+          2. Payment করার পরে Transaction ID সংগ্রহ করুন।
+        </p>
+
+        <p>
+          3. নিচের form-এ আপনার payment information submit করুন।
+        </p>
+
+        <p>
+          4. Payment verification-এর পরে আপনার Gmail address-এ purchased file access দেওয়া হবে।
+        </p>
+
+        <br>
+
+        <p>
+          bKash Personal:
+        </p>
+
+        <div class="number">
+          01753630079
+        </div>
+
+      </div>
+
+
+      <label>
+        Full Name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="আপনার নাম"
+        required
+      >
+
+
+      <label>
+        Gmail Address
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="example@gmail.com"
+        required
+      >
+
+
+      <label>
+        WhatsApp / Mobile Number
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="017xxxxxxxx"
+        required
+      >
+
+
+      <label>
+        Payment Method
+      </label>
+
+      <select id="paymentMethod">
+
+        <option value="bKash">
+          bKash
+        </option>
+
+        <option value="Nagad">
+          Nagad
+        </option>
+
+        <option value="Bank Transfer">
+          Bank Transfer
+        </option>
+
+      </select>
+
+
+      <label>
+        Transaction ID
+      </label>
+
+      <input
+        type="text"
+        id="transaction"
+        placeholder="যেমন: 8A7B6C5D"
+        required
+      >
+
+
+      <label>
+        Payment Note
+      </label>
+
+      <textarea
+        id="note"
+        placeholder="Payment সম্পর্কে অতিরিক্ত তথ্য থাকলে লিখুন"
+      ></textarea>
+
+
+      <button
+        class="btn"
+        onclick="submitPayment()"
+      >
+        ✅ Submit Payment Confirmation
+      </button>
+
+
+      <div class="note">
+        Payment verification সাধারণত manualভাবে করা হবে।
+      </div>
+
+    </div>
+
+
+    <div class="card success" id="successCard">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h2>
+        Payment Information Submitted
+      </h2>
+
+      <p>
+        ধন্যবাদ! আপনার payment information আমরা পেয়েছি।
+      </p>
+
+      <p>
+        Payment verify হওয়ার পরে আপনার দেওয়া Gmail address-এ purchased product-এর access দেওয়া হবে।
+      </p>
+
+      <a
+        href="https://selausacademy.com/"
+        class="back"
+      >
+        ← Back to Selaus Academy
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<script>
+
+  /* ==========================================
+     PRODUCT DATA
+  ========================================== */
+
+  const products = {
+
+    dm:{
+      title:"Digital Marketing Beginner Guide",
+      price:"৳ ১৯৯",
+      description:
+      "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।"
+    },
+
+    canva:{
+      title:"Canva Beginner to Professional Guide",
+      price:"৳ ২৯৯",
+      description:
+      "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।"
+    },
+
+    freelancing:{
+      title:"Freelancing Beginner Guide",
+      price:"৳ ২৯৯",
+      description:
+      "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।"
+    },
+
+    upwork:{
+      title:"Upwork Proposal Guide",
+      price:"৳ ৩৯৯",
+      description:
+      "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।"
+    },
+
+    fiverr:{
+      title:"Fiverr Gig Guide",
+      price:"৳ ৩৯৯",
+      description:
+      "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।"
+    }
+
+  };
+
+
+  /* ==========================================
+     GET PRODUCT FROM URL
+  ========================================== */
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  const productKey =
+    params.get("product") || "dm";
+
+  const product =
+    products[productKey];
+
+
+  if(product){
+
+    document.getElementById("productTitle").textContent =
+      product.title;
+
+    document.getElementById("productPrice").textContent =
+      product.price;
+
+    document.getElementById("productDescription").textContent =
+      product.description;
+
+  }
+
+
+  /* ==========================================
+     PAYMENT METHOD SYNC
+  ========================================== */
+
+  document.querySelectorAll(
+    'input[name="payment"]'
+  ).forEach(function(radio){
+
+    radio.addEventListener(
+      "change",
+      function(){
+
+        document.getElementById(
+          "paymentMethod"
+        ).value = this.value;
+
+      }
+    );
+
+  });
+
+
+  /* ==========================================
+     SUBMIT PAYMENT
+  ========================================== */
+
+  function submitPayment(){
+
+    const name =
+      document.getElementById("name").value.trim();
+
+    const email =
+      document.getElementById("email").value.trim();
+
+    const phone =
+      document.getElementById("phone").value.trim();
+
+    const method =
+      document.getElementById("paymentMethod").value;
+
+    const transaction =
+      document.getElementById("transaction").value.trim();
+
+
+    if(!name || !email || !phone || !transaction){
+
+      alert(
+        "দয়া করে সব প্রয়োজনীয় তথ্য পূরণ করুন।"
+      );
+
+      return;
+
+    }
+
+
+    if(!email.toLowerCase().endsWith("@gmail.com")){
+
+      alert(
+        "দয়া করে একটি valid Gmail address দিন।"
+      );
+
+      return;
+
+    }
+
+
+    /*
+
+      IMPORTANT:
+
+      এই version শুধু confirmation UI দেখাচ্ছে।
+
+      পরে এখানে Google Apps Script /
+      Form backend / Email automation
+      connect করা হবে।
+
+    */
+
+
+    const orderData = {
+
+      product:
+        product
+        ? product.title
+        : productKey,
+
+      price:
+        product
+        ? product.price
+        : "",
+
+      name:name,
+
+      email:email,
+
+      phone:phone,
+
+      paymentMethod:method,
+
+      transactionId:transaction,
+
+      note:
+        document.getElementById("note").value,
+
+      date:
+        new Date().toISOString()
+
+    };
+
+
+    console.log(
+      "ORDER DATA:",
+      orderData
+    );
+
+
+    document.getElementById(
+      "paymentCard"
+    ).style.display = "none";
+
+
+    document.getElementById(
+      "successCard"
+    ).style.display = "block";
+
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  }
+
+</script>
+
+</body>
+</html>
