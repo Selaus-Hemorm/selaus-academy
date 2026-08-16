@@ -1,1 +1,792 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Order | Selaus Academy</title>
+
+  <meta
+    name="description"
+    content="Order digital learning products from Selaus Academy."
+  >
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:
+        Inter,
+        "Noto Sans Bengali",
+        "Noto Sans",
+        Arial,
+        sans-serif;
+
+      background:#f8fafc;
+      color:#172033;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .wrap{
+      width:min(900px,92%);
+      margin:auto;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid #e4e7ec;
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:21px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .back{
+      font-size:13px;
+      font-weight:700;
+      color:#667085;
+    }
+
+    main{
+      padding:60px 0;
+    }
+
+    .order-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      align-items:start;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid #e4e7ec;
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 12px 40px rgba(16,24,40,.06);
+    }
+
+    .label{
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      color:#98a2b3;
+      margin-bottom:8px;
+    }
+
+    h1{
+      font-size:34px;
+      line-height:1.2;
+      margin-bottom:15px;
+      color:#101828;
+    }
+
+    h2{
+      font-size:22px;
+      margin-bottom:10px;
+    }
+
+    .description{
+      color:#667085;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    .product-list{
+      list-style:none;
+      margin:20px 0;
+    }
+
+    .product-list li{
+      padding:8px 0;
+      border-bottom:1px solid #f2f4f7;
+      font-size:13px;
+      color:#475467;
+    }
+
+    .price{
+      margin-top:20px;
+      font-size:32px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .price small{
+      display:block;
+      font-size:10px;
+      font-weight:600;
+      color:#98a2b3;
+    }
+
+    label{
+      display:block;
+      margin-top:15px;
+      margin-bottom:6px;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    input,
+    select{
+      width:100%;
+      min-height:48px;
+      padding:0 14px;
+
+      border:1px solid #d0d5dd;
+      border-radius:10px;
+
+      background:#fff;
+      color:#172033;
+      font:inherit;
+      font-size:14px;
+    }
+
+    input:focus,
+    select:focus{
+      outline:2px solid #98a2b3;
+      outline-offset:2px;
+    }
+
+    .payment-box{
+      margin-top:20px;
+      padding:18px;
+      border-radius:14px;
+      background:#f8fafc;
+      border:1px solid #e4e7ec;
+    }
+
+    .payment-box strong{
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .payment-box p{
+      font-size:12px;
+      color:#667085;
+    }
+
+    .btn{
+      width:100%;
+      min-height:50px;
+      margin-top:20px;
+
+      border:0;
+      border-radius:11px;
+
+      background:#111827;
+      color:#fff;
+
+      font-size:14px;
+      font-weight:800;
+
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      background:#273043;
+    }
+
+    .secure{
+      margin-top:15px;
+      text-align:center;
+      font-size:11px;
+      color:#98a2b3;
+    }
+
+    .error{
+      display:none;
+      padding:15px;
+      margin-bottom:20px;
+
+      border-radius:10px;
+      background:#fef3f2;
+      color:#b42318;
+
+      font-size:13px;
+      font-weight:700;
+    }
+
+    footer{
+      padding:35px 0;
+      text-align:center;
+      color:#98a2b3;
+      font-size:11px;
+    }
+
+    @media(max-width:700px){
+
+      main{
+        padding:35px 0;
+      }
+
+      .order-grid{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:29px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="wrap nav">
+
+    <a href="index.html" class="logo">
+      SELAUS ACADEMY
+    </a>
+
+    <a href="index.html" class="back">
+      ← Back to Website
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="wrap">
+
+    <div class="order-grid">
+
+
+      <!-- PRODUCT -->
+
+      <section class="card">
+
+        <div class="label">
+          YOUR PRODUCT
+        </div>
+
+        <h1 id="productTitle">
+          Loading...
+        </h1>
+
+        <p
+          class="description"
+          id="productDescription">
+        </p>
+
+        <ul
+          class="product-list"
+          id="productItems">
+        </ul>
+
+        <div class="price">
+
+          <small>
+            PRODUCT PRICE
+          </small>
+
+          <span id="productPrice">
+            —
+          </span>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ORDER FORM -->
+
+      <section class="card">
+
+        <div class="label">
+          ORDER INFORMATION
+        </div>
+
+        <h2>
+          Complete Your Order
+        </h2>
+
+        <p class="description">
+          আপনার তথ্য দিন। Payment confirmation-এর পরে
+          আপনার purchased file Gmail-এ access দেওয়া হবে।
+        </p>
+
+
+        <div
+          id="error"
+          class="error">
+        </div>
+
+
+        <form
+          id="orderForm">
+
+
+          <label for="name">
+            Full Name
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            placeholder="আপনার নাম"
+            required
+          >
+
+
+          <label for="email">
+            Gmail Address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="example@gmail.com"
+            required
+          >
+
+
+          <label for="phone">
+            WhatsApp / Mobile Number
+          </label>
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="01XXXXXXXXX"
+            required
+          >
+
+
+          <label for="payment">
+            Payment Method
+          </label>
+
+          <select
+            id="payment"
+            required>
+
+            <option value="">
+              Select Payment Method
+            </option>
+
+            <option value="bkash">
+              bKash
+            </option>
+
+            <option value="nagad">
+              Nagad
+            </option>
+
+            <option value="bank">
+              Bank Transfer
+            </option>
+
+          </select>
+
+
+          <div class="payment-box">
+
+            <strong>
+              💳 Payment Instructions
+            </strong>
+
+            <p>
+              Order submit করার পরে আপনাকে payment
+              instructions দেওয়া হবে।
+            </p>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn">
+
+            Continue to Payment →
+
+          </button>
+
+
+          <div class="secure">
+            🔐 Your information is used only for order processing.
+          </div>
+
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  © 2026 Selaus Academy · Learn • Practice • Build • Grow
+
+</footer>
+
+
+
+<script>
+
+const products = {
+
+  dm: {
+
+    title:
+      "Digital Marketing Beginner Guide",
+
+    price:
+      "৳ ১৯৯",
+
+    description:
+      "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
+
+    items: [
+
+      "Digital Marketing Fundamentals",
+
+      "Social Media Marketing",
+
+      "Content Marketing",
+
+      "Beginner Roadmap",
+
+      "Digital Career Direction"
+
+    ]
+
+  },
+
+
+  canva: {
+
+    title:
+      "Canva Beginner to Professional Guide",
+
+    price:
+      "৳ ২৯৯",
+
+    description:
+      "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
+
+    items: [
+
+      "Canva Fundamentals",
+
+      "Design Basics",
+
+      "Social Media Design",
+
+      "Marketing Materials",
+
+      "Professional Workflow"
+
+    ]
+
+  },
+
+
+  freelancing: {
+
+    title:
+      "Freelancing Beginner Guide",
+
+    price:
+      "৳ ২৯৯",
+
+    description:
+      "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
+
+    items: [
+
+      "Freelancing Fundamentals",
+
+      "Online Opportunities",
+
+      "Portfolio Preparation",
+
+      "Client Communication",
+
+      "Beginner Roadmap"
+
+    ]
+
+  },
+
+
+  upwork: {
+
+    title:
+      "Upwork Proposal Guide",
+
+    price:
+      "৳ ৩৯৯",
+
+    description:
+      "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
+
+    items: [
+
+      "Job Analysis",
+
+      "Proposal Structure",
+
+      "Client Communication",
+
+      "Proposal Examples",
+
+      "Winning Proposal Strategy"
+
+    ]
+
+  },
+
+
+  fiverr: {
+
+    title:
+      "Fiverr Gig Guide",
+
+    price:
+      "৳ ৩৯৯",
+
+    description:
+      "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
+
+    items: [
+
+      "Fiverr Profile Setup",
+
+      "Gig Creation",
+
+      "Gig Optimization",
+
+      "Client Communication",
+
+      "Fiverr Beginner Strategy"
+
+    ]
+
+  }
+
+};
+
+
+
+/* GET PRODUCT FROM URL */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+
+const productKey =
+  params.get("product");
+
+
+const product =
+  products[productKey];
+
+
+
+/* INVALID PRODUCT */
+
+if(!product){
+
+  document.getElementById(
+    "error"
+  ).style.display = "block";
+
+  document.getElementById(
+    "error"
+  ).textContent =
+    "Product পাওয়া যায়নি। Please go back and select a product.";
+
+}
+
+
+
+/* DISPLAY PRODUCT */
+
+if(product){
+
+  document.getElementById(
+    "productTitle"
+  ).textContent =
+    product.title;
+
+
+  document.getElementById(
+    "productDescription"
+  ).textContent =
+    product.description;
+
+
+  document.getElementById(
+    "productPrice"
+  ).textContent =
+    product.price;
+
+
+  const list =
+    document.getElementById(
+      "productItems"
+    );
+
+
+  product.items.forEach(
+    function(item){
+
+      const li =
+        document.createElement("li");
+
+      li.textContent =
+        "✓ " + item;
+
+      list.appendChild(li);
+
+    }
+  );
+
+}
+
+
+
+/* FORM */
+
+const form =
+  document.getElementById(
+    "orderForm"
+  );
+
+
+form.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+
+    if(!product){
+
+      return;
+
+    }
+
+
+    const name =
+      document.getElementById(
+        "name"
+      ).value.trim();
+
+
+    const email =
+      document.getElementById(
+        "email"
+      ).value.trim();
+
+
+    const phone =
+      document.getElementById(
+        "phone"
+      ).value.trim();
+
+
+    const payment =
+      document.getElementById(
+        "payment"
+      ).value;
+
+
+    const error =
+      document.getElementById(
+        "error"
+      );
+
+
+    if(!name ||
+       !email ||
+       !phone ||
+       !payment){
+
+      error.style.display =
+        "block";
+
+      error.textContent =
+        "অনুগ্রহ করে সব তথ্য পূরণ করুন।";
+
+      return;
+
+    }
+
+
+    /*
+      TEMPORARY ORDER FLOW
+
+      এখন আমরা WhatsApp-এ order details পাঠাব।
+
+      পরে এখানে bKash/Nagad payment gateway
+      + automated Gmail delivery system যুক্ত করা যাবে।
+    */
+
+
+    const message =
+      `New Selaus Academy Order%0A%0A` +
+
+      `Product: ${product.title}%0A` +
+
+      `Price: ${product.price}%0A` +
+
+      `Name: ${name}%0A` +
+
+      `Gmail: ${email}%0A` +
+
+      `Phone: ${phone}%0A` +
+
+      `Payment Method: ${payment}`;
+
+
+    const whatsapp =
+      "https://wa.me/8801753630079?text="
+      + message;
+
+
+    window.location.href =
+      whatsapp;
+
+  }
+
+);
+
+</script>
+
+</body>
+</html>
