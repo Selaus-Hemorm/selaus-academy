@@ -446,11 +446,20 @@ if(paymentButton){
 
             <a
   id="continuePayment"
-  class="btn dark full"
   href="#"
->
+  class="btn dark full">
   Continue to Payment →
 </a>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const product =
+  params.get("product") || "dm";
+
+document.getElementById("continuePayment").href =
+  "payment.html?product=" + encodeURIComponent(product);
+</script>
 
           </button>
 
