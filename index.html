@@ -1,46 +1,79 @@
 <!doctype html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-<meta name="description" content="Selaus Academy - Digital Skills, Freelancing, Career Development and Digital Products for Bangla-speaking learners.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Selaus Academy | Learn Skills. Build Your Future.</title>
+  <meta name="description"
+    content="Selaus Academy — Digital Skills, Freelancing, Career Development and Practical Digital Products for Bangla-speaking learners.">
 
-<link rel="icon" href="favicon.svg">
-<link rel="stylesheet" href="style.css">
+  <meta name="keywords"
+    content="Selaus Academy, Digital Marketing Bangladesh, Freelancing Course, Canva Guide, Upwork Guide, Fiverr Guide, Career Development">
+
+  <meta name="author" content="Selaus Hemrom">
+
+  <meta name="theme-color" content="#111827">
+
+  <meta property="og:title"
+    content="Selaus Academy | Learn Skills. Build Your Future.">
+
+  <meta property="og:description"
+    content="Learn Digital Skills, build your portfolio and take your next career step.">
+
+  <meta property="og:type" content="website">
+
+  <title>Selaus Academy | Learn Skills. Build Your Future.</title>
+
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header class="site-header">
+
   <div class="wrap nav">
 
-    <a class="logo" href="#home">
+    <a class="logo" href="#home" aria-label="Selaus Academy Home">
       <b>S</b>
       <span>Selaus <em>Academy</em></span>
     </a>
 
-    <button id="menu" aria-label="Open Menu">☰</button>
+    <button
+      id="menu"
+      class="menu-btn"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      type="button">
+      ☰
+    </button>
 
-    <nav id="nav">
+    <nav id="nav" aria-label="Main navigation">
+
       <a href="#home">হোম</a>
       <a href="#courses">কোর্স</a>
       <a href="#products">ডিজিটাল প্রোডাক্ট</a>
       <a href="#free">ফ্রি রিসোর্স</a>
       <a href="#about">আমাদের সম্পর্কে</a>
       <a href="#faq">FAQ</a>
-      <a class="cta" href="#enroll">শুরু করুন</a>
+
+      <a class="cta" href="#enroll">
+        শুরু করুন
+      </a>
+
     </nav>
 
   </div>
+
 </header>
 
 
 <!-- ================= HERO ================= -->
+
+<main>
 
 <section id="home" class="hero">
 
@@ -53,7 +86,7 @@
       </div>
 
       <h1>
-        Digital Skills শিখুন।<br>
+        Digital Skills শিখুন।
         <span>নিজের ভবিষ্যৎ গড়ুন।</span>
       </h1>
 
@@ -69,7 +102,7 @@
           class="btn dark"
           href="https://forms.gle/NHpn2oK4LzLdowEv6"
           target="_blank"
-        >
+          rel="noopener noreferrer">
           🎓 Free Orientation
         </a>
 
@@ -81,8 +114,8 @@
 
       <div class="trust">
         ✓ Beginner Friendly
-        &nbsp; ✓ Practical Learning
-        &nbsp; ✓ Career Focused
+        <span>✓ Practical Learning</span>
+        <span>✓ Career Focused</span>
       </div>
 
     </div>
@@ -132,7 +165,7 @@
 
 <!-- ================= STATS ================= -->
 
-<section class="stats">
+<section class="stats" aria-label="Selaus Academy statistics">
 
   <div class="wrap statsgrid">
 
@@ -190,7 +223,6 @@
 
 
     <div class="cards">
-
 
       <article>
 
@@ -343,7 +375,6 @@
         </p>
       </div>
 
-
       <div>
         <b>02</b>
         <h3>Learn from Home</h3>
@@ -352,7 +383,6 @@
         </p>
       </div>
 
-
       <div>
         <b>03</b>
         <h3>Portfolio Focused</h3>
@@ -360,7 +390,6 @@
           শেখার পাশাপাশি practical work এবং portfolio তৈরি করার সুযোগ।
         </p>
       </div>
-
 
       <div>
         <b>04</b>
@@ -378,9 +407,7 @@
 </section>
 
 
-<!-- =====================================================
-     DIGITAL PRODUCTS
-===================================================== -->
+<!-- ================= DIGITAL PRODUCTS ================= -->
 
 <section id="products" class="section products-section">
 
@@ -407,8 +434,6 @@
 
     </div>
 
-
-    <!-- PRODUCT NOTICE -->
 
     <div class="product-notice">
 
@@ -437,7 +462,7 @@
 
       <!-- PRODUCT 1 -->
 
-      <article class="product-card">
+      <article class="product-card featured-product">
 
         <div class="product-top">
 
@@ -461,12 +486,10 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Digital Marketing Fundamentals</span>
           <span>✓ Social Media Marketing</span>
           <span>✓ Content Marketing</span>
           <span>✓ Beginner Roadmap</span>
-
         </div>
 
         <div class="price">
@@ -476,15 +499,15 @@
         <div class="file-info">
           <span>📄 PDF</span>
           <span>📊 PPTX</span>
-          <span>🔐 After Purchase</span>
+          <span>🔐 Personal Access</span>
         </div>
 
         <div class="product-actions">
 
           <button
             class="preview-btn"
-            onclick="openPreview('dm')"
-          >
+            type="button"
+            onclick="openPreview('dm')">
             👁️ Preview
           </button>
 
@@ -492,7 +515,7 @@
             class="buy-btn"
             href="https://wa.me/8801753630079?text=আমি%20Digital%20Marketing%20Beginner%20Guide%20কিনতে%20চাই।"
             target="_blank"
-          >
+            rel="noopener noreferrer">
             💬 কিনতে চাই
           </a>
 
@@ -523,12 +546,10 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Canva Fundamentals</span>
           <span>✓ Professional Design Basics</span>
           <span>✓ Social Media Design</span>
           <span>✓ Marketing Materials</span>
-
         </div>
 
         <div class="price">
@@ -538,15 +559,15 @@
         <div class="file-info">
           <span>📄 PDF</span>
           <span>📊 PPTX</span>
-          <span>🔐 After Purchase</span>
+          <span>🔐 Personal Access</span>
         </div>
 
         <div class="product-actions">
 
           <button
             class="preview-btn"
-            onclick="openPreview('canva')"
-          >
+            type="button"
+            onclick="openPreview('canva')">
             👁️ Preview
           </button>
 
@@ -554,7 +575,7 @@
             class="buy-btn"
             href="https://wa.me/8801753630079?text=আমি%20Canva%20Beginner%20to%20Professional%20Guide%20কিনতে%20চাই।"
             target="_blank"
-          >
+            rel="noopener noreferrer">
             💬 কিনতে চাই
           </a>
 
@@ -585,12 +606,10 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Freelancing Fundamentals</span>
           <span>✓ Online Opportunities</span>
           <span>✓ Portfolio Preparation</span>
           <span>✓ Client Communication</span>
-
         </div>
 
         <div class="price">
@@ -600,15 +619,15 @@
         <div class="file-info">
           <span>📄 PDF</span>
           <span>📊 PPTX</span>
-          <span>🔐 After Purchase</span>
+          <span>🔐 Personal Access</span>
         </div>
 
         <div class="product-actions">
 
           <button
             class="preview-btn"
-            onclick="openPreview('freelancing')"
-          >
+            type="button"
+            onclick="openPreview('freelancing')">
             👁️ Preview
           </button>
 
@@ -616,7 +635,7 @@
             class="buy-btn"
             href="https://wa.me/8801753630079?text=আমি%20Freelancing%20Beginner%20Guide%20কিনতে%20চাই।"
             target="_blank"
-          >
+            rel="noopener noreferrer">
             💬 কিনতে চাই
           </a>
 
@@ -647,12 +666,10 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Job Analysis</span>
           <span>✓ Proposal Structure</span>
           <span>✓ Client Communication</span>
           <span>✓ Proposal Examples</span>
-
         </div>
 
         <div class="price">
@@ -662,15 +679,15 @@
         <div class="file-info">
           <span>📄 PDF</span>
           <span>📊 PPTX</span>
-          <span>🔐 After Purchase</span>
+          <span>🔐 Personal Access</span>
         </div>
 
         <div class="product-actions">
 
           <button
             class="preview-btn"
-            onclick="openPreview('upwork')"
-          >
+            type="button"
+            onclick="openPreview('upwork')">
             👁️ Preview
           </button>
 
@@ -678,7 +695,7 @@
             class="buy-btn"
             href="https://wa.me/8801753630079?text=আমি%20Upwork%20Proposal%20Guide%20কিনতে%20চাই।"
             target="_blank"
-          >
+            rel="noopener noreferrer">
             💬 কিনতে চাই
           </a>
 
@@ -709,12 +726,10 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Fiverr Profile Setup</span>
           <span>✓ Gig Creation</span>
           <span>✓ Gig Optimization</span>
           <span>✓ Client Communication</span>
-
         </div>
 
         <div class="price">
@@ -724,15 +739,15 @@
         <div class="file-info">
           <span>📄 PDF</span>
           <span>📊 PPTX</span>
-          <span>🔐 After Purchase</span>
+          <span>🔐 Personal Access</span>
         </div>
 
         <div class="product-actions">
 
           <button
             class="preview-btn"
-            onclick="openPreview('fiverr')"
-          >
+            type="button"
+            onclick="openPreview('fiverr')">
             👁️ Preview
           </button>
 
@@ -740,7 +755,7 @@
             class="buy-btn"
             href="https://wa.me/8801753630079?text=আমি%20Fiverr%20Gig%20Guide%20কিনতে%20চাই।"
             target="_blank"
-          >
+            rel="noopener noreferrer">
             💬 কিনতে চাই
           </a>
 
@@ -775,13 +790,11 @@
         </p>
 
         <div class="product-list">
-
           <span>✓ Client Tracker</span>
           <span>✓ Lead Tracker</span>
           <span>✓ Income Tracker</span>
           <span>✓ Job Application Tracker</span>
           <span>✓ Social Media Calendar</span>
-
         </div>
 
         <div class="price">
@@ -793,7 +806,7 @@
           <span>📋 Templates</span>
         </div>
 
-        <button class="disabled-btn">
+        <button class="disabled-btn" type="button" disabled>
           Coming Soon
         </button>
 
@@ -802,7 +815,7 @@
     </div>
 
 
-    <!-- BUNDLE -->
+    <!-- ================= BUNDLE ================= -->
 
     <div class="bundle">
 
@@ -823,10 +836,8 @@
 
         <div class="bundle-items">
           ✓ 5 Practical Guides
-          &nbsp;&nbsp;
-          ✓ PDF + PPTX
-          &nbsp;&nbsp;
-          ✓ Personal Access
+          <span>✓ PDF + PPTX</span>
+          <span>✓ Personal Access</span>
         </div>
 
       </div>
@@ -842,8 +853,8 @@
         <a
           href="https://wa.me/8801753630079?text=আমি%20Digital%20Career%20Starter%20Bundle%20কিনতে%20চাই।"
           target="_blank"
-          class="bundle-btn"
-        >
+          rel="noopener noreferrer"
+          class="bundle-btn">
           💬 Bundle কিনতে চাই
         </a>
 
@@ -894,7 +905,7 @@
           Beginner হিসেবে Digital Marketing শুরু করার basic checklist।
         </p>
 
-        <button class="disabled-btn">
+        <button class="disabled-btn" type="button" disabled>
           Coming Soon
         </button>
 
@@ -913,7 +924,7 @@
           Freelancing শুরু করার আগে কী কী প্রস্তুতি নেবেন।
         </p>
 
-        <button class="disabled-btn">
+        <button class="disabled-btn" type="button" disabled>
           Coming Soon
         </button>
 
@@ -932,7 +943,7 @@
           আপনার social media content planning সহজ করার resource।
         </p>
 
-        <button class="disabled-btn">
+        <button class="disabled-btn" type="button" disabled>
           Coming Soon
         </button>
 
@@ -977,33 +988,25 @@
       <div>
         <b>01</b>
         <h3>Learn</h3>
-        <p>
-          Fundamentals বুঝুন।
-        </p>
+        <p>Fundamentals বুঝুন।</p>
       </div>
 
       <div>
         <b>02</b>
         <h3>Practice</h3>
-        <p>
-          Guided tasks সম্পন্ন করুন।
-        </p>
+        <p>Guided tasks সম্পন্ন করুন।</p>
       </div>
 
       <div>
         <b>03</b>
         <h3>Build</h3>
-        <p>
-          Portfolio তৈরি করুন।
-        </p>
+        <p>Portfolio তৈরি করুন।</p>
       </div>
 
       <div>
         <b>04</b>
         <h3>Grow</h3>
-        <p>
-          Opportunity-এর জন্য apply করুন।
-        </p>
+        <p>Opportunity-এর জন্য apply করুন।</p>
       </div>
 
     </div>
@@ -1048,9 +1051,9 @@
 
       <div class="ticks">
         ✓ Practical Training
-        &nbsp; ✓ Career Guidance
-        &nbsp; ✓ Digital Skills
-        &nbsp; ✓ Employability Focus
+        <span>✓ Career Guidance</span>
+        <span>✓ Digital Skills</span>
+        <span>✓ Employability Focus</span>
       </div>
 
     </div>
@@ -1084,7 +1087,7 @@
       <a
         href="https://www.linkedin.com/in/selaus-hemrom/"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         View LinkedIn Profile ↗
       </a>
 
@@ -1122,7 +1125,7 @@
       class="btn white"
       href="https://forms.gle/NHpn2oK4LzLdowEv6"
       target="_blank"
-    >
+      rel="noopener noreferrer">
       🎓 Register Free Orientation →
     </a>
 
@@ -1248,27 +1251,33 @@
         সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।
       </p>
 
-      <p>
-        <b>WhatsApp:</b>
-        <a
-          href="https://wa.me/8801753630079"
-          target="_blank"
-        >
-          +880 1753-630079
-        </a>
-      </p>
+      <div class="contact-list">
 
-      <p>
-        <b>Email:</b>
-        <a href="mailto:hemromselaus@gmail.com">
-          hemromselaus@gmail.com
-        </a>
-      </p>
+        <p>
+          <b>WhatsApp:</b>
+          <a
+            href="https://wa.me/8801753630079"
+            target="_blank"
+            rel="noopener noreferrer">
+            +880 1753-630079
+          </a>
+        </p>
+
+        <p>
+          <b>Email:</b>
+          <a href="mailto:hemromselaus@gmail.com">
+            hemromselaus@gmail.com
+          </a>
+        </p>
+
+      </div>
 
     </div>
 
 
     <div class="formcard">
+
+      <span class="form-icon">🎓</span>
 
       <h3>
         Free Orientation Registration
@@ -1282,7 +1291,7 @@
         class="btn dark full"
         href="https://forms.gle/NHpn2oK4LzLdowEv6"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         Open Registration Form
       </a>
 
@@ -1292,6 +1301,8 @@
 
 </section>
 
+</main>
+
 
 <!-- ================= FOOTER ================= -->
 
@@ -1300,8 +1311,13 @@
   <div class="wrap foot">
 
     <div class="logo">
+
       <b>S</b>
-      <span>Selaus <em>Academy</em></span>
+
+      <span>
+        Selaus <em>Academy</em>
+      </span>
+
     </div>
 
     <p>
@@ -1314,35 +1330,35 @@
       <a
         href="https://www.facebook.com/SelausSuccessAcademy"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         Facebook
       </a>
 
       <a
         href="https://www.youtube.com/@SelausAcademy-Silas"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         YouTube
       </a>
 
       <a
         href="https://www.instagram.com/selaushemrom/"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         Instagram
       </a>
 
       <a
         href="https://www.tiktok.com/@selausacademy"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         TikTok
       </a>
 
       <a
         href="https://www.linkedin.com/in/selaus-hemrom/"
         target="_blank"
-      >
+        rel="noopener noreferrer">
         LinkedIn
       </a>
 
@@ -1357,37 +1373,40 @@
 </footer>
 
 
-<!-- ================= WHATSAPP FLOATING BUTTON ================= -->
+<!-- ================= WHATSAPP ================= -->
 
 <a
   class="wa"
   href="https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20am%20interested%20in%20your%20Digital%20Products."
   target="_blank"
-  aria-label="WhatsApp"
->
+  rel="noopener noreferrer"
+  aria-label="Contact Selaus Academy on WhatsApp">
   WA
 </a>
 
 
-<!-- =====================================================
-     PREVIEW MODAL
-===================================================== -->
+<!-- ================= PREVIEW MODAL ================= -->
 
 <div
   id="previewModal"
   class="modal"
   aria-hidden="true"
->
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="previewTitle">
 
-  <div class="modal-overlay" onclick="closePreview()"></div>
+  <div
+    class="modal-overlay"
+    onclick="closePreview()">
+  </div>
 
   <div class="modal-box">
 
     <button
       class="modal-close"
       onclick="closePreview()"
-      aria-label="Close"
-    >
+      aria-label="Close preview"
+      type="button">
       ×
     </button>
 
@@ -1398,34 +1417,80 @@
 </div>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<script src="script.js">/* =====================================================
+   SELAUS ACADEMY
+   MAIN JAVASCRIPT
+===================================================== */
 
-<script>
 
-const menu = document.querySelector('#menu');
-const nav = document.querySelector('#nav');
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-menu.addEventListener('click', function(){
-  nav.classList.toggle('open');
-});
+const menu = document.querySelector("#menu");
+const nav = document.querySelector("#nav");
 
-document.querySelectorAll('#nav a').forEach(function(link){
-  link.addEventListener('click', function(){
-    nav.classList.remove('open');
+if(menu && nav){
+
+  menu.addEventListener("click", function(){
+
+    const isOpen = nav.classList.toggle("open");
+
+    menu.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    menu.setAttribute(
+      "aria-label",
+      isOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+
   });
-});
 
 
-/* ================= PRODUCT PREVIEW DATA ================= */
+  document.querySelectorAll("#nav a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+      nav.classList.remove("open");
+
+      menu.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menu.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
+    });
+
+  });
+
+}
+
+
+/* =====================================================
+   PRODUCT DATA
+===================================================== */
 
 const products = {
 
   dm: {
+
     icon: "DM",
+
     title: "Digital Marketing Beginner Guide",
+
     price: "৳ ১৯৯",
+
     description:
       "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
+
     items: [
       "Digital Marketing Fundamentals",
       "Social Media Marketing",
@@ -1433,16 +1498,24 @@ const products = {
       "Beginner Roadmap",
       "Digital Career Direction"
     ],
+
     whatsapp:
       "https://wa.me/8801753630079?text=আমি%20Digital%20Marketing%20Beginner%20Guide%20কিনতে%20চাই।"
+
   },
 
+
   canva: {
+
     icon: "CV",
+
     title: "Canva Beginner to Professional Guide",
+
     price: "৳ ২৯৯",
+
     description:
       "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
+
     items: [
       "Canva Fundamentals",
       "Design Basics",
@@ -1450,16 +1523,24 @@ const products = {
       "Marketing Materials",
       "Professional Workflow"
     ],
+
     whatsapp:
       "https://wa.me/8801753630079?text=আমি%20Canva%20Guide%20কিনতে%20চাই।"
+
   },
 
+
   freelancing: {
+
     icon: "FR",
+
     title: "Freelancing Beginner Guide",
+
     price: "৳ ২৯৯",
+
     description:
       "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
+
     items: [
       "Freelancing Fundamentals",
       "Online Opportunities",
@@ -1467,16 +1548,24 @@ const products = {
       "Client Communication",
       "Beginner Roadmap"
     ],
+
     whatsapp:
       "https://wa.me/8801753630079?text=আমি%20Freelancing%20Beginner%20Guide%20কিনতে%20চাই।"
+
   },
 
+
   upwork: {
+
     icon: "UP",
+
     title: "Upwork Proposal Guide",
+
     price: "৳ ৩৯৯",
+
     description:
       "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
+
     items: [
       "Job Analysis",
       "Proposal Structure",
@@ -1484,16 +1573,24 @@ const products = {
       "Proposal Examples",
       "Winning Proposal Strategy"
     ],
+
     whatsapp:
       "https://wa.me/8801753630079?text=আমি%20Upwork%20Proposal%20Guide%20কিনতে%20চাই।"
+
   },
 
+
   fiverr: {
+
     icon: "FV",
+
     title: "Fiverr Gig Guide",
+
     price: "৳ ৩৯৯",
+
     description:
       "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
+
     items: [
       "Fiverr Profile Setup",
       "Gig Creation",
@@ -1501,14 +1598,18 @@ const products = {
       "Client Communication",
       "Fiverr Beginner Strategy"
     ],
+
     whatsapp:
       "https://wa.me/8801753630079?text=আমি%20Fiverr%20Gig%20Guide%20কিনতে%20চাই।"
+
   }
 
 };
 
 
-/* ================= OPEN PREVIEW ================= */
+/* =====================================================
+   OPEN PREVIEW
+===================================================== */
 
 function openPreview(productKey){
 
@@ -1518,14 +1619,29 @@ function openPreview(productKey){
     return;
   }
 
+
   let itemsHTML = "";
 
+
   product.items.forEach(function(item){
-    itemsHTML += `<li>✓ ${item}</li>`;
+
+    itemsHTML += `
+      <li>✓ ${item}</li>
+    `;
+
   });
 
 
-  document.getElementById("previewContent").innerHTML = `
+  const previewContent =
+    document.getElementById("previewContent");
+
+
+  if(!previewContent){
+    return;
+  }
+
+
+  previewContent.innerHTML = `
 
     <div class="preview-header">
 
@@ -1539,7 +1655,7 @@ function openPreview(productKey){
           PRODUCT PREVIEW
         </div>
 
-        <h2>
+        <h2 id="previewTitle">
           ${product.title}
         </h2>
 
@@ -1597,7 +1713,10 @@ function openPreview(productKey){
 
     <div class="preview-security">
 
-      🔐 <strong>Full file public নয়</strong>
+      🔐
+      <strong>
+        Full file public নয়
+      </strong>
 
       <p>
         সম্পূর্ণ PDF এবং PPTX purchase করার পরে
@@ -1621,11 +1740,12 @@ function openPreview(productKey){
 
       </div>
 
+
       <a
         href="${product.whatsapp}"
         target="_blank"
-        class="modal-buy"
-      >
+        rel="noopener noreferrer"
+        class="modal-buy">
         💬 WhatsApp-এ কিনতে চাই
       </a>
 
@@ -1634,45 +1754,210 @@ function openPreview(productKey){
   `;
 
 
-  const modal = document.getElementById("previewModal");
+  const modal =
+    document.getElementById("previewModal");
+
+
+  if(!modal){
+    return;
+  }
+
 
   modal.classList.add("show");
 
-  modal.setAttribute("aria-hidden","false");
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
 
-  document.body.classList.add("modal-open");
+  document.body.classList.add(
+    "modal-open"
+  );
+
+
+  const closeButton =
+    modal.querySelector(".modal-close");
+
+
+  if(closeButton){
+
+    setTimeout(function(){
+
+      closeButton.focus();
+
+    },50);
+
+  }
 
 }
 
 
-/* ================= CLOSE PREVIEW ================= */
+/* =====================================================
+   CLOSE PREVIEW
+===================================================== */
 
 function closePreview(){
 
-  const modal = document.getElementById("previewModal");
+  const modal =
+    document.getElementById("previewModal");
+
+
+  if(!modal){
+    return;
+  }
+
 
   modal.classList.remove("show");
 
-  modal.setAttribute("aria-hidden","true");
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
-  document.body.classList.remove("modal-open");
+  document.body.classList.remove(
+    "modal-open"
+  );
 
 }
 
 
-/* ================= ESC KEY ================= */
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
 
-document.addEventListener("keydown", function(event){
+document.addEventListener(
+  "keydown",
+  function(event){
 
-  if(event.key === "Escape"){
-    closePreview();
+    if(event.key === "Escape"){
+
+      closePreview();
+
+    }
+
   }
+);
 
-});
+
+/* =====================================================
+   MODAL TAB SAFETY
+===================================================== */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key !== "Tab"){
+      return;
+    }
 
 
-</script>
+    const modal =
+      document.getElementById("previewModal");
 
+
+    if(
+      !modal ||
+      !modal.classList.contains("show")
+    ){
+      return;
+    }
+
+
+    const focusable =
+      modal.querySelectorAll(
+        'button, a[href], input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+
+
+    if(!focusable.length){
+      return;
+    }
+
+
+    const first =
+      focusable[0];
+
+    const last =
+      focusable[focusable.length - 1];
+
+
+    if(event.shiftKey){
+
+      if(document.activeElement === first){
+
+        event.preventDefault();
+
+        last.focus();
+
+      }
+
+    }else{
+
+      if(document.activeElement === last){
+
+        event.preventDefault();
+
+        first.focus();
+
+      }
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   CLOSE MODAL WHEN CLICKING OVERLAY
+===================================================== */
+
+const modalOverlay =
+  document.querySelector(".modal-overlay");
+
+
+if(modalOverlay){
+
+  modalOverlay.addEventListener(
+    "click",
+    closePreview
+  );
+
+}
+
+
+/* =====================================================
+   PREVENT HASH JUMP GLITCH
+===================================================== */
+
+window.addEventListener(
+  "load",
+  function(){
+
+    if(window.location.hash){
+
+      setTimeout(function(){
+
+        const element =
+          document.querySelector(
+            window.location.hash
+          );
+
+
+        if(element){
+
+          element.scrollIntoView({
+            behavior:"smooth"
+          });
+
+        }
+
+      },100);
+
+    }
+
+  }
+);</script>
 
 </body>
 </html>
