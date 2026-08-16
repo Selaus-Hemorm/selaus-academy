@@ -80,9 +80,11 @@ const products = {
       "Digital Career Direction"
     ],
 
-    whatsapp:
-      "https://wa.me/8801753630079?text=আমি%20Digital%20Marketing%20Beginner%20Guide%20কিনতে%20চাই।"
+   buyUrl:
+"order.html?product=dm",
 
+supportWhatsapp:
+"https://wa.me/8801753630079?text=..."
   },
 
 
@@ -105,9 +107,11 @@ const products = {
       "Professional Workflow"
     ],
 
-    whatsapp:
-      "https://wa.me/8801753630079?text=আমি%20Canva%20Guide%20কিনতে%20চাই।"
+    buyUrl:
+"order.html?product=dm",
 
+supportWhatsapp:
+"https://wa.me/8801753630079?text=..."
   },
 
 
@@ -130,9 +134,11 @@ const products = {
       "Beginner Roadmap"
     ],
 
-    whatsapp:
-      "https://wa.me/8801753630079?text=আমি%20Freelancing%20Beginner%20Guide%20কিনতে%20চাই।"
+    buyUrl:
+"order.html?product=dm",
 
+supportWhatsapp:
+"https://wa.me/8801753630079?text=..."
   },
 
 
@@ -155,9 +161,11 @@ const products = {
       "Winning Proposal Strategy"
     ],
 
-    whatsapp:
-      "https://wa.me/8801753630079?text=আমি%20Upwork%20Proposal%20Guide%20কিনতে%20চাই।"
+    buyUrl:
+"order.html?product=dm",
 
+supportWhatsapp:
+"https://wa.me/8801753630079?text=..."
   },
 
 
@@ -180,9 +188,11 @@ const products = {
       "Fiverr Beginner Strategy"
     ],
 
-    whatsapp:
-      "https://wa.me/8801753630079?text=আমি%20Fiverr%20Gig%20Guide%20কিনতে%20চাই।"
+   buyUrl:
+"order.html?product=dm",
 
+supportWhatsapp:
+"https://wa.me/8801753630079?text=..."
   }
 
 };
@@ -319,19 +329,23 @@ function openPreview(productKey){
           ${product.price}
         </strong>
 
-      </div>
+      <div class="modal-actions">
 
+  <a
+    href="${product.buyUrl}"
+    class="modal-buy">
+    🛒 Buy Now
+  </a>
 
-      <a
-        href="${product.whatsapp}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="modal-buy">
-        💬 WhatsApp-এ কিনতে চাই
-      </a>
+  <a
+    href="${product.supportWhatsapp}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="modal-support">
+    💬 Ask on WhatsApp
+  </a>
 
-    </div>
-
+</div>
   `;
 
 
