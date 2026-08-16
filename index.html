@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="bn">
+
 <head>
+
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,10 +28,158 @@
   <title>Selaus Academy | Learn Skills. Build Your Future.</title>
 
   <link rel="icon" href="favicon.svg">
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =========================
+       PREVIEW MODAL
+    ========================= */
+
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .modal.active{
+      display:flex;
+    }
+
+    .modal-overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(15,23,42,.72);
+      backdrop-filter:blur(4px);
+    }
+
+    .modal-box{
+      position:relative;
+      z-index:2;
+      width:min(600px,100%);
+      max-height:90vh;
+      overflow:auto;
+      background:#fff;
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 25px 80px rgba(0,0,0,.25);
+    }
+
+    .modal-close{
+      position:absolute;
+      right:15px;
+      top:12px;
+      width:38px;
+      height:38px;
+      border:0;
+      border-radius:50%;
+      background:#f2f4f7;
+      color:#111827;
+      font-size:25px;
+      cursor:pointer;
+    }
+
+    .preview-label{
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      color:#98a2b3;
+      margin-bottom:8px;
+    }
+
+    .preview-title{
+      font-size:30px;
+      line-height:1.25;
+      color:#101828;
+      margin-bottom:12px;
+      padding-right:35px;
+    }
+
+    .preview-description{
+      color:#667085;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    .preview-items{
+      list-style:none;
+      margin:0 0 20px;
+      padding:0;
+    }
+
+    .preview-items li{
+      padding:9px 0;
+      border-bottom:1px solid #eaecf0;
+      font-size:14px;
+      color:#344054;
+    }
+
+    .preview-price{
+      font-size:28px;
+      font-weight:900;
+      color:#111827;
+      margin:18px 0;
+    }
+
+    .preview-actions{
+      display:flex;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .preview-actions a,
+    .preview-actions button{
+      flex:1;
+      min-height:48px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:800;
+      font-size:14px;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .preview-buy{
+      background:#111827;
+      color:#fff;
+    }
+
+    .preview-back{
+      background:#f2f4f7;
+      color:#344054;
+    }
+
+    @media(max-width:600px){
+
+      .modal-box{
+        padding:24px;
+      }
+
+      .preview-title{
+        font-size:25px;
+      }
+
+      .preview-actions{
+        flex-direction:column;
+      }
+
+    }
+
+  </style>
+
 </head>
 
+
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
@@ -38,9 +188,15 @@
   <div class="wrap nav">
 
     <a class="logo" href="#home" aria-label="Selaus Academy Home">
+
       <b>S</b>
-      <span>Selaus <em>Academy</em></span>
+
+      <span>
+        Selaus <em>Academy</em>
+      </span>
+
     </a>
+
 
     <button
       id="menu"
@@ -48,16 +204,24 @@
       aria-label="Open navigation menu"
       aria-expanded="false"
       type="button">
+
       ☰
+
     </button>
+
 
     <nav id="nav" aria-label="Main navigation">
 
       <a href="#home">হোম</a>
+
       <a href="#courses">কোর্স</a>
+
       <a href="#products">ডিজিটাল প্রোডাক্ট</a>
+
       <a href="#free">ফ্রি রিসোর্স</a>
+
       <a href="#about">আমাদের সম্পর্কে</a>
+
       <a href="#faq">FAQ</a>
 
       <a class="cta" href="#enroll">
@@ -71,30 +235,44 @@
 </header>
 
 
+
 <!-- ================= HERO ================= -->
 
 <main>
+
 
 <section id="home" class="hero">
 
   <div class="wrap hero-grid">
 
+
     <div class="hero-content">
+
 
       <div class="eyebrow">
         ONLINE TRAINING • DIGITAL SKILLS • CAREER DEVELOPMENT
       </div>
 
+
       <h1>
+
         Digital Skills শিখুন।
-        <span>নিজের ভবিষ্যৎ গড়ুন।</span>
+
+        <span>
+          নিজের ভবিষ্যৎ গড়ুন।
+        </span>
+
       </h1>
 
+
       <p>
+
         Beginner-friendly practical training, digital career resources,
         freelancing guides এবং career development support—
         সবকিছু এক জায়গায়।
+
       </p>
+
 
       <div class="actions">
 
@@ -103,42 +281,71 @@
           href="https://forms.gle/NHpn2oK4LzLdowEv6"
           target="_blank"
           rel="noopener noreferrer">
+
           🎓 Free Orientation
+
         </a>
 
-        <a class="btn" href="#products">
+
+        <a
+          class="btn"
+          href="#products">
+
           📚 Digital Products দেখুন
+
         </a>
 
       </div>
+
 
       <div class="trust">
+
         ✓ Beginner Friendly
-        <span>✓ Practical Learning</span>
-        <span>✓ Career Focused</span>
+
+        <span>
+          ✓ Practical Learning
+        </span>
+
+        <span>
+          ✓ Career Focused
+        </span>
+
       </div>
+
 
     </div>
 
 
+
     <div class="visual">
+
 
       <label>
         LEARN → PRACTICE → BUILD → GROW
       </label>
 
+
       <div class="screen">
 
-        <small>SELAUS ACADEMY</small>
+        <small>
+          SELAUS ACADEMY
+        </small>
+
 
         <h2>
+
           Digital Skills<br>
           for Real-World Growth
+
         </h2>
 
+
         <div class="bar">
+
           <i></i>
+
         </div>
+
 
         <p>
           Learn • Practice • Build • Grow
@@ -146,26 +353,44 @@
 
       </div>
 
-      <i class="bubble b1">DM</i>
-      <i class="bubble b2">CV</i>
-      <i class="bubble b3">AI</i>
-      <i class="bubble b4">WEB</i>
+
+      <i class="bubble b1">
+        DM
+      </i>
+
+      <i class="bubble b2">
+        CV
+      </i>
+
+      <i class="bubble b3">
+        AI
+      </i>
+
+      <i class="bubble b4">
+        WEB
+      </i>
+
 
       <footer>
+
         Mobile দিয়ে basic learning শুরু করতে পারবেন।
         Advanced practical work-এর জন্য laptop/desktop recommended।
+
       </footer>
 
+
     </div>
+
 
   </div>
 
 </section>
 
 
+
 <!-- ================= STATS ================= -->
 
-<section class="stats" aria-label="Selaus Academy statistics">
+<section class="stats">
 
   <div class="wrap statsgrid">
 
@@ -194,11 +419,13 @@
 </section>
 
 
+
 <!-- ================= COURSES ================= -->
 
 <section id="courses" class="section">
 
   <div class="wrap">
+
 
     <div class="head">
 
@@ -214,15 +441,20 @@
 
       </div>
 
+
       <p>
+
         Digital growth, career readiness, freelancing এবং
-        employability-এর জন্য practical learning.
+        employability-এর জন্য practical learning।
+
       </p>
 
     </div>
 
 
+
     <div class="cards">
+
 
       <article>
 
@@ -235,22 +467,32 @@
         </h3>
 
         <p>
+
           Social media marketing, content creation, Canva,
           Meta tools, portfolio development এবং freelancing readiness।
+
         </p>
 
+
         <ul>
+
           <li>Digital Marketing Fundamentals</li>
+
           <li>Content & Social Media Strategy</li>
+
           <li>Canva & Marketing Basics</li>
+
           <li>Portfolio & Freelancing Roadmap</li>
+
         </ul>
+
 
         <a href="#products">
           Digital Products দেখুন →
         </a>
 
       </article>
+
 
 
       <article>
@@ -262,22 +504,32 @@
         </h3>
 
         <p>
+
           CV, LinkedIn, interview preparation, career direction
           এবং professional online presence।
+
         </p>
 
+
         <ul>
+
           <li>CV & Cover Letter</li>
+
           <li>LinkedIn Optimization</li>
+
           <li>Interview Preparation</li>
+
           <li>Career Planning</li>
+
         </ul>
+
 
         <a href="#enroll">
           Guidance নিন →
         </a>
 
       </article>
+
 
 
       <article>
@@ -289,22 +541,32 @@
         </h3>
 
         <p>
+
           Modern AI এবং digital tools ব্যবহার করে productivity,
           content এবং research workflow উন্নত করা।
+
         </p>
 
+
         <ul>
+
           <li>AI-assisted Productivity</li>
+
           <li>Content Workflow</li>
+
           <li>Research & Writing</li>
+
           <li>Responsible AI Use</li>
+
         </ul>
+
 
         <a href="#enroll">
           Learn More →
         </a>
 
       </article>
+
 
 
       <article>
@@ -316,22 +578,32 @@
         </h3>
 
         <p>
+
           Workplace readiness, employability skills এবং
           career development support।
+
         </p>
 
+
         <ul>
+
           <li>Employability Skills</li>
+
           <li>Workplace Readiness</li>
+
           <li>Career Counseling</li>
+
           <li>Job Search Strategy</li>
+
         </ul>
+
 
         <a href="#enroll">
           Support নিন →
         </a>
 
       </article>
+
 
     </div>
 
@@ -340,11 +612,13 @@
 </section>
 
 
+
 <!-- ================= WHY US ================= -->
 
 <section id="why" class="section soft">
 
   <div class="wrap">
+
 
     <div class="center">
 
@@ -357,8 +631,10 @@
       </h2>
 
       <p>
+
         আপনি class শেষ করার পরে কী করবেন—
         সেই বিষয়টি মাথায় রেখেই learning resources তৈরি করা হয়।
+
       </p>
 
     </div>
@@ -366,39 +642,68 @@
 
     <div class="features">
 
+
       <div>
+
         <b>01</b>
-        <h3>Beginner Friendly</h3>
+
+        <h3>
+          Beginner Friendly
+        </h3>
+
         <p>
           সহজ ভাষায় explanation, step-by-step guidance
           এবং practical examples।
         </p>
+
       </div>
 
+
       <div>
+
         <b>02</b>
-        <h3>Learn from Home</h3>
+
+        <h3>
+          Learn from Home
+        </h3>
+
         <p>
           ঘরে বসে শেখার সুযোগ। Basic কাজ mobile দিয়েও শুরু করা যায়।
         </p>
+
       </div>
 
+
       <div>
+
         <b>03</b>
-        <h3>Portfolio Focused</h3>
+
+        <h3>
+          Portfolio Focused
+        </h3>
+
         <p>
           শেখার পাশাপাশি practical work এবং portfolio তৈরি করার সুযোগ।
         </p>
+
       </div>
 
+
       <div>
+
         <b>04</b>
-        <h3>Career Oriented</h3>
+
+        <h3>
+          Career Oriented
+        </h3>
+
         <p>
           Skill-এর সঙ্গে freelancing, employment এবং career growth-এর
           connection তৈরি করা।
         </p>
+
       </div>
+
 
     </div>
 
@@ -407,11 +712,13 @@
 </section>
 
 
+
 <!-- ================= DIGITAL PRODUCTS ================= -->
 
 <section id="products" class="section products-section">
 
   <div class="wrap">
+
 
     <div class="head">
 
@@ -427,12 +734,16 @@
 
       </div>
 
+
       <p>
+
         Beginner-friendly guides, templates এবং practical learning
         resources। Payment-এর পরে personal access দেওয়া হবে।
+
       </p>
 
     </div>
+
 
 
     <div class="product-notice">
@@ -441,6 +752,7 @@
         🔐
       </div>
 
+
       <div>
 
         <strong>
@@ -448,8 +760,10 @@
         </strong>
 
         <p>
+
           Paid products-এর সম্পূর্ণ PDF/PPTX website-এ publicly available নয়।
           Purchase করার পরে আপনার Gmail address-এ ব্যক্তিগত access দেওয়া হবে।
+
         </p>
 
       </div>
@@ -457,10 +771,11 @@
     </div>
 
 
+
     <div class="product-grid">
 
 
-      <!-- PRODUCT 1 -->
+      <!-- ================= PRODUCT 1 ================= -->
 
       <article class="product-card featured-product">
 
@@ -476,31 +791,60 @@
 
         </div>
 
+
         <h3>
           Digital Marketing Beginner Guide
         </h3>
 
+
         <p>
+
           Digital Marketing-এর fundamentals থেকে social media,
           content marketing এবং beginner roadmap—সবকিছু সহজভাবে।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Digital Marketing Fundamentals</span>
-          <span>✓ Social Media Marketing</span>
-          <span>✓ Content Marketing</span>
-          <span>✓ Beginner Roadmap</span>
+
+          <span>
+            ✓ Digital Marketing Fundamentals
+          </span>
+
+          <span>
+            ✓ Social Media Marketing
+          </span>
+
+          <span>
+            ✓ Content Marketing
+          </span>
+
+          <span>
+            ✓ Beginner Roadmap
+          </span>
+
+          <span>
+            ✓ Digital Career Direction
+          </span>
+
         </div>
+
 
         <div class="price">
           ৳ ১৯৯
         </div>
 
+
         <div class="file-info">
+
           <span>📄 PDF</span>
+
           <span>📊 PPTX</span>
+
           <span>🔐 Personal Access</span>
+
         </div>
+
 
         <div class="product-actions">
 
@@ -508,21 +852,27 @@
             class="preview-btn"
             type="button"
             onclick="openPreview('dm')">
+
             👁️ Preview
+
           </button>
 
-        <a
-  class="buy-btn"
-  href="order.html?product=dm">
-  💳 কিনতে চাই
-</a>
+
+          <a
+            class="buy-btn"
+            href="order.html?product=dm">
+
+            💳 কিনতে চাই
+
+          </a>
 
         </div>
 
       </article>
 
 
-      <!-- PRODUCT 2 -->
+
+      <!-- ================= PRODUCT 2 ================= -->
 
       <article class="product-card">
 
@@ -534,31 +884,60 @@
 
         </div>
 
+
         <h3>
           Canva Beginner to Professional Guide
         </h3>
 
+
         <p>
+
           Canva ব্যবহার করে Social Media, Marketing এবং
           Professional Design তৈরির step-by-step guide।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Canva Fundamentals</span>
-          <span>✓ Professional Design Basics</span>
-          <span>✓ Social Media Design</span>
-          <span>✓ Marketing Materials</span>
+
+          <span>
+            ✓ Canva Fundamentals
+          </span>
+
+          <span>
+            ✓ Professional Design Basics
+          </span>
+
+          <span>
+            ✓ Social Media Design
+          </span>
+
+          <span>
+            ✓ Marketing Materials
+          </span>
+
+          <span>
+            ✓ Professional Workflow
+          </span>
+
         </div>
+
 
         <div class="price">
           ৳ ২৯৯
         </div>
 
+
         <div class="file-info">
+
           <span>📄 PDF</span>
+
           <span>📊 PPTX</span>
+
           <span>🔐 Personal Access</span>
+
         </div>
+
 
         <div class="product-actions">
 
@@ -566,20 +945,27 @@
             class="preview-btn"
             type="button"
             onclick="openPreview('canva')">
+
             👁️ Preview
+
           </button>
-<a
-  class="buy-btn"
-  href="order.html?product=canva">
-  💳 কিনতে চাই
-</a>
+
+
+          <a
+            class="buy-btn"
+            href="order.html?product=canva">
+
+            💳 কিনতে চাই
+
+          </a>
 
         </div>
 
       </article>
 
 
-      <!-- PRODUCT 3 -->
+
+      <!-- ================= PRODUCT 3 ================= -->
 
       <article class="product-card">
 
@@ -591,31 +977,60 @@
 
         </div>
 
+
         <h3>
           Freelancing Beginner Guide
         </h3>
 
+
         <p>
+
           Freelancing শুরু করতে কী শিখবেন, portfolio কীভাবে তৈরি করবেন
           এবং client-এর সঙ্গে কীভাবে যোগাযোগ করবেন।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Freelancing Fundamentals</span>
-          <span>✓ Online Opportunities</span>
-          <span>✓ Portfolio Preparation</span>
-          <span>✓ Client Communication</span>
+
+          <span>
+            ✓ Freelancing Fundamentals
+          </span>
+
+          <span>
+            ✓ Online Opportunities
+          </span>
+
+          <span>
+            ✓ Portfolio Preparation
+          </span>
+
+          <span>
+            ✓ Client Communication
+          </span>
+
+          <span>
+            ✓ Beginner Roadmap
+          </span>
+
         </div>
+
 
         <div class="price">
           ৳ ২৯৯
         </div>
 
+
         <div class="file-info">
+
           <span>📄 PDF</span>
+
           <span>📊 PPTX</span>
+
           <span>🔐 Personal Access</span>
+
         </div>
+
 
         <div class="product-actions">
 
@@ -623,20 +1038,27 @@
             class="preview-btn"
             type="button"
             onclick="openPreview('freelancing')">
+
             👁️ Preview
+
           </button>
-<a
-  class="buy-btn"
-  href="order.html?product=freelancing">
-  💳 কিনতে চাই
-</a>
+
+
+          <a
+            class="buy-btn"
+            href="order.html?product=freelancing">
+
+            💳 কিনতে চাই
+
+          </a>
 
         </div>
 
       </article>
 
 
-      <!-- PRODUCT 4 -->
+
+      <!-- ================= PRODUCT 4 ================= -->
 
       <article class="product-card">
 
@@ -648,31 +1070,60 @@
 
         </div>
 
+
         <h3>
           Upwork Proposal Guide
         </h3>
 
+
         <p>
+
           Upwork job বুঝে professional proposal লেখা,
           client approach এবং proposal strategy শেখার guide।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Job Analysis</span>
-          <span>✓ Proposal Structure</span>
-          <span>✓ Client Communication</span>
-          <span>✓ Proposal Examples</span>
+
+          <span>
+            ✓ Job Analysis
+          </span>
+
+          <span>
+            ✓ Proposal Structure
+          </span>
+
+          <span>
+            ✓ Client Communication
+          </span>
+
+          <span>
+            ✓ Proposal Examples
+          </span>
+
+          <span>
+            ✓ Winning Proposal Strategy
+          </span>
+
         </div>
+
 
         <div class="price">
           ৳ ৩৯৯
         </div>
 
+
         <div class="file-info">
+
           <span>📄 PDF</span>
+
           <span>📊 PPTX</span>
+
           <span>🔐 Personal Access</span>
+
         </div>
+
 
         <div class="product-actions">
 
@@ -680,20 +1131,27 @@
             class="preview-btn"
             type="button"
             onclick="openPreview('upwork')">
+
             👁️ Preview
+
           </button>
-<a
-  class="buy-btn"
-  href="order.html?product=upwork">
-  💳 কিনতে চাই
-</a>
+
+
+          <a
+            class="buy-btn"
+            href="order.html?product=upwork">
+
+            💳 কিনতে চাই
+
+          </a>
 
         </div>
 
       </article>
 
 
-      <!-- PRODUCT 5 -->
+
+      <!-- ================= PRODUCT 5 ================= -->
 
       <article class="product-card">
 
@@ -705,31 +1163,60 @@
 
         </div>
 
+
         <h3>
           Fiverr Gig Guide
         </h3>
 
+
         <p>
+
           Fiverr profile ও gig তৈরি, optimization এবং
           client communication-এর beginner-friendly guide।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Fiverr Profile Setup</span>
-          <span>✓ Gig Creation</span>
-          <span>✓ Gig Optimization</span>
-          <span>✓ Client Communication</span>
+
+          <span>
+            ✓ Fiverr Profile Setup
+          </span>
+
+          <span>
+            ✓ Gig Creation
+          </span>
+
+          <span>
+            ✓ Gig Optimization
+          </span>
+
+          <span>
+            ✓ Client Communication
+          </span>
+
+          <span>
+            ✓ Fiverr Beginner Strategy
+          </span>
+
         </div>
+
 
         <div class="price">
           ৳ ৩৯৯
         </div>
 
+
         <div class="file-info">
+
           <span>📄 PDF</span>
+
           <span>📊 PPTX</span>
+
           <span>🔐 Personal Access</span>
+
         </div>
+
 
         <div class="product-actions">
 
@@ -737,20 +1224,27 @@
             class="preview-btn"
             type="button"
             onclick="openPreview('fiverr')">
+
             👁️ Preview
+
           </button>
-<a
-  class="buy-btn"
-  href="order.html?product=fiverr">
-  💳 কিনতে চাই
-</a>
+
+
+          <a
+            class="buy-btn"
+            href="order.html?product=fiverr">
+
+            💳 কিনতে চাই
+
+          </a>
 
         </div>
 
       </article>
 
 
-      <!-- PRODUCT 6 -->
+
+      <!-- ================= PRODUCT 6 ================= -->
 
       <article class="product-card coming">
 
@@ -766,44 +1260,79 @@
 
         </div>
 
+
         <h3>
           Career & Productivity Templates
         </h3>
 
+
         <p>
+
           Freelancing, client management, income tracking,
           job search এবং social media planning-এর জন্য practical templates।
+
         </p>
 
+
         <div class="product-list">
-          <span>✓ Client Tracker</span>
-          <span>✓ Lead Tracker</span>
-          <span>✓ Income Tracker</span>
-          <span>✓ Job Application Tracker</span>
-          <span>✓ Social Media Calendar</span>
+
+          <span>
+            ✓ Client Tracker
+          </span>
+
+          <span>
+            ✓ Lead Tracker
+          </span>
+
+          <span>
+            ✓ Income Tracker
+          </span>
+
+          <span>
+            ✓ Job Application Tracker
+          </span>
+
+          <span>
+            ✓ Social Media Calendar
+          </span>
+
         </div>
+
 
         <div class="price">
           Coming Soon
         </div>
 
+
         <div class="file-info">
+
           <span>📊 Excel</span>
+
           <span>📋 Templates</span>
+
         </div>
 
-        <button class="disabled-btn" type="button" disabled>
+
+        <button
+          class="disabled-btn"
+          type="button"
+          disabled>
+
           Coming Soon
+
         </button>
 
       </article>
 
+
     </div>
+
 
 
     <!-- ================= BUNDLE ================= -->
 
     <div class="bundle">
+
 
       <div>
 
@@ -811,46 +1340,67 @@
           SPECIAL BUNDLE
         </div>
 
+
         <h2>
           Digital Career Starter Bundle
         </h2>
 
+
         <p>
+
           Digital Marketing + Canva + Freelancing + Upwork + Fiverr—
           beginner হিসেবে শুরু করার জন্য গুরুত্বপূর্ণ resources একসাথে।
+
         </p>
 
+
         <div class="bundle-items">
+
           ✓ 5 Practical Guides
-          <span>✓ PDF + PPTX</span>
-          <span>✓ Personal Access</span>
+
+          <span>
+            ✓ PDF + PPTX
+          </span>
+
+          <span>
+            ✓ Personal Access
+          </span>
+
         </div>
 
       </div>
 
+
       <div class="bundle-price">
 
-        <span>Launch Offer</span>
+        <span>
+          Launch Offer
+        </span>
+
 
         <strong>
           ৳ ৯৯৯
         </strong>
 
+
         <a
-          href="https://wa.me/8801753630079?text=আমি%20Digital%20Career%20Starter%20Bundle%20কিনতে%20চাই।"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="order.html?product=bundle"
           class="bundle-btn">
-          💬 Bundle কিনতে চাই
+
+          💳 Bundle কিনতে চাই
+
         </a>
 
       </div>
 
+
     </div>
+
 
   </div>
 
 </section>
+
 
 
 <!-- ================= FREE RESOURCES ================= -->
@@ -859,25 +1409,31 @@
 
   <div class="wrap">
 
+
     <div class="center">
 
       <div class="eyebrow">
         FREE RESOURCES
       </div>
 
+
       <h2>
         বিনামূল্যে কিছু শিখুন।
       </h2>
 
+
       <p>
+
         ভবিষ্যতে এখানে free PDF, checklist, templates,
         mini guides এবং helpful resources দেওয়া হবে।
+
       </p>
 
     </div>
 
 
     <div class="free-grid">
+
 
       <div class="free-card">
 
@@ -891,8 +1447,13 @@
           Beginner হিসেবে Digital Marketing শুরু করার basic checklist।
         </p>
 
-        <button class="disabled-btn" type="button" disabled>
+        <button
+          class="disabled-btn"
+          type="button"
+          disabled>
+
           Coming Soon
+
         </button>
 
       </div>
@@ -910,8 +1471,13 @@
           Freelancing শুরু করার আগে কী কী প্রস্তুতি নেবেন।
         </p>
 
-        <button class="disabled-btn" type="button" disabled>
+        <button
+          class="disabled-btn"
+          type="button"
+          disabled>
+
           Coming Soon
+
         </button>
 
       </div>
@@ -929,11 +1495,17 @@
           আপনার social media content planning সহজ করার resource।
         </p>
 
-        <button class="disabled-btn" type="button" disabled>
+        <button
+          class="disabled-btn"
+          type="button"
+          disabled>
+
           Coming Soon
+
         </button>
 
       </div>
+
 
     </div>
 
@@ -942,11 +1514,13 @@
 </section>
 
 
+
 <!-- ================= ROADMAP ================= -->
 
 <section class="section">
 
   <div class="wrap">
+
 
     <div class="head">
 
@@ -962,6 +1536,7 @@
 
       </div>
 
+
       <p>
         একটি সহজ four-stage learning approach।
       </p>
@@ -971,11 +1546,13 @@
 
     <div class="steps">
 
+
       <div>
         <b>01</b>
         <h3>Learn</h3>
         <p>Fundamentals বুঝুন।</p>
       </div>
+
 
       <div>
         <b>02</b>
@@ -983,11 +1560,13 @@
         <p>Guided tasks সম্পন্ন করুন।</p>
       </div>
 
+
       <div>
         <b>03</b>
         <h3>Build</h3>
         <p>Portfolio তৈরি করুন।</p>
       </div>
+
 
       <div>
         <b>04</b>
@@ -995,11 +1574,13 @@
         <p>Opportunity-এর জন্য apply করুন।</p>
       </div>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- ================= ABOUT ================= -->
@@ -1008,41 +1589,65 @@
 
   <div class="wrap aboutgrid">
 
+
     <div>
 
       <div class="eyebrow">
         ABOUT SELAUS ACADEMY
       </div>
 
+
       <h2>
         Practical Skill Development এবং Career Experience-এর সমন্বয়।
       </h2>
 
-      <p>
-        Selaus Academy practical learning, career development,
-        digital skills এবং employability-এর উপর কাজ করে।
-      </p>
 
       <p>
+
+        Selaus Academy practical learning, career development,
+        digital skills এবং employability-এর উপর কাজ করে।
+
+      </p>
+
+
+      <p>
+
         Training, workforce development, youth employment, TVET,
         employer engagement, career counseling এবং digital learning
         experience-এর ভিত্তিতে এই platform তৈরি করা হয়েছে।
+
       </p>
 
+
       <p>
+
         আমাদের লক্ষ্য খুব সহজ—
         কী শিখবেন বুঝুন, practice করুন, portfolio তৈরি করুন
         এবং আপনার পরবর্তী career step নিন।
+
       </p>
 
+
       <div class="ticks">
+
         ✓ Practical Training
-        <span>✓ Career Guidance</span>
-        <span>✓ Digital Skills</span>
-        <span>✓ Employability Focus</span>
+
+        <span>
+          ✓ Career Guidance
+        </span>
+
+        <span>
+          ✓ Digital Skills
+        </span>
+
+        <span>
+          ✓ Employability Focus
+        </span>
+
       </div>
 
     </div>
+
 
 
     <div class="profile">
@@ -1051,37 +1656,48 @@
         S
       </div>
 
+
       <small>
         FOUNDER & TRAINER
       </small>
+
 
       <h3>
         Selaus Hemrom
       </h3>
 
+
       <p>
         Career Development & Digital Growth Specialist
       </p>
 
+
       <div class="tags">
+
         Workforce Development<br>
         Career Counseling<br>
         Digital Marketing<br>
         Training Facilitation
+
       </div>
+
 
       <a
         href="https://www.linkedin.com/in/selaus-hemrom/"
         target="_blank"
         rel="noopener noreferrer">
+
         View LinkedIn Profile ↗
+
       </a>
 
     </div>
 
+
   </div>
 
 </section>
+
 
 
 <!-- ================= OFFER ================= -->
@@ -1090,34 +1706,44 @@
 
   <div class="wrap offerbox">
 
+
     <div>
 
       <div class="eyebrow">
         START WITHOUT OVERTHINKING
       </div>
 
+
       <h2>
         Free Orientation Class-এ যোগ দিন।
       </h2>
 
+
       <p>
+
         আপনার লক্ষ্য অনুযায়ী কোন skill বা learning path
         আপনার জন্য উপযুক্ত তা বুঝে নিন।
+
       </p>
 
     </div>
+
 
     <a
       class="btn white"
       href="https://forms.gle/NHpn2oK4LzLdowEv6"
       target="_blank"
       rel="noopener noreferrer">
+
       🎓 Register Free Orientation →
+
     </a>
+
 
   </div>
 
 </section>
+
 
 
 <!-- ================= FAQ ================= -->
@@ -1125,6 +1751,7 @@
 <section id="faq" class="section soft">
 
   <div class="wrap narrow">
+
 
     <div class="center">
 
@@ -1146,9 +1773,11 @@
       </summary>
 
       <p>
-        Product-এর “কিনতে চাই” button অথবা WhatsApp button-এ click করে
-        আমাদের সঙ্গে যোগাযোগ করুন। Payment confirm হওয়ার পরে আপনার
-        Gmail address-এ personal access দেওয়া হবে।
+
+        Product-এর Preview অথবা “কিনতে চাই” button-এ click করুন।
+        এরপর নির্দিষ্ট product-এর order page-এ গিয়ে payment করুন,
+        Transaction ID দিন এবং order submit করুন।
+
       </p>
 
     </details>
@@ -1161,8 +1790,10 @@
       </summary>
 
       <p>
-        Product অনুযায়ী PDF এবং PPTX file/access দেওয়া হবে।
-        Access ব্যক্তিগতভাবে দেওয়া হবে।
+
+        Payment verification-এর পরে product অনুযায়ী PDF এবং PPTX
+        আপনার Gmail address-এ personal access দেওয়া হবে।
+
       </p>
 
     </details>
@@ -1175,9 +1806,10 @@
       </summary>
 
       <p>
+
         হ্যাঁ। Preview button-এ click করলে product-এর details,
         contents এবং sample information দেখতে পারবেন।
-        সম্পূর্ণ paid file public করা হবে না।
+
       </p>
 
     </details>
@@ -1190,8 +1822,10 @@
       </summary>
 
       <p>
+
         অবশ্যই। আমাদের guides এবং training beginner-friendly
         approach অনুসরণ করে তৈরি করা হয়েছে।
+
       </p>
 
     </details>
@@ -1204,16 +1838,20 @@
       </summary>
 
       <p>
+
         না। Freelancing-এর পাশাপাশি Digital Marketing,
         employment, career development, digital entrepreneurship
         এবং employability-এর জন্যও resources ও training রয়েছে।
+
       </p>
 
     </details>
 
+
   </div>
 
 </section>
+
 
 
 <!-- ================= ENROLL ================= -->
@@ -1222,38 +1860,55 @@
 
   <div class="wrap enroll">
 
+
     <div>
 
       <div class="eyebrow">
         READY TO START?
       </div>
 
+
       <h2>
         আজ থেকেই আপনার প্রথম Step নিন।
       </h2>
 
+
       <p>
+
         Free orientation-এ register করুন অথবা Digital Products
         সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+
       </p>
+
 
       <div class="contact-list">
 
         <p>
+
           <b>WhatsApp:</b>
+
           <a
             href="https://wa.me/8801753630079"
             target="_blank"
             rel="noopener noreferrer">
+
             +880 1753-630079
+
           </a>
+
         </p>
 
+
         <p>
+
           <b>Email:</b>
+
           <a href="mailto:hemromselaus@gmail.com">
+
             hemromselaus@gmail.com
+
           </a>
+
         </p>
 
       </div>
@@ -1261,33 +1916,44 @@
     </div>
 
 
+
     <div class="formcard">
 
-      <span class="form-icon">🎓</span>
+      <span class="form-icon">
+        🎓
+      </span>
+
 
       <h3>
         Free Orientation Registration
       </h3>
 
+
       <p>
         Short registration form পূরণ করে আপনার interest জানান।
       </p>
+
 
       <a
         class="btn dark full"
         href="https://forms.gle/NHpn2oK4LzLdowEv6"
         target="_blank"
         rel="noopener noreferrer">
+
         Open Registration Form
+
       </a>
 
     </div>
+
 
   </div>
 
 </section>
 
+
 </main>
+
 
 
 <!-- ================= FOOTER ================= -->
@@ -1295,6 +1961,7 @@
 <footer>
 
   <div class="wrap foot">
+
 
     <div class="logo">
 
@@ -1306,6 +1973,7 @@
 
     </div>
 
+
     <p>
       Learn Skills. Build Your Future.
     </p>
@@ -1313,50 +1981,69 @@
 
     <div class="links">
 
+
       <a
         href="https://www.facebook.com/SelausSuccessAcademy"
         target="_blank"
         rel="noopener noreferrer">
+
         Facebook
+
       </a>
+
 
       <a
         href="https://www.youtube.com/@SelausAcademy-Silas"
         target="_blank"
         rel="noopener noreferrer">
+
         YouTube
+
       </a>
+
 
       <a
         href="https://www.instagram.com/selaushemrom/"
         target="_blank"
         rel="noopener noreferrer">
+
         Instagram
+
       </a>
+
 
       <a
         href="https://www.tiktok.com/@selausacademy"
         target="_blank"
         rel="noopener noreferrer">
+
         TikTok
+
       </a>
+
 
       <a
         href="https://www.linkedin.com/in/selaus-hemrom/"
         target="_blank"
         rel="noopener noreferrer">
+
         LinkedIn
+
       </a>
 
+
     </div>
+
 
     <small>
       © 2026 Selaus Academy. All rights reserved.
     </small>
 
+
   </div>
 
 </footer>
+
 
 
 <!-- ================= WHATSAPP ================= -->
@@ -1367,8 +2054,11 @@
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Contact Selaus Academy on WhatsApp">
+
   WA
+
 </a>
+
 
 
 <!-- ================= PREVIEW MODAL ================= -->
@@ -1378,29 +2068,410 @@
   class="modal"
   aria-hidden="true"
   role="dialog"
-  aria-modal="true"
-  aria-labelledby="previewTitle">
+  aria-modal="true">
 
   <div
     class="modal-overlay"
     onclick="closePreview()">
   </div>
 
+
   <div class="modal-box">
+
 
     <button
       class="modal-close"
       onclick="closePreview()"
       aria-label="Close preview"
       type="button">
+
       ×
+
     </button>
 
+
     <div id="previewContent"></div>
+
 
   </div>
 
 </div>
-<script src="script.js"></script>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menu =
+  document.getElementById("menu");
+
+const nav =
+  document.getElementById("nav");
+
+
+if(menu && nav){
+
+  menu.addEventListener(
+    "click",
+    function(){
+
+      nav.classList.toggle("open");
+
+      const isOpen =
+        nav.classList.contains("open");
+
+      menu.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================
+   PRODUCT DATABASE
+========================= */
+
+const products = {
+
+  dm: {
+
+    title:
+      "Digital Marketing Beginner Guide",
+
+    price:
+      "৳ ১৯৯",
+
+    description:
+      "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
+
+    items: [
+
+      "Digital Marketing Fundamentals",
+
+      "Social Media Marketing",
+
+      "Content Marketing",
+
+      "Beginner Roadmap",
+
+      "Digital Career Direction"
+
+    ]
+
+  },
+
+
+  canva: {
+
+    title:
+      "Canva Beginner to Professional Guide",
+
+    price:
+      "৳ ২৯৯",
+
+    description:
+      "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
+
+    items: [
+
+      "Canva Fundamentals",
+
+      "Design Basics",
+
+      "Social Media Design",
+
+      "Marketing Materials",
+
+      "Professional Workflow"
+
+    ]
+
+  },
+
+
+  freelancing: {
+
+    title:
+      "Freelancing Beginner Guide",
+
+    price:
+      "৳ ২৯৯",
+
+    description:
+      "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
+
+    items: [
+
+      "Freelancing Fundamentals",
+
+      "Online Opportunities",
+
+      "Portfolio Preparation",
+
+      "Client Communication",
+
+      "Beginner Roadmap"
+
+    ]
+
+  },
+
+
+  upwork: {
+
+    title:
+      "Upwork Proposal Guide",
+
+    price:
+      "৳ ৩৯৯",
+
+    description:
+      "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
+
+    items: [
+
+      "Job Analysis",
+
+      "Proposal Structure",
+
+      "Client Communication",
+
+      "Proposal Examples",
+
+      "Winning Proposal Strategy"
+
+    ]
+
+  },
+
+
+  fiverr: {
+
+    title:
+      "Fiverr Gig Guide",
+
+    price:
+      "৳ ৩৯৯",
+
+    description:
+      "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
+
+    items: [
+
+      "Fiverr Profile Setup",
+
+      "Gig Creation",
+
+      "Gig Optimization",
+
+      "Client Communication",
+
+      "Fiverr Beginner Strategy"
+
+    ]
+
+  },
+
+
+  bundle: {
+
+    title:
+      "Digital Career Starter Bundle",
+
+    price:
+      "৳ ৯৯৯",
+
+    description:
+      "Digital Marketing + Canva + Freelancing + Upwork + Fiverr—beginner হিসেবে শুরু করার জন্য গুরুত্বপূর্ণ resources একসাথে।",
+
+    items: [
+
+      "Digital Marketing Beginner Guide",
+
+      "Canva Beginner to Professional Guide",
+
+      "Freelancing Beginner Guide",
+
+      "Upwork Proposal Guide",
+
+      "Fiverr Gig Guide",
+
+      "PDF + PPTX",
+
+      "Personal Access"
+
+    ]
+
+  }
+
+};
+
+
+
+/* =========================
+   OPEN PREVIEW
+========================= */
+
+function openPreview(productKey){
+
+  const product =
+    products[productKey];
+
+  if(!product){
+
+    return;
+
+  }
+
+
+  const modal =
+    document.getElementById(
+      "previewModal"
+    );
+
+
+  const content =
+    document.getElementById(
+      "previewContent"
+    );
+
+
+  let itemsHTML = "";
+
+
+  product.items.forEach(
+    function(item){
+
+      itemsHTML +=
+        "<li>✓ " +
+        item +
+        "</li>";
+
+    }
+  );
+
+
+  content.innerHTML = `
+
+    <div class="preview-label">
+      PRODUCT PREVIEW
+    </div>
+
+    <h2 class="preview-title">
+      ${product.title}
+    </h2>
+
+    <p class="preview-description">
+      ${product.description}
+    </p>
+
+    <ul class="preview-items">
+      ${itemsHTML}
+    </ul>
+
+    <div class="preview-price">
+      ${product.price}
+    </div>
+
+    <div class="preview-actions">
+
+      <a
+        class="preview-buy"
+        href="order.html?product=${encodeURIComponent(productKey)}">
+
+        💳 কিনতে চাই →
+
+      </a>
+
+      <button
+        type="button"
+        class="preview-back"
+        onclick="closePreview()">
+
+        ← Back
+
+      </button>
+
+    </div>
+
+  `;
+
+
+  modal.classList.add("active");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+
+/* =========================
+   CLOSE PREVIEW
+========================= */
+
+function closePreview(){
+
+  const modal =
+    document.getElementById(
+      "previewModal"
+    );
+
+
+  modal.classList.remove(
+    "active"
+  );
+
+
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+/* =========================
+   ESC CLOSE
+========================= */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Escape"){
+
+      closePreview();
+
+    }
+
+  }
+);
+
+
+</script>
+
+
 </body>
+
 </html>
