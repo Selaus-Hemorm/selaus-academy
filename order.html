@@ -5,15 +5,14 @@
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Order | Selaus Academy</title>
 
   <meta
     name="description"
-    content="Order digital learning products from Selaus Academy.">
+    content="Order digital learning products from Selaus Academy."
+  >
 
   <style>
 
@@ -42,7 +41,7 @@
     }
 
     .wrap{
-      width:min(900px,92%);
+      width:min(950px,92%);
       margin:auto;
     }
 
@@ -53,7 +52,6 @@
 
     .nav{
       min-height:76px;
-
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -155,7 +153,6 @@
     select{
       width:100%;
       min-height:48px;
-
       padding:0 14px;
 
       border:1px solid #d0d5dd;
@@ -194,10 +191,23 @@
       color:#667085;
     }
 
+    .payment-number{
+      margin-top:10px;
+      padding:10px;
+
+      border-radius:8px;
+
+      background:#fff;
+      border:1px solid #e4e7ec;
+
+      font-size:13px;
+      font-weight:800;
+      color:#111827;
+    }
+
     .btn{
       width:100%;
       min-height:50px;
-
       margin-top:20px;
 
       border:0;
@@ -210,21 +220,24 @@
       font-weight:800;
 
       cursor:pointer;
+
+      transition:.2s ease;
     }
 
     .btn:hover{
       background:#273043;
+      transform:translateY(-1px);
     }
 
     .btn:disabled{
       opacity:.6;
       cursor:not-allowed;
+      transform:none;
     }
 
     .secure{
       margin-top:15px;
       text-align:center;
-
       font-size:11px;
       color:#98a2b3;
     }
@@ -253,10 +266,31 @@
       border-radius:12px;
 
       background:#ecfdf3;
+      border:1px solid #abefc6;
+
       color:#067647;
 
-      font-size:13px;
+      font-size:14px;
       font-weight:700;
+    }
+
+    .order-id{
+      margin-top:10px;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .support{
+      display:block;
+
+      margin-top:15px;
+
+      text-align:center;
+
+      font-size:13px;
+      font-weight:800;
+
+      color:#111827;
     }
 
     footer{
@@ -265,6 +299,7 @@
       text-align:center;
 
       color:#98a2b3;
+
       font-size:11px;
     }
 
@@ -282,6 +317,10 @@
         font-size:29px;
       }
 
+      .card{
+        padding:24px;
+      }
+
     }
 
   </style>
@@ -296,20 +335,12 @@
 
   <div class="wrap nav">
 
-    <a
-      href="index.html"
-      class="logo">
-
+    <a href="index.html" class="logo">
       SELAUS ACADEMY
-
     </a>
 
-    <a
-      href="index.html"
-      class="back">
-
+    <a href="index.html" class="back">
       ← Back to Website
-
     </a>
 
   </div>
@@ -325,7 +356,9 @@
     <div class="order-grid">
 
 
-      <!-- PRODUCT INFORMATION -->
+      <!-- =========================================
+           PRODUCT INFORMATION
+      ========================================== -->
 
       <section class="card">
 
@@ -367,7 +400,9 @@
 
 
 
-      <!-- ORDER FORM -->
+      <!-- =========================================
+           ORDER FORM
+      ========================================== -->
 
       <section class="card">
 
@@ -382,12 +417,14 @@
 
 
         <p class="description">
-
-          আপনার তথ্য দিন। Payment confirmation-এর পরে
-          আপনার purchased file Gmail-এ access দেওয়া হবে।
-
+          আপনার তথ্য দিন এবং payment সম্পন্ন করে
+          Transaction ID দিন। Payment verification-এর
+          পরে আপনার purchased file Gmail-এ access দেওয়া হবে।
         </p>
 
+
+
+        <!-- ERROR -->
 
         <div
           id="error"
@@ -395,28 +432,30 @@
         </div>
 
 
+
+        <!-- SUCCESS -->
+
         <div
           id="success"
           class="success">
+
+          ✅ Order successfully submitted!
+
+          <div
+            id="orderId"
+            class="order-id">
+          </div>
+
+          <div style="margin-top:8px;">
+            Payment verification-এর পরে আপনার
+            Gmail address-এ file access দেওয়া হবে।
+          </div>
+
         </div>
 
 
 
         <form id="orderForm">
-
-
-          <!-- HIDDEN PRODUCT DATA -->
-
-          <input
-            type="hidden"
-            id="productInput"
-            name="product">
-
-          <input
-            type="hidden"
-            id="priceInput"
-            name="price">
-
 
 
           <!-- NAME -->
@@ -427,10 +466,10 @@
 
           <input
             id="name"
-            name="name"
             type="text"
             placeholder="আপনার নাম"
-            required>
+            required
+          >
 
 
 
@@ -442,10 +481,10 @@
 
           <input
             id="email"
-            name="email"
             type="email"
             placeholder="example@gmail.com"
-            required>
+            required
+          >
 
 
 
@@ -457,22 +496,21 @@
 
           <input
             id="phone"
-            name="phone"
             type="tel"
             placeholder="01XXXXXXXXX"
-            required>
+            required
+          >
 
 
 
           <!-- PAYMENT METHOD -->
 
-          <label for="paymentMethod">
+          <label for="payment">
             Payment Method
           </label>
 
           <select
-            id="paymentMethod"
-            name="paymentMethod"
+            id="payment"
             required>
 
             <option value="">
@@ -495,31 +533,20 @@
 
 
 
-          <!-- TRANSACTION ID -->
+          <!-- PAYMENT INSTRUCTIONS -->
 
-          <label for="transactionId">
-            Transaction ID
-          </label>
-
-          <input
-            id="transactionId"
-            name="transactionId"
-            type="text"
-            placeholder="Payment করার পরে Transaction ID দিন"
-            required>
-
-
-
-          <div class="payment-box">
+          <div
+            id="paymentBox"
+            class="payment-box">
 
             <strong>
               💳 Payment Instructions
             </strong>
 
-            <p>
+            <p id="paymentText">
 
-              প্রথমে আপনার নির্বাচিত payment method ব্যবহার
-              করে payment করুন। এরপর Transaction ID দিন।
+              প্রথমে আপনার নির্বাচিত payment method
+              ব্যবহার করে payment করুন।
 
             </p>
 
@@ -527,26 +554,60 @@
 
 
 
+          <!-- TRANSACTION ID -->
+
+          <label for="transactionId">
+
+            Transaction ID
+
+          </label>
+
+
+          <input
+            id="transactionId"
+            type="text"
+            placeholder="Payment করার পর Transaction ID দিন"
+            required
+          >
+
+
+
           <!-- SUBMIT -->
 
           <button
+            id="submitButton"
             type="submit"
-            class="btn"
-            id="submitButton">
+            class="btn">
 
-            Continue to Payment →
+            Submit Order →
 
           </button>
 
 
           <div class="secure">
 
-            🔐 Your information is used only for order processing.
+            🔐 আপনার তথ্য শুধুমাত্র order processing
+            এবং payment verification-এর জন্য ব্যবহার করা হবে।
 
           </div>
 
 
         </form>
+
+
+
+        <!-- WHATSAPP SUPPORT -->
+
+        <a
+          href="https://wa.me/8801753630079"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="support">
+
+          💬 Need Help? WhatsApp Support
+
+        </a>
+
 
       </section>
 
@@ -750,11 +811,26 @@ const product =
    ELEMENTS
 ===================================================== */
 
+const productTitle =
+  document.getElementById("productTitle");
+
+const productDescription =
+  document.getElementById("productDescription");
+
+const productPrice =
+  document.getElementById("productPrice");
+
+const productItems =
+  document.getElementById("productItems");
+
 const errorBox =
   document.getElementById("error");
 
 const successBox =
   document.getElementById("success");
+
+const orderIdBox =
+  document.getElementById("orderId");
 
 const form =
   document.getElementById("orderForm");
@@ -762,10 +838,16 @@ const form =
 const submitButton =
   document.getElementById("submitButton");
 
+const payment =
+  document.getElementById("payment");
+
+const paymentText =
+  document.getElementById("paymentText");
+
 
 
 /* =====================================================
-   INVALID PRODUCT
+   DISPLAY PRODUCT
 ===================================================== */
 
 if(!product){
@@ -774,52 +856,21 @@ if(!product){
     "block";
 
   errorBox.textContent =
-    "Product পাওয়া যায়নি। Please go back and select a product.";
+    "Product পাওয়া যায়নি। Website থেকে আবার product select করুন।";
 
-}
+  form.style.display =
+    "none";
 
+}else{
 
-
-/* =====================================================
-   DISPLAY PRODUCT
-===================================================== */
-
-if(product){
-
-  document.getElementById(
-    "productTitle"
-  ).textContent =
+  productTitle.textContent =
     product.title;
 
-
-  document.getElementById(
-    "productDescription"
-  ).textContent =
+  productDescription.textContent =
     product.description;
 
-
-  document.getElementById(
-    "productPrice"
-  ).textContent =
+  productPrice.textContent =
     product.price;
-
-
-  document.getElementById(
-    "productInput"
-  ).value =
-    product.title;
-
-
-  document.getElementById(
-    "priceInput"
-  ).value =
-    product.price;
-
-
-  const list =
-    document.getElementById(
-      "productItems"
-    );
 
 
   product.items.forEach(
@@ -831,12 +882,90 @@ if(product){
       li.textContent =
         "✓ " + item;
 
-      list.appendChild(li);
+      productItems.appendChild(li);
 
     }
   );
 
 }
+
+
+
+/* =====================================================
+   PAYMENT INSTRUCTIONS
+===================================================== */
+
+payment.addEventListener(
+  "change",
+  function(){
+
+    const method =
+      payment.value;
+
+
+    if(method === "bKash"){
+
+      paymentText.innerHTML =
+
+        "bKash Send Money করুন এই নম্বরে:" +
+
+        '<div class="payment-number">' +
+
+        "📱 01753630079" +
+
+        "</div>" +
+
+        "<br>" +
+
+        "Payment করার পরে Transaction ID এখানে দিন।";
+
+    }
+
+
+    else if(method === "Nagad"){
+
+      paymentText.innerHTML =
+
+        "Nagad Send Money করুন এই নম্বরে:" +
+
+        '<div class="payment-number">' +
+
+        "📱 01753630079" +
+
+        "</div>" +
+
+        "<br>" +
+
+        "Payment করার পরে Transaction ID এখানে দিন।";
+
+    }
+
+
+    else if(method === "Bank Transfer"){
+
+      paymentText.innerHTML =
+
+        "Bank Transfer-এর জন্য order submit করার পরে " +
+
+        "আপনার সাথে যোগাযোগ করা হবে। অথবা " +
+
+        "WhatsApp Support ব্যবহার করুন।";
+
+    }
+
+
+    else{
+
+      paymentText.textContent =
+
+        "প্রথমে আপনার নির্বাচিত payment method " +
+
+        "ব্যবহার করে payment করুন।";
+
+    }
+
+  }
+);
 
 
 
@@ -859,33 +988,37 @@ form.addEventListener(
 
 
     const name =
-      document.getElementById(
-        "name"
-      ).value.trim();
+      document
+        .getElementById("name")
+        .value
+        .trim();
 
 
     const email =
-      document.getElementById(
-        "email"
-      ).value.trim();
+      document
+        .getElementById("email")
+        .value
+        .trim();
 
 
     const phone =
-      document.getElementById(
-        "phone"
-      ).value.trim();
+      document
+        .getElementById("phone")
+        .value
+        .trim();
 
 
     const paymentMethod =
-      document.getElementById(
-        "paymentMethod"
-      ).value;
+      document
+        .getElementById("payment")
+        .value;
 
 
     const transactionId =
-      document.getElementById(
-        "transactionId"
-      ).value.trim();
+      document
+        .getElementById("transactionId")
+        .value
+        .trim();
 
 
 
@@ -903,16 +1036,36 @@ form.addEventListener(
         "block";
 
       errorBox.textContent =
-        "অনুগ্রহ করে সব তথ্য পূরণ করুন।";
+        "❌ অনুগ্রহ করে Name, Gmail, Phone, Payment Method এবং Transaction ID পূরণ করুন।";
 
       return;
 
     }
 
 
+
+    /* GMAIL CHECK */
+
+    if(
+      !email.toLowerCase().endsWith("@gmail.com")
+    ){
+
+      errorBox.style.display =
+        "block";
+
+      errorBox.textContent =
+        "❌ অনুগ্রহ করে একটি valid Gmail address দিন।";
+
+      return;
+
+    }
+
+
+
+    /* START SUBMIT */
+
     errorBox.style.display =
       "none";
-
 
     successBox.style.display =
       "none";
@@ -921,13 +1074,12 @@ form.addEventListener(
     submitButton.disabled =
       true;
 
-
     submitButton.textContent =
       "Submitting Order...";
 
 
 
-    /* DATA FOR GOOGLE SHEET */
+    /* ORDER DATA */
 
     const orderData = {
 
@@ -959,17 +1111,14 @@ form.addEventListener(
     try{
 
 
+      /* SEND TO GOOGLE SHEETS */
+
       const response =
         await fetch(
           GOOGLE_SCRIPT_URL,
           {
 
             method:"POST",
-
-            headers:{
-              "Content-Type":
-                "text/plain;charset=utf-8"
-            },
 
             body:
               JSON.stringify(orderData)
@@ -978,70 +1127,28 @@ form.addEventListener(
         );
 
 
-
       const result =
         await response.json();
 
 
 
-      /* SUCCESS */
-
       if(result.success){
+
+
+        /* SUCCESS */
+
+        form.style.display =
+          "none";
+
 
         successBox.style.display =
           "block";
 
 
-        successBox.innerHTML =
-          "✅ Order submitted successfully!<br><br>" +
+        orderIdBox.textContent =
+          "Order ID: " +
+          result.orderId;
 
-          "Order ID: <strong>" +
-          result.orderId +
-          "</strong><br><br>" +
-
-          "Payment verification-এর পরে আপনার Gmail-এ purchased file/access দেওয়া হবে.";
-
-
-
-        form.reset();
-
-
-        /*
-          IMPORTANT:
-
-          Product data আবার hidden field-এ রাখছি
-          যাতে reset-এর পরে হারিয়ে না যায়।
-        */
-
-        document.getElementById(
-          "productInput"
-        ).value =
-          product.title;
-
-
-        document.getElementById(
-          "priceInput"
-        ).value =
-          product.price;
-
-
-
-        /*
-          3 seconds পরে payment page
-        */
-
-        setTimeout(
-          function(){
-
-            window.location.href =
-              "payment.html?product=" +
-              encodeURIComponent(productKey) +
-              "&orderId=" +
-              encodeURIComponent(result.orderId);
-
-          },
-          3000
-        );
 
 
       }else{
@@ -1049,7 +1156,7 @@ form.addEventListener(
 
         throw new Error(
           result.error ||
-          "Order submission failed."
+          "Order submission failed"
         );
 
       }
@@ -1066,7 +1173,7 @@ form.addEventListener(
 
 
       errorBox.textContent =
-        "❌ Order submit হয়নি। Please try again.";
+        "❌ Order submit হয়নি। Google Sheet connection অথবা Apps Script deployment check করুন।";
 
 
       submitButton.disabled =
@@ -1074,7 +1181,7 @@ form.addEventListener(
 
 
       submitButton.textContent =
-        "Continue to Payment →";
+        "Submit Order →";
 
     }
 
