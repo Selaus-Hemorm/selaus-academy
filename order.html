@@ -7,539 +7,518 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Order | Selaus Academy</title>
 
   <meta
     name="description"
-    content="Order digital learning products from Selaus Academy.">
-
-  <title>
-    Order | Selaus Academy
-  </title>
-
+    content="Selaus Academy digital products order page"
+  >
 
   <style>
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
-    body{
-
+    body {
+      margin: 0;
       font-family:
-        Inter,
-        "Noto Sans Bengali",
-        "Noto Sans",
         Arial,
+        "Noto Sans Bengali",
         sans-serif;
+      background: #f6f8fc;
+      color: #111827;
+    }
 
-      background:#f8fafc;
-
-      color:#172033;
-
-      line-height:1.6;
-
+    a {
+      text-decoration: none;
     }
 
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    /* =================================================
+       HEADER
+    ================================================= */
+
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 30px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 25px;
+      font-weight: 800;
+      color: #111827;
+      letter-spacing: .5px;
+    }
+
+    .back-link {
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      color: #111827;
     }
 
 
-    .wrap{
+    /* =================================================
+       MAIN
+    ================================================= */
 
-      width:min(950px,92%);
-
-      margin:auto;
-
+    .page {
+      max-width: 1100px;
+      margin: 55px auto;
+      padding: 0 20px;
     }
 
-
-    header{
-
-      background:#fff;
-
-      border-bottom:
-        1px solid #e4e7ec;
-
-    }
-
-
-    .nav{
-
-      min-height:76px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
-
-    }
-
-
-    .logo{
-
-      font-size:21px;
-
-      font-weight:900;
-
-      color:#111827;
-
-    }
-
-
-    .back{
-
-      font-size:13px;
-
-      font-weight:700;
-
-      color:#667085;
-
-    }
-
-
-    main{
-
-      padding:60px 0;
-
-    }
-
-
-    .order-grid{
-
-      display:grid;
-
+    .order-grid {
+      display: grid;
       grid-template-columns:
-        1fr 1fr;
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
-      gap:25px;
-
-      align-items:start;
-
+      gap: 30px;
+      align-items: start;
     }
 
 
-    .card{
+    /* =================================================
+       PRODUCT CARD
+    ================================================= */
 
-      background:#fff;
-
-      border:
-        1px solid #e4e7ec;
-
-      border-radius:22px;
-
-      padding:30px;
+    .product-card,
+    .order-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 32px;
 
       box-shadow:
-        0 12px 40px rgba(16,24,40,.06);
+        0 12px 35px
+        rgba(15, 23, 42, .07);
+    }
 
+    .label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+
+    .product-card h1 {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 0 0 18px;
+      color: #0f172a;
+    }
+
+    .product-description {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 25px;
     }
 
 
-    .label{
+    /* =================================================
+       PRODUCT FEATURES
+    ================================================= */
 
-      font-size:10px;
+    .features {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-      font-weight:900;
+    .features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eef2f7;
+      color: #374151;
+    }
 
-      letter-spacing:1.5px;
-
-      color:#98a2b3;
-
-      margin-bottom:8px;
-
+    .features li::before {
+      content: "✓";
+      color: #16a34a;
+      font-weight: 800;
+      margin-right: 10px;
     }
 
 
-    h1{
+    /* =================================================
+       PRICE
+    ================================================= */
 
-      font-size:34px;
+    .price-box {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid #e5e7eb;
+    }
 
-      line-height:1.2;
+    .price-label {
+      display: block;
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
 
-      margin-bottom:15px;
-
-      color:#101828;
-
+    .price {
+      font-size: 32px;
+      font-weight: 900;
+      color: #111827;
     }
 
 
-    h2{
+    /* =================================================
+       ORDER CARD
+    ================================================= */
 
-      font-size:22px;
+    .order-card h2 {
+      font-size: 27px;
+      margin: 0 0 15px;
+      color: #0f172a;
+    }
 
-      margin-bottom:10px;
-
+    .order-intro {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 25px;
     }
 
 
-    .description{
+    /* =================================================
+       FORM
+    ================================================= */
 
-      color:#667085;
-
-      font-size:14px;
-
-      margin-bottom:20px;
-
+    .form-group {
+      margin-bottom: 17px;
     }
 
-
-    .product-list{
-
-      list-style:none;
-
-      margin:20px 0;
-
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 7px;
     }
 
-
-    .product-list li{
-
-      padding:8px 0;
-
-      border-bottom:
-        1px solid #f2f4f7;
-
-      font-size:13px;
-
-      color:#475467;
-
+    .required {
+      color: #dc2626;
     }
-
-
-    .price{
-
-      margin-top:20px;
-
-      font-size:32px;
-
-      font-weight:900;
-
-      color:#111827;
-
-    }
-
-
-    .price small{
-
-      display:block;
-
-      font-size:10px;
-
-      font-weight:600;
-
-      color:#98a2b3;
-
-    }
-
-
-    label{
-
-      display:block;
-
-      margin-top:15px;
-
-      margin-bottom:6px;
-
-      font-size:13px;
-
-      font-weight:800;
-
-    }
-
 
     input,
-    select{
+    select {
+      width: 100%;
+      height: 50px;
 
-      width:100%;
+      border: 1px solid #dbe2ea;
+      border-radius: 12px;
 
-      min-height:48px;
+      padding: 0 15px;
 
-      padding:0 14px;
+      font-size: 15px;
+      font-family: inherit;
 
-      border:
-        1px solid #d0d5dd;
+      background: #ffffff;
+      color: #111827;
 
-      border-radius:10px;
-
-      background:#fff;
-
-      color:#172033;
-
-      font:inherit;
-
-      font-size:14px;
-
+      outline: none;
     }
-
 
     input:focus,
-    select:focus{
+    select:focus {
+      border-color: #111827;
 
-      outline:
-        2px solid #98a2b3;
+      box-shadow:
+        0 0 0 3px
+        rgba(17, 24, 39, .08);
+    }
 
-      outline-offset:2px;
-
+    input[readonly] {
+      background: #f8fafc;
     }
 
 
-    .payment-box{
+    /* =================================================
+       PAYMENT INSTRUCTIONS
+    ================================================= */
 
-      margin-top:20px;
+    .payment-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
 
-      padding:18px;
+      border-radius: 16px;
+      padding: 20px;
 
-      border-radius:14px;
+      margin: 20px 0;
+    }
 
-      background:#f8fafc;
+    .payment-box h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
 
-      border:
-        1px solid #e4e7ec;
+    .payment-subtitle {
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
+    .payment-number {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+
+      padding: 14px;
+
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+
+      margin-bottom: 12px;
+    }
+
+    .bank-info {
+      display: none;
+    }
+
+    .bank-row {
+      padding: 7px 0;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .bank-row strong {
+      color: #111827;
+    }
+
+    .payment-amount {
+      font-size: 14px;
+      color: #475569;
+      margin-top: 12px;
+    }
+
+    .payment-amount strong {
+      color: #111827;
     }
 
 
-    .payment-box strong{
+    /* =================================================
+       WARNING
+    ================================================= */
 
-      display:block;
+    .warning {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
 
-      margin-bottom:5px;
+      border-radius: 12px;
 
+      padding: 13px 15px;
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      color: #9a3412;
+
+      margin-bottom: 18px;
     }
 
 
-    .payment-box p{
+    /* =================================================
+       SUBMIT BUTTON
+    ================================================= */
 
-      font-size:12px;
+    .submit-btn {
+      width: 100%;
+      height: 54px;
 
-      color:#667085;
+      border: none;
+      border-radius: 13px;
 
+      background: #111827;
+      color: #ffffff;
+
+      font-size: 16px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none;
     }
 
 
-    .payment-number{
+    /* =================================================
+       SECURITY NOTE
+    ================================================= */
 
-      margin-top:10px;
+    .security-note {
+      text-align: center;
 
-      padding:12px;
+      font-size: 12px;
+      color: #94a3b8;
 
-      border-radius:8px;
+      line-height: 1.6;
 
-      background:#fff;
-
-      border:
-        1px solid #e4e7ec;
-
-      font-size:14px;
-
-      font-weight:800;
-
-      color:#111827;
-
+      margin-top: 15px;
     }
 
 
-    .btn{
+    /* =================================================
+       SUCCESS
+    ================================================= */
 
-      width:100%;
+    .success-box {
+      display: none;
 
-      min-height:50px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
 
-      margin-top:20px;
+      border-radius: 16px;
 
-      border:0;
+      padding: 25px;
 
-      border-radius:11px;
+      color: #065f46;
+    }
 
-      background:#111827;
+    .success-box.show {
+      display: block;
+    }
 
-      color:#fff;
+    .success-box h3 {
+      margin-top: 0;
+      color: #047857;
+      font-size: 20px;
+    }
 
-      font-size:14px;
+    .success-box p {
+      line-height: 1.7;
+      margin: 8px 0;
+    }
 
-      font-weight:800;
+    .order-id {
+      font-weight: 900;
+      font-size: 17px;
+    }
 
-      cursor:pointer;
+    .whatsapp-help {
+      display: inline-block;
 
-      transition:.2s ease;
+      margin-top: 15px;
 
+      background: #16a34a;
+      color: white;
+
+      padding: 12px 18px;
+
+      border-radius: 10px;
+
+      font-weight: 700;
     }
 
 
-    .btn:hover{
+    /* =================================================
+       ERROR
+    ================================================= */
 
-      background:#273043;
+    .error-box {
+      display: none;
 
-      transform:translateY(-1px);
+      background: #fef2f2;
+      border: 1px solid #fecaca;
 
+      color: #991b1b;
+
+      border-radius: 12px;
+
+      padding: 13px 15px;
+
+      margin-bottom: 18px;
+
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .error-box.show {
+      display: block;
     }
 
 
-    .btn:disabled{
+    /* =================================================
+       FOOTER
+    ================================================= */
 
-      opacity:.6;
+    footer {
+      text-align: center;
 
-      cursor:not-allowed;
+      padding: 35px 20px;
 
-      transform:none;
+      color: #94a3b8;
 
+      font-size: 13px;
     }
 
 
-    .secure{
+    /* =================================================
+       MOBILE
+    ================================================= */
 
-      margin-top:15px;
+    @media (max-width: 800px) {
 
-      text-align:center;
-
-      font-size:11px;
-
-      color:#98a2b3;
-
-    }
-
-
-    .error{
-
-      display:none;
-
-      padding:15px;
-
-      margin-bottom:20px;
-
-      border-radius:10px;
-
-      background:#fef3f2;
-
-      color:#b42318;
-
-      font-size:13px;
-
-      font-weight:700;
-
-    }
-
-
-    .success{
-
-      display:none;
-
-      padding:18px;
-
-      margin-bottom:20px;
-
-      border-radius:12px;
-
-      background:#ecfdf3;
-
-      border:
-        1px solid #abefc6;
-
-      color:#067647;
-
-      font-size:14px;
-
-      font-weight:700;
-
-    }
-
-
-    .order-id{
-
-      margin-top:10px;
-
-      font-size:13px;
-
-      font-weight:900;
-
-    }
-
-
-    .support{
-
-      display:block;
-
-      margin-top:15px;
-
-      text-align:center;
-
-      font-size:13px;
-
-      font-weight:800;
-
-      color:#111827;
-
-    }
-
-
-    .notice{
-
-      margin-top:15px;
-
-      padding:12px;
-
-      border-radius:10px;
-
-      background:#fffaeb;
-
-      border:
-        1px solid #fedf89;
-
-      color:#93370d;
-
-      font-size:12px;
-
-    }
-
-
-    footer{
-
-      padding:35px 0;
-
-      text-align:center;
-
-      color:#98a2b3;
-
-      font-size:11px;
-
-    }
-
-
-    @media(max-width:700px){
-
-      main{
-
-        padding:35px 0;
-
+      .order-grid {
+        grid-template-columns: 1fr;
       }
 
-
-      .order-grid{
-
-        grid-template-columns:1fr;
-
+      .page {
+        margin: 30px auto;
       }
 
-
-      h1{
-
-        font-size:29px;
-
+      .product-card,
+      .order-card {
+        padding: 24px;
       }
 
+      .product-card h1 {
+        font-size: 28px;
+      }
 
-      .card{
+      .header-inner {
+        gap: 15px;
+      }
 
-        padding:24px;
-
+      .brand {
+        font-size: 21px;
       }
 
     }
@@ -552,1058 +531,1045 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+  <!-- =================================================
+       HEADER
+  ================================================= -->
 
-<header>
+  <header class="site-header">
 
-  <div class="wrap nav">
+    <div class="header-inner">
 
+      <div class="brand">
+        SELAUS ACADEMY
+      </div>
 
-    <a
-      href="index.html"
-      class="logo">
+      <a
+        href="index.html"
+        class="back-link"
+      >
+        ← Back to Products
+      </a>
 
-      SELAUS ACADEMY
+    </div>
 
-    </a>
-
-
-    <a
-      href="index.html#products"
-      class="back">
-
-      ← Back to Products
-
-    </a>
-
-
-  </div>
-
-</header>
+  </header>
 
 
+  <!-- =================================================
+       MAIN
+  ================================================= -->
 
-<!-- ================= MAIN ================= -->
-
-<main>
-
-  <div class="wrap">
-
+  <main class="page">
 
     <div class="order-grid">
 
 
-      <!-- ================= PRODUCT ================= -->
+      <!-- =============================================
+           PRODUCT INFORMATION
+      ============================================== -->
 
-      <section class="card">
-
+      <section class="product-card">
 
         <div class="label">
           YOUR PRODUCT
         </div>
 
-
         <h1 id="productTitle">
-          Loading...
+          Loading Product...
         </h1>
 
-
         <p
+          class="product-description"
           id="productDescription"
-          class="description">
+        >
+          Please wait...
         </p>
 
 
         <ul
-          id="productItems"
-          class="product-list">
-        </ul>
+          class="features"
+          id="productFeatures"
+        ></ul>
 
 
-        <div class="price">
+        <div class="price-box">
 
-          <small>
+          <span class="price-label">
             PRODUCT PRICE
-          </small>
+          </span>
 
-
-          <span id="productPrice">
+          <span
+            class="price"
+            id="productPrice"
+          >
             —
           </span>
 
         </div>
 
-
       </section>
 
 
 
-      <!-- ================= ORDER FORM ================= -->
+      <!-- =============================================
+           ORDER FORM
+      ============================================== -->
 
-      <section class="card">
-
+      <section class="order-card">
 
         <div class="label">
           ORDER INFORMATION
         </div>
 
-
         <h2>
           Complete Your Order
         </h2>
 
+        <p class="order-intro">
 
-        <p class="description">
-
-          প্রথমে payment করুন। এরপর আপনার Name,
-          Gmail, Mobile Number, Payment Method এবং
-          Transaction ID দিয়ে order submit করুন।
+          প্রথমে payment করুন। এরপর আপনার
+          Name, Gmail, Mobile Number,
+          Payment Method এবং Transaction ID
+          দিয়ে order submit করুন।
 
         </p>
-
 
 
         <!-- ERROR -->
 
         <div
-          id="error"
-          class="error">
+          id="errorBox"
+          class="error-box"
+        >
         </div>
-
-
-
-        <!-- SUCCESS -->
-
-        <div
-          id="success"
-          class="success">
-
-
-          ✅ Order successfully submitted!
-
-
-          <div
-            id="orderId"
-            class="order-id">
-          </div>
-
-
-          <div style="margin-top:8px;">
-
-            Payment verification-এর পরে আপনার
-            Gmail address-এ purchased file access দেওয়া হবে।
-
-          </div>
-
-
-        </div>
-
 
 
         <!-- FORM -->
 
         <form
-          id="orderForm">
+          id="orderForm"
+        >
+
+          <!-- Product hidden -->
+
+          <input
+            type="hidden"
+            id="productInput"
+            name="product"
+          >
+
+
+          <input
+            type="hidden"
+            id="priceInput"
+            name="price"
+          >
 
 
           <!-- NAME -->
 
-          <label for="name">
-            Full Name
-          </label>
+          <div class="form-group">
+
+            <label for="name">
+              Name <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="আপনার নাম"
+              required
+            >
+
+          </div>
 
 
-          <input
-            id="name"
-            type="text"
-            placeholder="আপনার নাম"
-            required>
+          <!-- GMAIL -->
 
+          <div class="form-group">
 
+            <label for="email">
+              Gmail <span class="required">*</span>
+            </label>
 
-          <!-- EMAIL -->
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            >
 
-          <label for="email">
-            Gmail Address
-          </label>
-
-
-          <input
-            id="email"
-            type="email"
-            placeholder="example@gmail.com"
-            required>
-
+          </div>
 
 
           <!-- PHONE -->
 
-          <label for="phone">
-            WhatsApp / Mobile Number
-          </label>
+          <div class="form-group">
 
+            <label for="phone">
+              WhatsApp / Mobile Number
+              <span class="required">*</span>
+            </label>
 
-          <input
-            id="phone"
-            type="tel"
-            placeholder="01XXXXXXXXX"
-            required>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="01XXXXXXXXX"
+              required
+            >
 
+          </div>
 
 
           <!-- PAYMENT METHOD -->
 
-          <label for="payment">
-            Payment Method
-          </label>
+          <div class="form-group">
 
+            <label for="paymentMethod">
+              Payment Method
+              <span class="required">*</span>
+            </label>
 
-          <select
-            id="payment"
-            required>
+            <select
+              id="paymentMethod"
+              name="paymentMethod"
+              required
+            >
 
+              <option value="">
+                Select Payment Method
+              </option>
 
-            <option value="">
-              Select Payment Method
-            </option>
+              <option value="bKash">
+                bKash
+              </option>
 
+              <option value="Nagad">
+                Nagad
+              </option>
 
-            <option value="bKash">
-              bKash
-            </option>
+              <option value="Bank">
+                Dutch-Bangla Bank
+              </option>
 
-
-            <option value="Nagad">
-              Nagad
-            </option>
-
-
-            <option value="Bank Transfer">
-              Bank Transfer
-            </option>
-
-
-          </select>
-
-
-
-          <!-- PAYMENT INSTRUCTIONS -->
-
-          <div
-            id="paymentBox"
-            class="payment-box">
-
-
-            <strong>
-              💳 Payment Instructions
-            </strong>
-
-
-            <p id="paymentText">
-
-              প্রথমে একটি payment method নির্বাচন করুন।
-
-            </p>
-
+            </select>
 
           </div>
 
+
+          <!-- =========================================
+               PAYMENT INSTRUCTIONS
+          ========================================== -->
+
+          <div
+            class="payment-box"
+            id="paymentBox"
+          >
+
+            <h3>
+              💳 Payment Instructions
+            </h3>
+
+            <div class="payment-subtitle">
+
+              প্রথমে নিচের account-এ payment করুন।
+              তারপর সঠিক Transaction ID দিন।
+
+            </div>
+
+
+            <!-- MOBILE PAYMENT -->
+
+            <div
+              id="mobilePayment"
+            >
+
+              <div
+                class="payment-number"
+                id="mobileNumber"
+              >
+                Payment Method select করুন
+              </div>
+
+            </div>
+
+
+            <!-- BANK PAYMENT -->
+
+            <div
+              class="bank-info"
+              id="bankInfo"
+            >
+
+              <div class="bank-row">
+                <strong>Bank:</strong>
+                Dutch-Bangla Bank
+              </div>
+
+              <div class="bank-row">
+                <strong>Account Name:</strong>
+                Selaus Hembrom
+              </div>
+
+              <div class="bank-row">
+                <strong>Account Number:</strong>
+                1721030030475
+              </div>
+
+            </div>
+
+
+            <div class="payment-amount">
+
+              Payment Amount:
+              <strong id="paymentAmount">
+                —
+              </strong>
+
+            </div>
+
+          </div>
 
 
           <!-- TRANSACTION ID -->
 
-          <label for="transactionId">
+          <div class="form-group">
 
-            Transaction ID
+            <label for="transactionId">
 
-          </label>
+              Transaction ID
+              <span class="required">*</span>
 
+            </label>
 
-          <input
-            id="transactionId"
-            type="text"
-            placeholder="Payment করার পর Transaction ID দিন"
-            required>
-
-
-          <div class="notice">
-
-            ⚠️ Payment করার পরে সঠিক Transaction ID দিন।
-            ভুল Transaction ID দিলে order verification করা সম্ভব হবে না।
+            <input
+              type="text"
+              id="transactionId"
+              name="transactionId"
+              placeholder="Payment করার পর Transaction ID দিন"
+              required
+            >
 
           </div>
 
+
+          <!-- WARNING -->
+
+          <div class="warning">
+
+            ⚠️ Payment করার পরে সঠিক Transaction ID
+            দিন। ভুল Transaction ID দিলে order
+            verification করা সম্ভব হবে না।
+
+          </div>
 
 
           <!-- SUBMIT -->
 
           <button
-            id="submitButton"
             type="submit"
-            class="btn">
+            class="submit-btn"
+            id="submitButton"
+          >
 
             Submit Order →
 
           </button>
 
 
-          <div class="secure">
+          <div class="security-note">
 
-            🔐 আপনার তথ্য শুধুমাত্র order processing
+            🔒 আপনার তথ্য শুধুমাত্র order processing
             এবং payment verification-এর জন্য ব্যবহার করা হবে।
 
           </div>
 
-
         </form>
 
 
+        <!-- =========================================
+             SUCCESS MESSAGE
+        ========================================== -->
 
-        <!-- SUPPORT -->
+        <div
+          id="successBox"
+          class="success-box"
+        >
 
-        <a
-          href="https://wa.me/8801753630079"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="support">
+          <h3>
+            ✅ Order successfully submitted!
+          </h3>
 
-          💬 Need Help? WhatsApp Support
+          <p>
+            আপনার Order ID:
+          </p>
 
-        </a>
+          <p
+            class="order-id"
+            id="successOrderId"
+          >
+            —
+          </p>
 
+          <p>
+
+            Payment verification-এর পরে
+            আপনার Gmail address-এ purchased
+            file access দেওয়া হবে।
+
+          </p>
+
+          <a
+            href="https://wa.me/8801753630079"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-help"
+          >
+            💬 Need Help? WhatsApp Support
+          </a>
+
+        </div>
 
       </section>
 
-
     </div>
 
-  </div>
+  </main>
 
-</main>
 
+  <!-- =================================================
+       FOOTER
+  ================================================= -->
 
+  <footer>
 
-<footer>
+    © 2026 Selaus Academy ·
+    Learn • Practice • Build • Grow
 
-  © 2026 Selaus Academy · Learn • Practice • Build • Grow
+  </footer>
 
-</footer>
 
 
+  <script>
 
-<!-- ================= JAVASCRIPT ================= -->
+    /* =================================================
+       IMPORTANT:
+       YOUR GOOGLE APPS SCRIPT WEB APP URL
+    ================================================= */
 
-<script>
+    const APPS_SCRIPT_URL =
+      "YOUR_APPS_SCRIPT_WEB_APP_URL";
 
 
-/* =====================================================
-   GOOGLE APPS SCRIPT URL
-===================================================== */
+    /* =================================================
+       PRODUCT DATA
+    ================================================= */
 
-const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbwwbCHctv8wM6oSyPRSqYKFtezodvgvzY7JkhNkz14yNmQhTSDKJXgEcpe6T5WEUajDSA/exec";
+    const products = {
 
+      dm: {
 
+        title:
+          "Digital Marketing Beginner Guide",
 
-/* =====================================================
-   PRODUCT DATABASE
-===================================================== */
+        price:
+          "৳ ১৯৯",
 
-const products = {
+        description:
+          "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
 
+        items: [
+          "Digital Marketing Fundamentals",
+          "Social Media Marketing",
+          "Content Marketing",
+          "Beginner Roadmap",
+          "Digital Career Direction"
+        ]
 
-  dm: {
+      },
 
-    title:
-      "Digital Marketing Beginner Guide",
 
-    price:
-      "৳ ১৯৯",
+      canva: {
 
-    description:
-      "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
+        title:
+          "Canva Beginner to Professional Guide",
 
-    items: [
+        price:
+          "৳ ২৯৯",
 
-      "Digital Marketing Fundamentals",
+        description:
+          "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
 
-      "Social Media Marketing",
+        items: [
+          "Canva Fundamentals",
+          "Design Basics",
+          "Social Media Design",
+          "Marketing Materials",
+          "Professional Workflow"
+        ]
 
-      "Content Marketing",
+      },
 
-      "Beginner Roadmap",
 
-      "Digital Career Direction"
+      freelancing: {
 
-    ]
+        title:
+          "Freelancing Beginner Guide",
 
-  },
+        price:
+          "৳ ২৯৯",
 
+        description:
+          "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
 
-  canva: {
+        items: [
+          "Freelancing Fundamentals",
+          "Online Opportunities",
+          "Portfolio Preparation",
+          "Client Communication",
+          "Beginner Roadmap"
+        ]
 
-    title:
-      "Canva Beginner to Professional Guide",
+      },
 
-    price:
-      "৳ ২৯৯",
 
-    description:
-      "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
+      upwork: {
 
-    items: [
+        title:
+          "Upwork Proposal Guide",
 
-      "Canva Fundamentals",
+        price:
+          "৳ ৩৯৯",
 
-      "Design Basics",
+        description:
+          "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
 
-      "Social Media Design",
+        items: [
+          "Job Analysis",
+          "Proposal Structure",
+          "Client Communication",
+          "Proposal Examples",
+          "Winning Proposal Strategy"
+        ]
 
-      "Marketing Materials",
+      },
 
-      "Professional Workflow"
 
-    ]
+      fiverr: {
 
-  },
+        title:
+          "Fiverr Gig Guide",
 
+        price:
+          "৳ ৩৯৯",
 
-  freelancing: {
+        description:
+          "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
 
-    title:
-      "Freelancing Beginner Guide",
+        items: [
+          "Fiverr Profile Setup",
+          "Gig Creation",
+          "Gig Optimization",
+          "Client Communication",
+          "Fiverr Beginner Strategy"
+        ]
 
-    price:
-      "৳ ২৯৯",
-
-    description:
-      "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
-
-    items: [
-
-      "Freelancing Fundamentals",
-
-      "Online Opportunities",
-
-      "Portfolio Preparation",
-
-      "Client Communication",
-
-      "Beginner Roadmap"
-
-    ]
-
-  },
-
-
-  upwork: {
-
-    title:
-      "Upwork Proposal Guide",
-
-    price:
-      "৳ ৩৯৯",
-
-    description:
-      "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
-
-    items: [
-
-      "Job Analysis",
-
-      "Proposal Structure",
-
-      "Client Communication",
-
-      "Proposal Examples",
-
-      "Winning Proposal Strategy"
-
-    ]
-
-  },
-
-
-  fiverr: {
-
-    title:
-      "Fiverr Gig Guide",
-
-    price:
-      "৳ ৩৯৯",
-
-    description:
-      "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
-
-    items: [
-
-      "Fiverr Profile Setup",
-
-      "Gig Creation",
-
-      "Gig Optimization",
-
-      "Client Communication",
-
-      "Fiverr Beginner Strategy"
-
-    ]
-
-  },
-
-
-  bundle: {
-
-    title:
-      "Digital Career Starter Bundle",
-
-    price:
-      "৳ ৯৯৯",
-
-    description:
-      "Digital Marketing + Canva + Freelancing + Upwork + Fiverr—beginner হিসেবে শুরু করার জন্য গুরুত্বপূর্ণ resources একসাথে।",
-
-    items: [
-
-      "Digital Marketing Beginner Guide",
-
-      "Canva Beginner to Professional Guide",
-
-      "Freelancing Beginner Guide",
-
-      "Upwork Proposal Guide",
-
-      "Fiverr Gig Guide",
-
-      "PDF + PPTX",
-
-      "Personal Access"
-
-    ]
-
-  }
-
-};
-
-
-
-/* =====================================================
-   GET PRODUCT FROM URL
-===================================================== */
-
-const params =
-  new URLSearchParams(
-    window.location.search
-  );
-
-
-const productKey =
-  params.get("product");
-
-
-const product =
-  products[productKey];
-
-
-
-/* =====================================================
-   ELEMENTS
-===================================================== */
-
-const productTitle =
-  document.getElementById(
-    "productTitle"
-  );
-
-
-const productDescription =
-  document.getElementById(
-    "productDescription"
-  );
-
-
-const productPrice =
-  document.getElementById(
-    "productPrice"
-  );
-
-
-const productItems =
-  document.getElementById(
-    "productItems"
-  );
-
-
-const errorBox =
-  document.getElementById(
-    "error"
-  );
-
-
-const successBox =
-  document.getElementById(
-    "success"
-  );
-
-
-const orderIdBox =
-  document.getElementById(
-    "orderId"
-  );
-
-
-const form =
-  document.getElementById(
-    "orderForm"
-  );
-
-
-const submitButton =
-  document.getElementById(
-    "submitButton"
-  );
-
-
-const payment =
-  document.getElementById(
-    "payment"
-  );
-
-
-const paymentText =
-  document.getElementById(
-    "paymentText"
-  );
-
-
-
-/* =====================================================
-   DISPLAY PRODUCT
-===================================================== */
-
-if(!product){
-
-  errorBox.style.display =
-    "block";
-
-
-  errorBox.textContent =
-    "❌ Product পাওয়া যায়নি। অনুগ্রহ করে Website থেকে আবার product select করুন।";
-
-
-  form.style.display =
-    "none";
-
-
-}else{
-
-
-  productTitle.textContent =
-    product.title;
-
-
-  productDescription.textContent =
-    product.description;
-
-
-  productPrice.textContent =
-    product.price;
-
-
-  product.items.forEach(
-    function(item){
-
-      const li =
-        document.createElement(
-          "li"
-        );
-
-
-      li.textContent =
-        "✓ " + item;
-
-
-      productItems.appendChild(
-        li
-      );
-
-    }
-  );
-
-}
-
-
-
-/* =====================================================
-   PAYMENT INSTRUCTIONS
-===================================================== */
-
-payment.addEventListener(
-  "change",
-  function(){
-
-    const method =
-      payment.value;
-
-
-    if(method === "bKash"){
-
-      paymentText.innerHTML =
-
-        "bKash Send Money করুন এই নম্বরে:" +
-
-        '<div class="payment-number">' +
-
-        "📱 01753630079" +
-
-        "</div>" +
-
-        "<br>" +
-
-        "Payment amount: <b>" +
-        product.price +
-        "</b>" +
-
-        "<br>" +
-
-        "Payment করার পরে Transaction ID এখানে দিন.";
-
-    }
-
-
-    else if(method === "Nagad"){
-
-      paymentText.innerHTML =
-
-        "Nagad Send Money করুন এই নম্বরে:" +
-
-        '<div class="payment-number">' +
-
-        "📱 01753630079" +
-
-        "</div>" +
-
-        "<br>" +
-
-        "Payment amount: <b>" +
-        product.price +
-        "</b>" +
-
-        "<br>" +
-
-        "Payment করার পরে Transaction ID এখানে দিন.";
-
-    }
-
-
-    else if(method === "Bank Transfer"){
-
-      paymentText.innerHTML =
-
-        "Bank Transfer-এর জন্য নিচের account ব্যবহার করুন:" +
-
-        '<div class="payment-number">' +
-
-        "Bank: YOUR BANK NAME<br>" +
-
-        "Account Name: SELAUS HEMROM<br>" +
-
-        "Account Number: YOUR ACCOUNT NUMBER" +
-
-        "</div>" +
-
-        "<br>" +
-
-        "Payment amount: <b>" +
-        product.price +
-        "</b>" +
-
-        "<br>" +
-
-        "Payment করার পরে Transaction ID এখানে দিন.";
-
-    }
-
-
-    else{
-
-      paymentText.textContent =
-        "প্রথমে একটি payment method নির্বাচন করুন।";
-
-    }
-
-  }
-);
-
-
-
-/* =====================================================
-   FORM SUBMISSION
-===================================================== */
-
-form.addEventListener(
-  "submit",
-  async function(event){
-
-    event.preventDefault();
-
-
-    if(!product){
-
-      return;
-
-    }
-
-
-
-    /* =====================
-       GET VALUES
-    ===================== */
-
-    const name =
-      document
-        .getElementById("name")
-        .value
-        .trim();
-
-
-    const email =
-      document
-        .getElementById("email")
-        .value
-        .trim();
-
-
-    const phone =
-      document
-        .getElementById("phone")
-        .value
-        .trim();
-
-
-    const paymentMethod =
-      document
-        .getElementById("payment")
-        .value;
-
-
-    const transactionId =
-      document
-        .getElementById("transactionId")
-        .value
-        .trim();
-
-
-
-    /* =====================
-       VALIDATION
-    ===================== */
-
-    if(
-      !name ||
-      !email ||
-      !phone ||
-      !paymentMethod ||
-      !transactionId
-    ){
-
-      errorBox.style.display =
-        "block";
-
-
-      errorBox.textContent =
-        "❌ Name, Gmail, Phone, Payment Method এবং Transaction ID সব পূরণ করুন।";
-
-
-      return;
-
-    }
-
-
-
-    /* =====================
-       GMAIL VALIDATION
-    ===================== */
-
-    if(
-      !email
-        .toLowerCase()
-        .endsWith("@gmail.com")
-    ){
-
-      errorBox.style.display =
-        "block";
-
-
-      errorBox.textContent =
-        "❌ অনুগ্রহ করে একটি valid Gmail address দিন।";
-
-
-      return;
-
-    }
-
-
-
-    /* =====================
-       CLEAR ERROR
-    ===================== */
-
-    errorBox.style.display =
-      "none";
-
-
-    successBox.style.display =
-      "none";
-
-
-    submitButton.disabled =
-      true;
-
-
-    submitButton.textContent =
-      "Submitting Order...";
-
-
-
-    /* =====================
-       ORDER DATA
-    ===================== */
-
-    const orderData = {
-
-      product:
-        product.title,
-
-      price:
-        product.price,
-
-      name:
-        name,
-
-      email:
-        email,
-
-      phone:
-        phone,
-
-      paymentMethod:
-        paymentMethod,
-
-      transactionId:
-        transactionId
+      }
 
     };
 
 
+    /* =================================================
+       GET PRODUCT FROM URL
+       Example:
+       order.html?product=fiverr
+    ================================================= */
 
-    /* =====================
-       SEND TO GOOGLE SCRIPT
-    ===================== */
-
-    try{
-
-
-      const response =
-        await fetch(
-          GOOGLE_SCRIPT_URL,
-          {
-
-            method:
-              "POST",
-
-            body:
-              JSON.stringify(
-                orderData
-              )
-
-          }
-        );
-
-
-      const responseText =
-        await response.text();
-
-
-      let result;
-
-
-      try{
-
-        result =
-          JSON.parse(
-            responseText
-          );
-
-      }catch(parseError){
-
-        throw new Error(
-          "Google Apps Script response পাওয়া যায়নি।"
-        );
-
-      }
-
-
-
-      /* =====================
-         SUCCESS
-      ===================== */
-
-      if(result.success){
-
-        form.style.display =
-          "none";
-
-
-        successBox.style.display =
-          "block";
-
-
-        orderIdBox.textContent =
-          "Order ID: " +
-          result.orderId;
-
-
-      }else{
-
-        throw new Error(
-          result.error ||
-          "Order submission failed."
-        );
-
-      }
-
-
-    }catch(error){
-
-
-      console.error(
-        "Order Error:",
-        error
+    const params =
+      new URLSearchParams(
+        window.location.search
       );
 
-
-      errorBox.style.display =
-        "block";
-
-
-      errorBox.textContent =
-        "❌ Order submit হয়নি। Google Apps Script deployment এবং Web App access check করুন।";
+    const productKey =
+      params.get("product") || "dm";
 
 
-      submitButton.disabled =
-        false;
+    const product =
+      products[productKey];
 
 
-      submitButton.textContent =
-        "Submit Order →";
+    /* =================================================
+       CHECK PRODUCT
+    ================================================= */
+
+    if (!product) {
+
+      document.getElementById(
+        "productTitle"
+      ).textContent =
+        "Product Not Found";
 
     }
 
-  }
-);
 
-</script>
+    /* =================================================
+       LOAD PRODUCT INFORMATION
+    ================================================= */
+
+    if (product) {
+
+      document.getElementById(
+        "productTitle"
+      ).textContent =
+        product.title;
+
+
+      document.getElementById(
+        "productDescription"
+      ).textContent =
+        product.description;
+
+
+      document.getElementById(
+        "productPrice"
+      ).textContent =
+        product.price;
+
+
+      document.getElementById(
+        "paymentAmount"
+      ).textContent =
+        product.price;
+
+
+      document.getElementById(
+        "productInput"
+      ).value =
+        product.title;
+
+
+      document.getElementById(
+        "priceInput"
+      ).value =
+        product.price;
+
+
+      const featureList =
+        document.getElementById(
+          "productFeatures"
+        );
+
+
+      product.items.forEach(
+        function (item) {
+
+          const li =
+            document.createElement("li");
+
+          li.textContent =
+            item;
+
+          featureList.appendChild(li);
+
+        }
+      );
+
+    }
+
+
+    /* =================================================
+       PAYMENT METHOD
+    ================================================= */
+
+    const paymentMethod =
+      document.getElementById(
+        "paymentMethod"
+      );
+
+
+    const mobilePayment =
+      document.getElementById(
+        "mobilePayment"
+      );
+
+
+    const mobileNumber =
+      document.getElementById(
+        "mobileNumber"
+      );
+
+
+    const bankInfo =
+      document.getElementById(
+        "bankInfo"
+      );
+
+
+    paymentMethod.addEventListener(
+      "change",
+      function () {
+
+        const method =
+          paymentMethod.value;
+
+
+        bankInfo.style.display =
+          "none";
+
+
+        mobilePayment.style.display =
+          "block";
+
+
+        if (method === "bKash") {
+
+          mobileNumber.textContent =
+            "📱 bKash Personal: 01753630079";
+
+        }
+
+
+        else if (method === "Nagad") {
+
+          mobileNumber.textContent =
+            "📱 Nagad Personal: 01753630079";
+
+        }
+
+
+        else if (method === "Bank") {
+
+          mobilePayment.style.display =
+            "none";
+
+          bankInfo.style.display =
+            "block";
+
+        }
+
+
+        else {
+
+          mobileNumber.textContent =
+            "Payment Method select করুন";
+
+        }
+
+      }
+    );
+
+
+    /* =================================================
+       FORM SUBMISSION
+    ================================================= */
+
+    const orderForm =
+      document.getElementById(
+        "orderForm"
+      );
+
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+
+    const errorBox =
+      document.getElementById(
+        "errorBox"
+      );
+
+
+    const successBox =
+      document.getElementById(
+        "successBox"
+      );
+
+
+    const successOrderId =
+      document.getElementById(
+        "successOrderId"
+      );
+
+
+    orderForm.addEventListener(
+      "submit",
+      async function (event) {
+
+        event.preventDefault();
+
+
+        errorBox.classList.remove(
+          "show"
+        );
+
+
+        /* ---------------------------------------------
+           CHECK APPS SCRIPT URL
+        --------------------------------------------- */
+
+        if (
+          APPS_SCRIPT_URL ===
+          "YOUR_APPS_SCRIPT_WEB_APP_URL"
+        ) {
+
+          errorBox.textContent =
+            "https://script.google.com/macros/s/AKfycbwwbCHctv8wM6oSyPRSqYKFtezodvgvzY7JkhNkz14yNmQhTSDKJXgEcpe6T5WEUajDSA/exec";
+
+          errorBox.classList.add(
+            "show"
+          );
+
+          return;
+
+        }
+
+
+        /* ---------------------------------------------
+           GET FORM DATA
+        --------------------------------------------- */
+
+        const data = {
+
+          product:
+            document.getElementById(
+              "productInput"
+            ).value,
+
+          price:
+            document.getElementById(
+              "priceInput"
+            ).value,
+
+          name:
+            document.getElementById(
+              "name"
+            ).value.trim(),
+
+          email:
+            document.getElementById(
+              "email"
+            ).value.trim(),
+
+          phone:
+            document.getElementById(
+              "phone"
+            ).value.trim(),
+
+          paymentMethod:
+            document.getElementById(
+              "paymentMethod"
+            ).value,
+
+          transactionId:
+            document.getElementById(
+              "transactionId"
+            ).value.trim()
+
+        };
+
+
+        /* ---------------------------------------------
+           BASIC VALIDATION
+        --------------------------------------------- */
+
+        if (!data.name) {
+
+          showError(
+            "আপনার Name দিন।"
+          );
+
+          return;
+
+        }
+
+
+        if (!data.email) {
+
+          showError(
+            "আপনার Gmail address দিন।"
+          );
+
+          return;
+
+        }
+
+
+        if (!data.phone) {
+
+          showError(
+            "আপনার WhatsApp / Mobile Number দিন।"
+          );
+
+          return;
+
+        }
+
+
+        if (!data.paymentMethod) {
+
+          showError(
+            "Payment Method select করুন।"
+          );
+
+          return;
+
+        }
+
+
+        if (!data.transactionId) {
+
+          showError(
+            "Payment করার পরে Transaction ID দিন।"
+          );
+
+          return;
+
+        }
+
+
+        /* ---------------------------------------------
+           DISABLE BUTTON
+        --------------------------------------------- */
+
+        submitButton.disabled =
+          true;
+
+        submitButton.textContent =
+          "Submitting Order...";
+
+
+        try {
+
+          /* -------------------------------------------
+             SEND DATA TO GOOGLE APPS SCRIPT
+          ------------------------------------------- */
+
+          const response =
+            await fetch(
+              APPS_SCRIPT_URL,
+              {
+
+                method: "POST",
+
+                headers: {
+                  "Content-Type":
+                    "text/plain;charset=utf-8"
+                },
+
+                body:
+                  JSON.stringify(data)
+
+              }
+            );
+
+
+          const result =
+            await response.json();
+
+
+          /* -------------------------------------------
+             SUCCESS
+          ------------------------------------------- */
+
+          if (
+            result.success === true
+          ) {
+
+            orderForm.style.display =
+              "none";
+
+
+            successBox.classList.add(
+              "show"
+            );
+
+
+            successOrderId.textContent =
+              result.orderId ||
+              "Order Submitted";
+
+
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+
+
+          }
+
+
+          /* -------------------------------------------
+             SERVER ERROR
+          ------------------------------------------- */
+
+          else {
+
+            throw new Error(
+              result.error ||
+              "Order submission failed."
+            );
+
+          }
+
+        }
+
+
+        catch (error) {
+
+          console.error(
+            "Order Error:",
+            error
+          );
+
+
+          showError(
+            "Order submit করা যায়নি। Internet connection এবং Apps Script Web App URL check করুন।"
+          );
+
+        }
+
+
+        finally {
+
+          submitButton.disabled =
+            false;
+
+          submitButton.textContent =
+            "Submit Order →";
+
+        }
+
+      }
+    );
+
+
+    /* =================================================
+       ERROR FUNCTION
+    ================================================= */
+
+    function showError(message) {
+
+      errorBox.textContent =
+        "⚠️ " + message;
+
+      errorBox.classList.add(
+        "show"
+      );
+
+      errorBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+
+  </script>
 
 
 </body>
