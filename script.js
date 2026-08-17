@@ -5,15 +5,42 @@
 
 
 /* =====================================================
+   PAYMENT INFORMATION
+===================================================== */
+
+const PAYMENT_INFO = {
+
+  bkash: {
+    type: "Personal",
+    number: "01753630079",
+    name: "Selaus Hembrom"
+  },
+
+  nagad: {
+    type: "Personal",
+    number: "01753630079",
+    name: "Selaus Hembrom"
+  },
+
+  bank: {
+    bankName: "Dutch-Bangla Bank",
+    accountName: "Selaus Hembrom",
+    accountNumber: "1721030030475"
+  }
+
+};
+
+
+/* =====================================================
    MOBILE MENU
 ===================================================== */
 
 const menu = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 
-if(menu && nav){
+if (menu && nav) {
 
-  menu.addEventListener("click", function(){
+  menu.addEventListener("click", function () {
 
     const isOpen = nav.classList.toggle("open");
 
@@ -32,9 +59,9 @@ if(menu && nav){
   });
 
 
-  document.querySelectorAll("#nav a").forEach(function(link){
+  document.querySelectorAll("#nav a").forEach(function (link) {
 
-    link.addEventListener("click", function(){
+    link.addEventListener("click", function () {
 
       nav.classList.remove("open");
 
@@ -61,6 +88,10 @@ if(menu && nav){
 
 const products = {
 
+  /* ---------------------------------------------------
+     DIGITAL MARKETING
+  --------------------------------------------------- */
+
   dm: {
 
     icon: "DM",
@@ -80,13 +111,18 @@ const products = {
       "Digital Career Direction"
     ],
 
-   buyUrl:
-"order.html?product=dm",
+    buyUrl:
+      "order.html?product=dm",
 
-supportWhatsapp:
-"https://wa.me/8801753630079?text=..."
+    supportWhatsapp:
+      "https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20want%20to%20know%20more%20about%20the%20Digital%20Marketing%20Beginner%20Guide."
+
   },
 
+
+  /* ---------------------------------------------------
+     CANVA
+  --------------------------------------------------- */
 
   canva: {
 
@@ -108,12 +144,17 @@ supportWhatsapp:
     ],
 
     buyUrl:
-"order.html?product=dm",
+      "order.html?product=canva",
 
-supportWhatsapp:
-"https://wa.me/8801753630079?text=..."
+    supportWhatsapp:
+      "https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20want%20to%20know%20more%20about%20the%20Canva%20Beginner%20to%20Professional%20Guide."
+
   },
 
+
+  /* ---------------------------------------------------
+     FREELANCING
+  --------------------------------------------------- */
 
   freelancing: {
 
@@ -135,12 +176,17 @@ supportWhatsapp:
     ],
 
     buyUrl:
-"order.html?product=dm",
+      "order.html?product=freelancing",
 
-supportWhatsapp:
-"https://wa.me/8801753630079?text=..."
+    supportWhatsapp:
+      "https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20want%20to%20know%20more%20about%20the%20Freelancing%20Beginner%20Guide."
+
   },
 
+
+  /* ---------------------------------------------------
+     UPWORK
+  --------------------------------------------------- */
 
   upwork: {
 
@@ -162,12 +208,17 @@ supportWhatsapp:
     ],
 
     buyUrl:
-"order.html?product=dm",
+      "order.html?product=upwork",
 
-supportWhatsapp:
-"https://wa.me/8801753630079?text=..."
+    supportWhatsapp:
+      "https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20want%20to%20know%20more%20about%20the%20Upwork%20Proposal%20Guide."
+
   },
 
+
+  /* ---------------------------------------------------
+     FIVERR
+  --------------------------------------------------- */
 
   fiverr: {
 
@@ -188,33 +239,53 @@ supportWhatsapp:
       "Fiverr Beginner Strategy"
     ],
 
-   buyUrl:
-"order.html?product=dm",
+    buyUrl:
+      "order.html?product=fiverr",
 
-supportWhatsapp:
-"https://wa.me/8801753630079?text=..."
+    supportWhatsapp:
+      "https://wa.me/8801753630079?text=Hello%20Selaus%20Academy%2C%20I%20want%20to%20know%20more%20about%20the%20Fiverr%20Gig%20Guide."
+
   }
 
 };
 
 
 /* =====================================================
-   OPEN PREVIEW
+   OPEN PRODUCT PREVIEW
 ===================================================== */
 
-function openPreview(productKey){
+function openPreview(productKey) {
 
   const product = products[productKey];
 
-  if(!product){
+  if (!product) {
+    console.error("Product not found:", productKey);
     return;
   }
 
 
+  const previewContent =
+    document.getElementById("previewContent");
+
+  const modal =
+    document.getElementById("previewModal");
+
+
+  if (!previewContent || !modal) {
+    console.error(
+      "Preview modal elements not found."
+    );
+    return;
+  }
+
+
+  /* ---------------------------------------------------
+     CREATE PRODUCT ITEMS
+  --------------------------------------------------- */
+
   let itemsHTML = "";
 
-
-  product.items.forEach(function(item){
+  product.items.forEach(function (item) {
 
     itemsHTML += `
       <li>✓ ${item}</li>
@@ -223,14 +294,9 @@ function openPreview(productKey){
   });
 
 
-  const previewContent =
-    document.getElementById("previewContent");
-
-
-  if(!previewContent){
-    return;
-  }
-
+  /* ---------------------------------------------------
+     PREVIEW HTML
+  --------------------------------------------------- */
 
   previewContent.innerHTML = `
 
@@ -304,13 +370,16 @@ function openPreview(productKey){
 
     <div class="preview-security">
 
-      🔐
-      <strong>
-        Full file public নয়
-      </strong>
+      <div>
+        🔐
+        <strong>
+          Personal Access
+        </strong>
+      </div>
 
       <p>
-        সম্পূর্ণ PDF এবং PPTX purchase করার পরে
+        সম্পূর্ণ PDF এবং PPTX public করা হবে না।
+        Purchase এবং payment verification-এর পরে
         আপনার Gmail address-এ personal access দেওয়া হবে।
       </p>
 
@@ -329,34 +398,38 @@ function openPreview(productKey){
           ${product.price}
         </strong>
 
+      </div>
+
+
       <div class="modal-actions">
 
-  <a
-    href="${product.buyUrl}"
-    class="modal-buy">
-    🛒 Buy Now
-  </a>
+        <a
+          href="${product.buyUrl}"
+          class="modal-buy"
+        >
+          🛒 Buy Now
+        </a>
 
-  <a
-    href="${product.supportWhatsapp}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="modal-support">
-    💬 Ask on WhatsApp
-  </a>
 
-</div>
+        <a
+          href="${product.supportWhatsapp}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="modal-support"
+        >
+          💬 Ask on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
   `;
 
 
-  const modal =
-    document.getElementById("previewModal");
-
-
-  if(!modal){
-    return;
-  }
-
+  /* ---------------------------------------------------
+     SHOW MODAL
+  --------------------------------------------------- */
 
   modal.classList.add("show");
 
@@ -370,17 +443,20 @@ function openPreview(productKey){
   );
 
 
+  /* ---------------------------------------------------
+     FOCUS CLOSE BUTTON
+  --------------------------------------------------- */
+
   const closeButton =
     modal.querySelector(".modal-close");
 
+  if (closeButton) {
 
-  if(closeButton){
-
-    setTimeout(function(){
+    setTimeout(function () {
 
       closeButton.focus();
 
-    },50);
+    }, 50);
 
   }
 
@@ -388,16 +464,15 @@ function openPreview(productKey){
 
 
 /* =====================================================
-   CLOSE PREVIEW
+   CLOSE PRODUCT PREVIEW
 ===================================================== */
 
-function closePreview(){
+function closePreview() {
 
   const modal =
     document.getElementById("previewModal");
 
-
-  if(!modal){
+  if (!modal) {
     return;
   }
 
@@ -417,14 +492,14 @@ function closePreview(){
 
 
 /* =====================================================
-   ESCAPE KEY
+   ESCAPE KEY → CLOSE MODAL
 ===================================================== */
 
 document.addEventListener(
   "keydown",
-  function(event){
+  function (event) {
 
-    if(event.key === "Escape"){
+    if (event.key === "Escape") {
 
       closePreview();
 
@@ -440,9 +515,9 @@ document.addEventListener(
 
 document.addEventListener(
   "keydown",
-  function(event){
+  function (event) {
 
-    if(event.key !== "Tab"){
+    if (event.key !== "Tab") {
       return;
     }
 
@@ -451,10 +526,10 @@ document.addEventListener(
       document.getElementById("previewModal");
 
 
-    if(
+    if (
       !modal ||
       !modal.classList.contains("show")
-    ){
+    ) {
       return;
     }
 
@@ -465,7 +540,7 @@ document.addEventListener(
       );
 
 
-    if(!focusable.length){
+    if (!focusable.length) {
       return;
     }
 
@@ -477,9 +552,13 @@ document.addEventListener(
       focusable[focusable.length - 1];
 
 
-    if(event.shiftKey){
+    /* SHIFT + TAB */
 
-      if(document.activeElement === first){
+    if (event.shiftKey) {
+
+      if (
+        document.activeElement === first
+      ) {
 
         event.preventDefault();
 
@@ -487,9 +566,16 @@ document.addEventListener(
 
       }
 
-    }else{
+    }
 
-      if(document.activeElement === last){
+
+    /* TAB */
+
+    else {
+
+      if (
+        document.activeElement === last
+      ) {
 
         event.preventDefault();
 
@@ -504,18 +590,33 @@ document.addEventListener(
 
 
 /* =====================================================
-   CLOSE MODAL WHEN CLICKING OVERLAY
+   CLOSE MODAL BY CLICKING OVERLAY
 ===================================================== */
 
 const modalOverlay =
   document.querySelector(".modal-overlay");
 
 
-if(modalOverlay){
+if (modalOverlay) {
 
   modalOverlay.addEventListener(
     "click",
-    closePreview
+    function (event) {
+
+      /*
+        Only close when the actual overlay
+        itself is clicked.
+      */
+
+      if (
+        event.target === modalOverlay
+      ) {
+
+        closePreview();
+
+      }
+
+    }
   );
 
 }
@@ -527,29 +628,51 @@ if(modalOverlay){
 
 window.addEventListener(
   "load",
-  function(){
+  function () {
 
-    if(window.location.hash){
+    if (window.location.hash) {
 
-      setTimeout(function(){
+      setTimeout(
+        function () {
 
-        const element =
-          document.querySelector(
-            window.location.hash
-          );
+          const element =
+            document.querySelector(
+              window.location.hash
+            );
 
 
-        if(element){
+          if (element) {
 
-          element.scrollIntoView({
-            behavior:"smooth"
-          });
+            element.scrollIntoView({
+              behavior: "smooth"
+            });
 
-        }
+          }
 
-      },100);
+        },
+        100
+      );
 
     }
 
   }
 );
+
+
+/* =====================================================
+   GLOBAL ERROR CHECK
+===================================================== */
+
+console.log(
+  "Selaus Academy main.js loaded successfully."
+);
+
+console.log(
+  "Available products:",
+  Object.keys(products)
+);
+
+
+/* =====================================================
+   END OF MAIN JAVASCRIPT
+===================================================== */
