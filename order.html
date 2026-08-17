@@ -41,10 +41,9 @@
       text-decoration: none;
     }
 
-
-    /* =================================================
+    /* ==============================
        HEADER
-    ================================================= */
+    ============================== */
 
     .site-header {
       background: #ffffff;
@@ -75,13 +74,12 @@
     }
 
     .back-link:hover {
-      color: #111827;
+      color: #2563eb;
     }
 
-
-    /* =================================================
+    /* ==============================
        MAIN
-    ================================================= */
+    ============================== */
 
     .page {
       max-width: 1100px;
@@ -99,10 +97,9 @@
       align-items: start;
     }
 
-
-    /* =================================================
-       PRODUCT CARD
-    ================================================= */
+    /* ==============================
+       CARDS
+    ============================== */
 
     .product-card,
     .order-card {
@@ -136,10 +133,9 @@
       margin-bottom: 25px;
     }
 
-
-    /* =================================================
-       PRODUCT FEATURES
-    ================================================= */
+    /* ==============================
+       FEATURES
+    ============================== */
 
     .features {
       margin: 0;
@@ -160,10 +156,9 @@
       margin-right: 10px;
     }
 
-
-    /* =================================================
+    /* ==============================
        PRICE
-    ================================================= */
+    ============================== */
 
     .price-box {
       margin-top: 28px;
@@ -187,10 +182,9 @@
       color: #111827;
     }
 
-
-    /* =================================================
+    /* ==============================
        ORDER CARD
-    ================================================= */
+    ============================== */
 
     .order-card h2 {
       font-size: 27px;
@@ -204,10 +198,9 @@
       margin-bottom: 25px;
     }
 
-
-    /* =================================================
+    /* ==============================
        FORM
-    ================================================= */
+    ============================== */
 
     .form-group {
       margin-bottom: 17px;
@@ -246,21 +239,20 @@
 
     input:focus,
     select:focus {
-      border-color: #111827;
+      border-color: #2563eb;
 
       box-shadow:
         0 0 0 3px
-        rgba(17, 24, 39, .08);
+        rgba(37, 99, 235, .10);
     }
 
     input[readonly] {
       background: #f8fafc;
     }
 
-
-    /* =================================================
-       PAYMENT INSTRUCTIONS
-    ================================================= */
+    /* ==============================
+       PAYMENT BOX
+    ============================== */
 
     .payment-box {
       background: #f8fafc;
@@ -275,6 +267,7 @@
     .payment-box h3 {
       margin: 0 0 8px;
       font-size: 17px;
+      color: #111827;
     }
 
     .payment-subtitle {
@@ -291,7 +284,7 @@
 
       padding: 14px;
 
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       color: #111827;
 
@@ -300,6 +293,11 @@
 
     .bank-info {
       display: none;
+
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px 15px;
     }
 
     .bank-row {
@@ -322,10 +320,9 @@
       color: #111827;
     }
 
-
-    /* =================================================
+    /* ==============================
        WARNING
-    ================================================= */
+    ============================== */
 
     .warning {
       background: #fff7ed;
@@ -343,10 +340,9 @@
       margin-bottom: 18px;
     }
 
-
-    /* =================================================
+    /* ==============================
        SUBMIT BUTTON
-    ================================================= */
+    ============================== */
 
     .submit-btn {
       width: 100%;
@@ -365,11 +361,13 @@
 
       transition:
         transform .2s ease,
-        opacity .2s ease;
+        opacity .2s ease,
+        background .2s ease;
     }
 
     .submit-btn:hover {
       transform: translateY(-1px);
+      background: #1f2937;
     }
 
     .submit-btn:disabled {
@@ -378,10 +376,9 @@
       transform: none;
     }
 
-
-    /* =================================================
-       SECURITY NOTE
-    ================================================= */
+    /* ==============================
+       SECURITY
+    ============================== */
 
     .security-note {
       text-align: center;
@@ -394,10 +391,9 @@
       margin-top: 15px;
     }
 
-
-    /* =================================================
+    /* ==============================
        SUCCESS
-    ================================================= */
+    ============================== */
 
     .success-box {
       display: none;
@@ -447,10 +443,9 @@
       font-weight: 700;
     }
 
-
-    /* =================================================
+    /* ==============================
        ERROR
-    ================================================= */
+    ============================== */
 
     .error-box {
       display: none;
@@ -474,10 +469,9 @@
       display: block;
     }
 
-
-    /* =================================================
+    /* ==============================
        FOOTER
-    ================================================= */
+    ============================== */
 
     footer {
       text-align: center;
@@ -489,10 +483,9 @@
       font-size: 13px;
     }
 
-
-    /* =================================================
+    /* ==============================
        MOBILE
-    ================================================= */
+    ============================== */
 
     @media (max-width: 800px) {
 
@@ -531,9 +524,9 @@
 <body>
 
 
-  <!-- =================================================
+  <!-- ==============================
        HEADER
-  ================================================= -->
+  ============================== -->
 
   <header class="site-header">
 
@@ -555,18 +548,18 @@
   </header>
 
 
-  <!-- =================================================
+  <!-- ==============================
        MAIN
-  ================================================= -->
+  ============================== -->
 
   <main class="page">
 
     <div class="order-grid">
 
 
-      <!-- =============================================
-           PRODUCT INFORMATION
-      ============================================== -->
+      <!-- ============================
+           PRODUCT
+      ============================= -->
 
       <section class="product-card">
 
@@ -585,12 +578,10 @@
           Please wait...
         </p>
 
-
         <ul
           class="features"
           id="productFeatures"
         ></ul>
-
 
         <div class="price-box">
 
@@ -610,10 +601,9 @@
       </section>
 
 
-
-      <!-- =============================================
+      <!-- ============================
            ORDER FORM
-      ============================================== -->
+      ============================= -->
 
       <section class="order-card">
 
@@ -635,22 +625,20 @@
         </p>
 
 
-        <!-- ERROR -->
+        <!-- ERROR BOX -->
 
         <div
           id="errorBox"
           class="error-box"
-        >
-        </div>
+        ></div>
 
 
-        <!-- FORM -->
+        <!-- ORDER FORM -->
 
-        <form
-          id="orderForm"
-        >
+        <form id="orderForm">
 
-          <!-- Product hidden -->
+
+          <!-- PRODUCT -->
 
           <input
             type="hidden"
@@ -658,6 +646,8 @@
             name="product"
           >
 
+
+          <!-- PRICE -->
 
           <input
             type="hidden"
@@ -671,7 +661,10 @@
           <div class="form-group">
 
             <label for="name">
-              Name <span class="required">*</span>
+
+              Name
+              <span class="required">*</span>
+
             </label>
 
             <input
@@ -685,12 +678,15 @@
           </div>
 
 
-          <!-- GMAIL -->
+          <!-- EMAIL -->
 
           <div class="form-group">
 
             <label for="email">
-              Gmail <span class="required">*</span>
+
+              Gmail
+              <span class="required">*</span>
+
             </label>
 
             <input
@@ -709,8 +705,10 @@
           <div class="form-group">
 
             <label for="phone">
+
               WhatsApp / Mobile Number
               <span class="required">*</span>
+
             </label>
 
             <input
@@ -729,8 +727,10 @@
           <div class="form-group">
 
             <label for="paymentMethod">
+
               Payment Method
               <span class="required">*</span>
+
             </label>
 
             <select
@@ -751,7 +751,7 @@
                 Nagad
               </option>
 
-              <option value="Bank">
+              <option value="Dutch-Bangla Bank">
                 Dutch-Bangla Bank
               </option>
 
@@ -760,9 +760,9 @@
           </div>
 
 
-          <!-- =========================================
+          <!-- =========================
                PAYMENT INSTRUCTIONS
-          ========================================== -->
+          ========================== -->
 
           <div
             class="payment-box"
@@ -805,26 +805,46 @@
             >
 
               <div class="bank-row">
-                <strong>Bank:</strong>
+
+                <strong>
+                  Bank:
+                </strong>
+
                 Dutch-Bangla Bank
+
               </div>
 
+
               <div class="bank-row">
-                <strong>Account Name:</strong>
+
+                <strong>
+                  Account Name:
+                </strong>
+
                 Selaus Hembrom
+
               </div>
 
+
               <div class="bank-row">
-                <strong>Account Number:</strong>
+
+                <strong>
+                  Account Number:
+                </strong>
+
                 1721030030475
+
               </div>
 
             </div>
 
 
+            <!-- PAYMENT AMOUNT -->
+
             <div class="payment-amount">
 
               Payment Amount:
+
               <strong id="paymentAmount">
                 —
               </strong>
@@ -867,7 +887,7 @@
           </div>
 
 
-          <!-- SUBMIT -->
+          <!-- SUBMIT BUTTON -->
 
           <button
             type="submit"
@@ -890,9 +910,9 @@
         </form>
 
 
-        <!-- =========================================
-             SUCCESS MESSAGE
-        ========================================== -->
+        <!-- =========================
+             SUCCESS BOX
+        ========================== -->
 
         <div
           id="successBox"
@@ -928,7 +948,9 @@
             rel="noopener noreferrer"
             class="whatsapp-help"
           >
+
             💬 Need Help? WhatsApp Support
+
           </a>
 
         </div>
@@ -940,9 +962,9 @@
   </main>
 
 
-  <!-- =================================================
+  <!-- ==============================
        FOOTER
-  ================================================= -->
+  ============================== -->
 
   <footer>
 
@@ -952,21 +974,25 @@
   </footer>
 
 
+  <!-- ==============================
+       JAVASCRIPT
+  ============================== -->
 
   <script>
 
-    /* =================================================
-       IMPORTANT:
-       YOUR GOOGLE APPS SCRIPT WEB APP URL
-    ================================================= */
+
+    /* =========================================
+       GOOGLE APPS SCRIPT WEB APP URL
+       ALREADY CONNECTED
+    ========================================= */
 
     const APPS_SCRIPT_URL =
-      "YOUR_APPS_SCRIPT_WEB_APP_URL";
+      "https://script.google.com/macros/s/AKfycbwwbCHctv8wM6oSyPRSqYKFtezodvgvzY7JkhNkz14yNmQhTSDKJXgEcpe6T5WEUajDSA/exec";
 
 
-    /* =================================================
+    /* =========================================
        PRODUCT DATA
-    ================================================= */
+    ========================================= */
 
     const products = {
 
@@ -982,11 +1008,17 @@
           "Digital Marketing-এর basic থেকে practical understanding তৈরি করার জন্য beginner-friendly guide।",
 
         items: [
+
           "Digital Marketing Fundamentals",
+
           "Social Media Marketing",
+
           "Content Marketing",
+
           "Beginner Roadmap",
+
           "Digital Career Direction"
+
         ]
 
       },
@@ -1004,11 +1036,17 @@
           "Canva ব্যবহার করে professional social media, marketing এবং career-related design তৈরি করার practical guide।",
 
         items: [
+
           "Canva Fundamentals",
+
           "Design Basics",
+
           "Social Media Design",
+
           "Marketing Materials",
+
           "Professional Workflow"
+
         ]
 
       },
@@ -1026,11 +1064,17 @@
           "Freelancing শুরু করার জন্য skill, portfolio, client communication এবং online opportunity সম্পর্কে practical roadmap।",
 
         items: [
+
           "Freelancing Fundamentals",
+
           "Online Opportunities",
+
           "Portfolio Preparation",
+
           "Client Communication",
+
           "Beginner Roadmap"
+
         ]
 
       },
@@ -1048,11 +1092,17 @@
           "Upwork job বুঝে professional proposal তৈরি, client approach এবং proposal strategy শেখার guide।",
 
         items: [
+
           "Job Analysis",
+
           "Proposal Structure",
+
           "Client Communication",
+
           "Proposal Examples",
+
           "Winning Proposal Strategy"
+
         ]
 
       },
@@ -1070,11 +1120,17 @@
           "Fiverr profile এবং gig তৈরি, optimization এবং client communication-এর beginner-friendly guide।",
 
         items: [
+
           "Fiverr Profile Setup",
+
           "Gig Creation",
+
           "Gig Optimization",
+
           "Client Communication",
+
           "Fiverr Beginner Strategy"
+
         ]
 
       }
@@ -1082,16 +1138,17 @@
     };
 
 
-    /* =================================================
+    /* =========================================
        GET PRODUCT FROM URL
        Example:
        order.html?product=fiverr
-    ================================================= */
+    ========================================= */
 
     const params =
       new URLSearchParams(
         window.location.search
       );
+
 
     const productKey =
       params.get("product") || "dm";
@@ -1101,78 +1158,114 @@
       products[productKey];
 
 
-    /* =================================================
-       CHECK PRODUCT
-    ================================================= */
+    /* =========================================
+       ELEMENTS
+    ========================================= */
+
+    const productTitle =
+      document.getElementById(
+        "productTitle"
+      );
+
+
+    const productDescription =
+      document.getElementById(
+        "productDescription"
+      );
+
+
+    const productPrice =
+      document.getElementById(
+        "productPrice"
+      );
+
+
+    const productFeatures =
+      document.getElementById(
+        "productFeatures"
+      );
+
+
+    const productInput =
+      document.getElementById(
+        "productInput"
+      );
+
+
+    const priceInput =
+      document.getElementById(
+        "priceInput"
+      );
+
+
+    const paymentAmount =
+      document.getElementById(
+        "paymentAmount"
+      );
+
+
+    /* =========================================
+       LOAD PRODUCT
+    ========================================= */
 
     if (!product) {
 
-      document.getElementById(
-        "productTitle"
-      ).textContent =
+      productTitle.textContent =
         "Product Not Found";
+
+      productDescription.textContent =
+        "দুঃখিত, এই product পাওয়া যায়নি।";
+
+      productPrice.textContent =
+        "—";
 
     }
 
 
-    /* =================================================
-       LOAD PRODUCT INFORMATION
-    ================================================= */
-
     if (product) {
 
-      document.getElementById(
-        "productTitle"
-      ).textContent =
+      productTitle.textContent =
         product.title;
 
 
-      document.getElementById(
-        "productDescription"
-      ).textContent =
+      productDescription.textContent =
         product.description;
 
 
-      document.getElementById(
-        "productPrice"
-      ).textContent =
+      productPrice.textContent =
         product.price;
 
 
-      document.getElementById(
-        "paymentAmount"
-      ).textContent =
+      paymentAmount.textContent =
         product.price;
 
 
-      document.getElementById(
-        "productInput"
-      ).value =
+      productInput.value =
         product.title;
 
 
-      document.getElementById(
-        "priceInput"
-      ).value =
+      priceInput.value =
         product.price;
 
 
-      const featureList =
-        document.getElementById(
-          "productFeatures"
-        );
+      productFeatures.innerHTML =
+        "";
 
 
       product.items.forEach(
-        function (item) {
+        function(item) {
 
           const li =
-            document.createElement("li");
+            document.createElement(
+              "li"
+            );
 
           li.textContent =
             item;
 
-          featureList.appendChild(li);
+          productFeatures.appendChild(
+            li
+          );
 
         }
       );
@@ -1180,9 +1273,9 @@
     }
 
 
-    /* =================================================
+    /* =========================================
        PAYMENT METHOD
-    ================================================= */
+    ========================================= */
 
     const paymentMethod =
       document.getElementById(
@@ -1210,21 +1303,23 @@
 
     paymentMethod.addEventListener(
       "change",
-      function () {
+      function() {
 
         const method =
           paymentMethod.value;
-
-
-        bankInfo.style.display =
-          "none";
 
 
         mobilePayment.style.display =
           "block";
 
 
-        if (method === "bKash") {
+        bankInfo.style.display =
+          "none";
+
+
+        if (
+          method === "bKash"
+        ) {
 
           mobileNumber.textContent =
             "📱 bKash Personal: 01753630079";
@@ -1232,7 +1327,9 @@
         }
 
 
-        else if (method === "Nagad") {
+        else if (
+          method === "Nagad"
+        ) {
 
           mobileNumber.textContent =
             "📱 Nagad Personal: 01753630079";
@@ -1240,7 +1337,9 @@
         }
 
 
-        else if (method === "Bank") {
+        else if (
+          method === "Dutch-Bangla Bank"
+        ) {
 
           mobilePayment.style.display =
             "none";
@@ -1262,9 +1361,9 @@
     );
 
 
-    /* =================================================
-       FORM SUBMISSION
-    ================================================= */
+    /* =========================================
+       FORM ELEMENTS
+    ========================================= */
 
     const orderForm =
       document.getElementById(
@@ -1296,9 +1395,13 @@
       );
 
 
+    /* =========================================
+       FORM SUBMIT
+    ========================================= */
+
     orderForm.addEventListener(
       "submit",
-      async function (event) {
+      async function(event) {
 
         event.preventDefault();
 
@@ -1308,30 +1411,9 @@
         );
 
 
-        /* ---------------------------------------------
-           CHECK APPS SCRIPT URL
-        --------------------------------------------- */
-
-        if (
-          APPS_SCRIPT_URL ===
-          "YOUR_APPS_SCRIPT_WEB_APP_URL"
-        ) {
-
-          errorBox.textContent =
-            "https://script.google.com/macros/s/AKfycbwwbCHctv8wM6oSyPRSqYKFtezodvgvzY7JkhNkz14yNmQhTSDKJXgEcpe6T5WEUajDSA/exec";
-
-          errorBox.classList.add(
-            "show"
-          );
-
-          return;
-
-        }
-
-
-        /* ---------------------------------------------
-           GET FORM DATA
-        --------------------------------------------- */
+        /* ===============================
+           GET DATA
+        =============================== */
 
         const data = {
 
@@ -1373,9 +1455,9 @@
         };
 
 
-        /* ---------------------------------------------
-           BASIC VALIDATION
-        --------------------------------------------- */
+        /* ===============================
+           VALIDATION
+        =============================== */
 
         if (!data.name) {
 
@@ -1392,6 +1474,19 @@
 
           showError(
             "আপনার Gmail address দিন।"
+          );
+
+          return;
+
+        }
+
+
+        if (
+          !data.email.includes("@")
+        ) {
+
+          showError(
+            "সঠিক Gmail address দিন।"
           );
 
           return;
@@ -1432,12 +1527,13 @@
         }
 
 
-        /* ---------------------------------------------
-           DISABLE BUTTON
-        --------------------------------------------- */
+        /* ===============================
+           BUTTON LOADING
+        =============================== */
 
         submitButton.disabled =
           true;
+
 
         submitButton.textContent =
           "Submitting Order...";
@@ -1445,20 +1541,24 @@
 
         try {
 
-          /* -------------------------------------------
-             SEND DATA TO GOOGLE APPS SCRIPT
-          ------------------------------------------- */
+
+          /* =============================
+             SEND TO GOOGLE APPS SCRIPT
+          ============================= */
 
           const response =
             await fetch(
               APPS_SCRIPT_URL,
               {
 
-                method: "POST",
+                method:
+                  "POST",
 
                 headers: {
+
                   "Content-Type":
                     "text/plain;charset=utf-8"
+
                 },
 
                 body:
@@ -1472,9 +1572,9 @@
             await response.json();
 
 
-          /* -------------------------------------------
+          /* =============================
              SUCCESS
-          ------------------------------------------- */
+          ============================= */
 
           if (
             result.success === true
@@ -1495,17 +1595,16 @@
 
 
             window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
 
+              top: 0,
+
+              behavior:
+                "smooth"
+
+            });
 
           }
 
-
-          /* -------------------------------------------
-             SERVER ERROR
-          ------------------------------------------- */
 
           else {
 
@@ -1519,7 +1618,7 @@
         }
 
 
-        catch (error) {
+        catch(error) {
 
           console.error(
             "Order Error:",
@@ -1528,7 +1627,7 @@
 
 
           showError(
-            "Order submit করা যায়নি। Internet connection এবং Apps Script Web App URL check করুন।"
+            "Order submit করা যায়নি। কিছুক্ষণ পরে আবার চেষ্টা করুন।"
           );
 
         }
@@ -1539,6 +1638,7 @@
           submitButton.disabled =
             false;
 
+
           submitButton.textContent =
             "Submit Order →";
 
@@ -1548,22 +1648,29 @@
     );
 
 
-    /* =================================================
+    /* =========================================
        ERROR FUNCTION
-    ================================================= */
+    ========================================= */
 
     function showError(message) {
 
       errorBox.textContent =
         "⚠️ " + message;
 
+
       errorBox.classList.add(
         "show"
       );
 
+
       errorBox.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+
+        behavior:
+          "smooth",
+
+        block:
+          "center"
+
       });
 
     }
