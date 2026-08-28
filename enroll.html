@@ -1,1 +1,743 @@
+```html
+<!doctype html>
+<html lang="bn">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Selaus Academy Course Enrollment">
+
+  <meta name="author"
+    content="Selaus Hemrom">
+
+  <title>
+    Course Enrollment | Selaus Academy
+  </title>
+
+  <link rel="icon"
+    href="favicon.svg">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Arial,
+        "Noto Sans Bengali",
+        sans-serif;
+      background: #f8fafc;
+      color: #101828;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: min(900px, 100%);
+      margin: auto;
+    }
+
+    .top {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .logo b {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #111827;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      color: #667085;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+
+    .subtitle {
+      color: #667085;
+      line-height: 1.7;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow:
+        0 10px 40px rgba(16, 24, 40, .08);
+      margin-bottom: 20px;
+    }
+
+    .course-box {
+      background: #f8fafc;
+      border: 1px solid #eaecf0;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .course-box small {
+      display: block;
+      color: #667085;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .course-name {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .course-fee {
+      font-size: 25px;
+      font-weight: 900;
+      color: #111827;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #344054;
+    }
+
+    input,
+    select {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #d0d5dd;
+      border-radius: 9px;
+      font-size: 14px;
+      outline: none;
+      background: #fff;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #111827;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .payment-box {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #eaecf0;
+    }
+
+    .payment-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .payment-option {
+      border: 1px solid #d0d5dd;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .payment-option strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .payment-option span {
+      color: #667085;
+      font-size: 13px;
+    }
+
+    .notice {
+      padding: 14px;
+      border-radius: 10px;
+      background: #fffaeb;
+      color: #7a2e0e;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .submit-btn {
+      width: 100%;
+      min-height: 52px;
+      border: 0;
+      border-radius: 10px;
+      background: #111827;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      opacity: .92;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 18px;
+      color: #475467;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer {
+      text-align: center;
+      color: #98a2b3;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 650px) {
+
+      .page {
+        padding: 25px 15px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+  <div class="container">
+
+
+    <!-- HEADER -->
+
+    <div class="top">
+
+      <a
+        class="logo"
+        href="index.html">
+
+        <b>S</b>
+
+        <span>
+          Selaus Academy
+        </span>
+
+      </a>
+
+
+      <div class="eyebrow">
+        COURSE ENROLLMENT
+      </div>
+
+
+      <h1>
+        আপনার Learning Journey শুরু করুন
+      </h1>
+
+
+      <p class="subtitle">
+
+        নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন।
+        Payment সম্পন্ন করার পর Transaction ID দিন।
+
+      </p>
+
+    </div>
+
+
+
+    <!-- ENROLLMENT CARD -->
+
+    <div class="card">
+
+
+      <!-- SELECTED COURSE -->
+
+      <div class="course-box">
+
+        <small>
+          SELECTED COURSE
+        </small>
+
+
+        <div
+          id="courseName"
+          class="course-name">
+
+          Loading...
+
+        </div>
+
+
+        <div
+          id="courseFee"
+          class="course-fee">
+
+          ৳0
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <form
+        id="enrollmentForm">
+
+
+        <div class="grid">
+
+
+          <div class="field">
+
+            <label for="name">
+              Full Name *
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="আপনার পূর্ণ নাম"
+              required>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="phone">
+              Mobile Number *
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="01XXXXXXXXX"
+              required>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="grid">
+
+
+          <div class="field">
+
+            <label for="email">
+              Gmail Address *
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="yourname@gmail.com"
+              required>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="district">
+              District
+            </label>
+
+            <input
+              id="district"
+              name="district"
+              type="text"
+              placeholder="আপনার জেলা">
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- PAYMENT -->
+
+        <div class="payment-box">
+
+          <div class="payment-title">
+            💳 Payment Information
+          </div>
+
+
+          <div class="payment-option">
+
+            <strong>
+              🟣 bKash
+            </strong>
+
+            <span>
+              আপনার bKash payment number এখানে বসানো হবে।
+            </span>
+
+          </div>
+
+
+          <div class="payment-option">
+
+            <strong>
+              🟠 Nagad
+            </strong>
+
+            <span>
+              আপনার Nagad payment number এখানে বসানো হবে।
+            </span>
+
+          </div>
+
+
+          <div class="payment-option">
+
+            <strong>
+              🏦 Bank Transfer
+            </strong>
+
+            <span>
+              আপনার Bank payment information এখানে বসানো হবে।
+            </span>
+
+          </div>
+
+
+          <div class="notice">
+
+            ⚠️ Payment করার আগে Course এবং Fee ভালোভাবে
+            যাচাই করুন। Payment করার পরে Transaction ID
+            অবশ্যই সংরক্ষণ করুন।
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="paymentMethod">
+              Payment Method *
+            </label>
+
+            <select
+              id="paymentMethod"
+              name="paymentMethod"
+              required>
+
+              <option value="">
+                Select Payment Method
+              </option>
+
+              <option value="bKash">
+                bKash
+              </option>
+
+              <option value="Nagad">
+                Nagad
+              </option>
+
+              <option value="Bank Transfer">
+                Bank Transfer
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <div class="grid">
+
+
+            <div class="field">
+
+              <label for="transaction">
+                Transaction ID *
+              </label>
+
+              <input
+                id="transaction"
+                name="transaction"
+                type="text"
+                placeholder="Payment Transaction ID"
+                required>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="paymentPhone">
+                যে নম্বর থেকে Payment করেছেন *
+              </label>
+
+              <input
+                id="paymentPhone"
+                name="paymentPhone"
+                type="tel"
+                placeholder="01XXXXXXXXX"
+                required>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <button
+          class="submit-btn"
+          type="submit">
+
+          🎓 Submit Enrollment
+
+        </button>
+
+
+      </form>
+
+
+      <a
+        class="back"
+        href="index.html#courses">
+
+        ← Back to Courses
+
+      </a>
+
+
+    </div>
+
+
+
+    <div class="footer">
+
+      © 2026 Selaus Academy.
+      Learn Skills. Build Your Future.
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   COURSE DATABASE
+========================= */
+
+const courses = {
+
+  "digital-marketing": {
+
+    name:
+      "Digital Marketing Career Starter",
+
+    fee:
+      "৳999"
+
+  },
+
+
+  "canva": {
+
+    name:
+      "Canva & Content Creation",
+
+    fee:
+      "৳699"
+
+  },
+
+
+  "freelancing": {
+
+    name:
+      "Freelancing Career Starter",
+
+    fee:
+      "৳999"
+
+  },
+
+
+  "social-media": {
+
+    name:
+      "Social Media Management",
+
+    fee:
+      "৳899"
+
+  }
+
+};
+
+
+
+/* =========================
+   GET COURSE
+========================= */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+
+const courseKey =
+  params.get("course");
+
+
+const course =
+  courses[courseKey];
+
+
+
+/* =========================
+   DISPLAY COURSE
+========================= */
+
+const courseName =
+  document.getElementById(
+    "courseName"
+  );
+
+
+const courseFee =
+  document.getElementById(
+    "courseFee"
+  );
+
+
+if(course){
+
+  courseName.textContent =
+    course.name;
+
+  courseFee.textContent =
+    course.fee;
+
+}else{
+
+  courseName.textContent =
+    "Course not selected";
+
+  courseFee.textContent =
+    "Please select a course";
+
+}
+
+
+
+/* =========================
+   FORM SUBMIT
+========================= */
+
+document
+  .getElementById("enrollmentForm")
+  .addEventListener(
+    "submit",
+    function(event){
+
+      event.preventDefault();
+
+
+      alert(
+        "Enrollment information received. Payment verification system will be connected in the next step."
+      );
+
+    }
+  );
+
+
+</script>
+
+
+</body>
+
+</html>
+```
 
