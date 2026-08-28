@@ -15,12 +15,9 @@
   <meta name="author"
     content="Selaus Hemrom">
 
-  <title>
-    Course Enrollment | Selaus Academy
-  </title>
+  <title>Course Enrollment | Selaus Academy</title>
 
-  <link rel="icon"
-    href="favicon.svg">
+  <link rel="icon" href="favicon.svg">
 
   <style>
 
@@ -30,10 +27,7 @@
 
     body {
       margin: 0;
-      font-family:
-        Arial,
-        "Noto Sans Bengali",
-        sans-serif;
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
       background: #f8fafc;
       color: #101828;
     }
@@ -100,8 +94,7 @@
       background: #fff;
       border-radius: 20px;
       padding: 30px;
-      box-shadow:
-        0 10px 40px rgba(16, 24, 40, .08);
+      box-shadow: 0 10px 40px rgba(16, 24, 40, .08);
       margin-bottom: 20px;
     }
 
@@ -175,7 +168,7 @@
     }
 
     .payment-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 900;
       margin-bottom: 15px;
     }
@@ -183,28 +176,63 @@
     .payment-option {
       border: 1px solid #d0d5dd;
       border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 10px;
+      padding: 17px;
+      margin-bottom: 12px;
+      background: #fff;
     }
 
     .payment-option strong {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: 15px;
     }
 
     .payment-option span {
-      color: #667085;
+      display: block;
+      color: #475467;
       font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .payment-number {
+      font-size: 18px !important;
+      font-weight: 900;
+      color: #111827 !important;
+      margin-top: 5px;
+    }
+
+    .bank-details {
+      line-height: 1.9 !important;
     }
 
     .notice {
-      padding: 14px;
+      padding: 15px;
       border-radius: 10px;
       background: #fffaeb;
       color: #7a2e0e;
       font-size: 13px;
-      line-height: 1.6;
+      line-height: 1.7;
       margin: 20px 0;
+    }
+
+    .step-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 17px;
+      margin-bottom: 20px;
+    }
+
+    .step-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .step-box ol {
+      margin: 0;
+      padding-left: 20px;
+      color: #475467;
+      font-size: 13px;
+      line-height: 1.8;
     }
 
     .submit-btn {
@@ -277,9 +305,7 @@
 
     <div class="top">
 
-      <a
-        class="logo"
-        href="index.html">
+      <a class="logo" href="index.html">
 
         <b>S</b>
 
@@ -302,8 +328,8 @@
 
       <p class="subtitle">
 
-        নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন।
-        Payment সম্পন্ন করার পর Transaction ID দিন।
+        Course নির্বাচন করুন, payment সম্পন্ন করুন
+        এবং নিচের enrollment form পূরণ করুন।
 
       </p>
 
@@ -324,22 +350,12 @@
           SELECTED COURSE
         </small>
 
-
-        <div
-          id="courseName"
-          class="course-name">
-
+        <div id="courseName" class="course-name">
           Loading...
-
         </div>
 
-
-        <div
-          id="courseFee"
-          class="course-fee">
-
+        <div id="courseFee" class="course-fee">
           ৳0
-
         </div>
 
       </div>
@@ -348,8 +364,7 @@
 
       <!-- FORM -->
 
-      <form
-        id="enrollmentForm">
+      <form id="enrollmentForm">
 
 
         <div class="grid">
@@ -433,59 +448,126 @@
 
         <div class="payment-box">
 
+
           <div class="payment-title">
-            💳 Payment Information
+            💳 Payment করুন
           </div>
 
+
+          <!-- BKASH -->
 
           <div class="payment-option">
 
             <strong>
-              🟣 bKash
+              🟣 bKash — Personal
             </strong>
 
             <span>
-              আপনার bKash payment number এখানে বসানো হবে।
+              Send Money করুন:
+            </span>
+
+            <span class="payment-number">
+              01753630079
             </span>
 
           </div>
 
 
+
+          <!-- NAGAD -->
+
           <div class="payment-option">
 
             <strong>
-              🟠 Nagad
+              🟠 Nagad — Personal
             </strong>
 
             <span>
-              আপনার Nagad payment number এখানে বসানো হবে।
+              Send Money করুন:
+            </span>
+
+            <span class="payment-number">
+              01753630079
             </span>
 
           </div>
 
 
+
+          <!-- BANK -->
+
           <div class="payment-option">
 
             <strong>
-              🏦 Bank Transfer
+              🏦 Bank Transfer — Dutch-Bangla Bank
             </strong>
 
-            <span>
-              আপনার Bank payment information এখানে বসানো হবে।
+            <span class="bank-details">
+
+              <b>Account Name:</b>
+              Selaus Hembrom<br>
+
+              <b>Account Number:</b>
+              1721030030475<br>
+
+              <b>Branch:</b>
+              Dinajpur Lilirmore Branch
+
             </span>
 
           </div>
+
+
+
+          <!-- PAYMENT STEPS -->
+
+          <div class="step-box">
+
+            <strong>
+              📌 Payment করার নিয়ম
+            </strong>
+
+            <ol>
+
+              <li>
+                উপরের যেকোনো একটি payment method নির্বাচন করুন।
+              </li>
+
+              <li>
+                Selected Course-এর fee অনুযায়ী payment করুন।
+              </li>
+
+              <li>
+                Transaction ID / Reference Number সংগ্রহ করুন।
+              </li>
+
+              <li>
+                নিচের form-এ সঠিক তথ্য দিয়ে enrollment submit করুন।
+              </li>
+
+            </ol>
+
+          </div>
+
 
 
           <div class="notice">
 
-            ⚠️ Payment করার আগে Course এবং Fee ভালোভাবে
-            যাচাই করুন। Payment করার পরে Transaction ID
-            অবশ্যই সংরক্ষণ করুন।
+            ⚠️ <b>Important:</b>
+            Payment করার আগে আপনার selected course এবং fee
+            ভালোভাবে যাচাই করুন।
+
+            <br><br>
+
+            Payment করার পরে Transaction ID অবশ্যই সংরক্ষণ করুন।
+            ভুল Transaction ID দিলে enrollment verification
+            বিলম্বিত হতে পারে।
 
           </div>
 
 
+
+          <!-- PAYMENT METHOD -->
 
           <div class="field">
 
@@ -526,14 +608,14 @@
             <div class="field">
 
               <label for="transaction">
-                Transaction ID *
+                Transaction ID / Reference *
               </label>
 
               <input
                 id="transaction"
                 name="transaction"
                 type="text"
-                placeholder="Payment Transaction ID"
+                placeholder="Transaction ID লিখুন"
                 required>
 
             </div>
@@ -726,7 +808,7 @@ document
 
 
       alert(
-        "Enrollment information received. Payment verification system will be connected in the next step."
+        "আপনার enrollment information প্রস্তুত হয়েছে। পরবর্তী ধাপে Google Form/Google Sheet-এর সাথে submission system connect করা হবে।"
       );
 
     }
@@ -740,4 +822,3 @@ document
 
 </html>
 ```
-
